@@ -1,0 +1,43 @@
+html, #timeline-container {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+
+#section-1 {
+	background: #3498db;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	min-height: 960px;
+}
+
+
+/* how to vertical align this item */
+#center-container {
+	margin-top: 45px;
+}
+
+#camera-container {
+  	   position: absolute;
+}
+
+#timeline-container {
+	position: relative;
+	width: 100px;
+	float: right;
+	color: white;
+	margin-top: 5px;
+}
+
+path {
+	stroke: white;
+}
+
+.img-2 {
+	width: 500px;
+	height: 331px;
+	background: url('img/2.jpg');
+}
