@@ -36,8 +36,6 @@ path {
 	stroke: white;
 }
 
-.img-2 {
-	width: 500px;
-	height: 331px;
-	background: url('img/2.jpg');
+#imageSlider-container {
+	
 }
