@@ -14,7 +14,9 @@ body {
 	min-height: 960px;
 }
 
-
+#camera {
+	z-index: 10;
+}
 /* how to vertical align this item */
 #center-container {
 	margin-top: 45px;
@@ -37,8 +39,9 @@ path {
 }
 
 #imageSlider-container {
-	margin-left: 113px;
-	margin-top: 286px;
+	z-index: 0;
+	margin-right: 248px;
+	margin-top: 534px;
 	position: relative;
 }
 
