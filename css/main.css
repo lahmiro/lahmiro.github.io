@@ -39,4 +39,11 @@ path {
 #imageSlider-container {
 	margin-left: 113px;
 	margin-top: 286px;
+	position: relative;
+}
+
+#imageSlider-container div{
+	position: absolute;
+	bottom: 0;
+	right: 0;
 }
