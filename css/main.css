@@ -15,7 +15,7 @@ body {
 }
 
 #camera {
-	z-index: 10;
+	z-index: 100;
 }
 /* how to vertical align this item */
 #center-container {
@@ -51,4 +51,12 @@ path {
 	position: absolute;
 	bottom: 0;
 	right: 0;
+}
+
+#imgSliderContainer img {
+	z-index: 0;
+}
+
+#section-2 {
+	height: 500px;
 }

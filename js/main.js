@@ -18,7 +18,8 @@ $(document).ready(function($) {
 			triggerElement: "#camera-container",
 			duration: 2000,
 		})
-		.setPin("#camera");
+		.setPin("#camera")
+		.setPin("#imgSliderContainer");
 
 		var timelinePin = new ScrollScene({
 			triggerElement: "#timeline-container",
@@ -26,11 +27,6 @@ $(document).ready(function($) {
 		})
 		.setPin("#timeline");
 
-		var imgSliderPin = new ScrollScene({
-			triggerElement: "#camera-container",
-			duration: 2000,
-		})
-		.setPin("#imgSliderContainer");
 
 		//drawing timeline dots
 		function pathPrepare ($el) {
@@ -46,21 +42,26 @@ $(document).ready(function($) {
 			.add(TweenMax.to($circle, 1, {strokeDashoffset: 0, ease:Linear.easeNone})) 
 
 		var circleScene = new ScrollScene({offset: 500, duration: 200, tweenChanges: true})
-			.setTween(dotTween)
-			.addTo(controller);
+			.setTween(dotTween);
 
 		//image Slider
+		//var imgSliderTween = new TweenMax.to("#imgSlider2", 1, {transform: "translateY(-248px)"});
+		var anim = new TimelineMax()
+			.add(TweenMax.to("#imgSlider2", 2, {transform: "translateY(-248px)",  delay:1}))
+			.add(TweenMax.to("#imgSlider1", 2, {transform: "translateY(-248px)"}))
 
+		var imgSliderScene = new ScrollScene({offset: 500, duration: 1000})
+			.setTween(anim);
 		
 		//add scenes to the controller
 		controller.addScene([
 			cameraPin,
 			timelinePin,
 			circleScene,
-			imgSliderPin,
+			imgSliderScene,
 		]);
 		//imgPin.addIndicators();
-		imgSliderPin.addIndicators();
-
+		
+		imgSliderScene.addIndicators();
 
 });
