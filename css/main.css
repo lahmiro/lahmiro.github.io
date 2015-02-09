@@ -19,7 +19,7 @@ body {
 }
 /* how to vertical align this item */
 #center-container {
-	margin-top: 45px;
+	margin-top: 3em;
 }
 
 #camera-container {
@@ -38,14 +38,16 @@ path {
 	stroke: white;
 }
 
-#imageSlider-container {
+#imgSliderContainer {
 	z-index: 0;
-	margin-right: 248px;
-	margin-top: 534px;
 	position: relative;
+	width: 312px;
+	height: 248px;
+	margin-left: 17%;
+	margin-top: 42%;
 }
 
-#imageSlider-container div{
+#imgSliderContainer div{
 	position: absolute;
 	bottom: 0;
 	right: 0;

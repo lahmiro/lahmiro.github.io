@@ -19,6 +19,7 @@ $(document).ready(function($) {
 			duration: 2000,
 		})
 		.setPin('#camera');
+
 		var timelinePin = new ScrollScene({
 			triggerElement: "#timeline-container",
 			duration: 2000,
@@ -35,21 +36,25 @@ $(document).ready(function($) {
 		var $circle = $('#2012 path'); //find the path
 		pathPrepare($circle);
 
-		var tween = new TimelineMax()
+		var dotTween = new TimelineMax()
 			.add(TweenMax.to($circle, 1, {strokeDashoffset: 0, ease:Linear.easeNone})) 
 
 		var circleScene = new ScrollScene({offset: 500, duration: 200, tweenChanges: true})
-			.setTween(tween)
+			.setTween(dotTween)
 			.addTo(controller);
 
 		//image Slider
-		
 
+		
 		//add scenes to the controller
 		controller.addScene([
 			cameraPin,
 			timelinePin,
-			circleScene
+			circleScene,
+			
 		]);
+		//imgPin.addIndicators();
+		timelinePin.addIndicators();
+
 
 });
