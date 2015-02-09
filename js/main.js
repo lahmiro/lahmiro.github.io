@@ -18,13 +18,19 @@ $(document).ready(function($) {
 			triggerElement: "#camera-container",
 			duration: 2000,
 		})
-		.setPin('#camera');
+		.setPin("#camera");
 
 		var timelinePin = new ScrollScene({
 			triggerElement: "#timeline-container",
 			duration: 2000,
 		})
-		.setPin('#timeline');
+		.setPin("#timeline");
+
+		var imgSliderPin = new ScrollScene({
+			triggerElement: "#camera-container",
+			duration: 2000,
+		})
+		.setPin("#imgSliderContainer");
 
 		//drawing timeline dots
 		function pathPrepare ($el) {
@@ -51,10 +57,10 @@ $(document).ready(function($) {
 			cameraPin,
 			timelinePin,
 			circleScene,
-			
+			imgSliderPin,
 		]);
 		//imgPin.addIndicators();
-		timelinePin.addIndicators();
+		imgSliderPin.addIndicators();
 
 
 });
