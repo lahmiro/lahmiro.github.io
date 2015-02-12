@@ -1,24 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Camera-2</title>
 
-  <title>Path Drawing</title>
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"> -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/main.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/lightbox.css">
 </head>
-<body>
 
+<body>
+    
 <div class="container-fluid">
-  <div class="row" id="section-1">
-    <div class="col-md-8 col-md-offset-2" id="center-container">
-      <div id="camera-container" class="col-md-10">
-        
-        <svg id="camera" width="700px"  version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+  <div class="row" id="section1">
+
+    <div class="col-md-8 col-md-offset-2" id="centerContainer"
+          >
+      <div id="cameraContainer" class="col-md-10">
+        <svg id="camera" width="700px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
    viewBox="0 0 471.3 414.7" enable-background="new 0 0 471.3 414.7" xml:space="preserve">
 <g id="baseCase">
   <path fill="none" stroke="#000000" stroke-miterlimit="10" d="M15.8,90.6c-0.1-1.2-0.5-2.3-0.2-3.3c1.9-5.3,62.7-27.8,66.2-26.2
@@ -133,7 +134,7 @@
   <path stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" d="M51.7,278.6l3.6,6.3"/>
   <path stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" d="M55.4,320l-3.6-6.3"/>
 </g>
-<g id="zoomOut_1_">
+<g id="zoomOut">
   <path fill="none" stroke="#000000" stroke-miterlimit="10" d="M53.8,309.2c0,2.7-2.1,5-4.8,5c-2.7,0-5-2.1-5-4.8c0-2.7,2.1-5,4.8-5
     C51.5,304.3,53.8,306.5,53.8,309.2z"/>
   <path fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" d="M45.7,309.2h7"/>
@@ -209,55 +210,42 @@
 </g>
 
 
+
 <!-- 
   <g id="imageSlider-1">
   <path fill="none" stroke="#000000" stroke-width="1.4" stroke-miterlimit="10" d="M270.2,193H86.8c-5.5,0-10,4.5-10,10v146c0,5.5,4.5,10,10,10h189.5
     c5.5,0,10-4.5,10-10V203c0-5.5-4.5-10-10-10H270.2z"/>
 </g>
 
-<g id="imageSlider-1">
-  <path fill="none" stroke="#000000" stroke-width="1.4" stroke-miterlimit="10" d="M270.2,193H86.8c-5.5,0-10,4.5-10,10v146c0,5.5,4.5,10,10,10h189.5
-    c5.5,0,10-4.5,10-10V203c0-5.5-4.5-10-10-10H270.2z"/>
-</g>
-
-<g id="imageSlider">
-  <g>
-    <defs>
-      <path id="SVGID_1_" stroke-miterlimit="10" d="M270.2,193H86.8c-5.5,0-10,4.5-10,10v146c0,5.5,4.5,10,10,10h189.5
-    c5.5,0,10-4.5,10-10V203c0-5.5-4.5-10-10-10H270.2z"/>
-    </defs>
-    <clipPath id="SVGID_2_">
-      <use xlink:href="#SVGID_1_"  overflow="visible"/>
-    </clipPath>
-
-    <g clip-path="url(#SVGID_2_)">
-        <image id="img01" overflow="visible" width="500" height="331" xlink:href="img/1.jpg"  transform="matrix(0.4863 0 0 0.5095 46.8333 190.6667)">
-      </image>
-    </g>
-
-    <g clip-path="url(#SVGID_2_)">
-       <image id="img02" overflow="visible" width="500" height="331" xlink:href="img/2.jpg"  transform="matrix(0.4863 0 0 0.5095 46.8333 190.6667)">
-       </image>
-    </g>
-
-    <use xlink:href="#SVGID_1_"  overflow="visible" fill="none" stroke="#000000" stroke-miterlimit="10"/>
-  </g>
-</g>
  -->
 
 
 </svg>
       
-      <div id="imgSliderContainer">
-          <div class="imgSliders" id="imgSlider1"> <img src="img/2-2.png" alt="sheep"> </div>
-          <div class="imgSliders" id="imgSlider2"><img src="img/1-2.png" alt="monkey"></div>
-      </div>
+    <div id="imgBox">
+         <div id="imgContainer">
+            <div class="img1"><a href="img/open.png" data-lightbox="imgSlider"> <img src="img/open.png"></a></div>
+            <div class="img"><a href="img/2012-1.png" data-lightbox="imgSlider"> <img src="img/2012-1.png"></a></div>
+            <div class="img"><a href="img/2012-2.png" data-lightbox="imgSlider" > <img src="img/2012-2.png"></a></div>
+            <div class="img"><a href="img/2012-3.png" data-lightbox="imgSlider"> <img src="img/2012-3.png"></a></div>
+            <div class="img"><a href="img/2012-4.png" data-lightbox="imgSlider"> <img src="img/2012-4.png"></a></div>
+            <div class="img"><a href="img/2013-1.png" data-lightbox="imgSlider"> <img src="img/2013-1.png"></a></div>
+            <div class="img"><a href="img/2013-2.png" data-lightbox="imgSlider"> <img src="img/2013-2.png"></a></div>
+            <div class="img"><a href="img/2013-3.png" data-lightbox="imgSlider"> <img src="img/2013-3.png"></a></div>
+            <div class="img"><a href="img/2013-4.png" data-lightbox="imgSlider"> <img src="img/2013-4.png"></a></div>
+            <div class="img"><a href="img/2014-1.png" data-lightbox="imgSlider"> <img src="img/2014-1.png"></a></div>
+            <div class="img"><a href="img/2014-2.png" data-lightbox="imgSlider"> <img src="img/2014-2.png"></a></div>
+            <div class="img"><a href="img/2014-3.png" data-lightbox="imgSlider"> <img src="img/2014-3.png"></a></div>
+            <div class="img"><a href="img/2014-4.png" data-lightbox="imgSlider"> <img src="img/2014-4.png"></a></div>
+            <div class="img endImg"><a href="img/end.png" data-lightbox="imgSlider"> <img src="img/end.png"></a></div>
+          </div>
+     </div>
 
 
     </div>
-
-      <div id="timeline-container" class="col-md-2">
-            <div class="timeline-svg">
+    
+      <div id="timelineContainer" class="col-md-2">
+              <div class="timelineSvg">
                             <svg id="timeline" height="600px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 100 616" enable-background="new 0 0 100 616" xml:space="preserve">
                 <g id="2015">
@@ -288,24 +276,61 @@
                 </svg>
 
             </div>
-            <div class="timeline-date-block">
-              
-            </div>
+
+              <div id="timelineDateBlock">
+                <table>
+                  <tr><td>2012</td></tr>
+                  <tr><td>2013</td></tr>
+                  <tr><td>2014</td></tr>
+                  <tr><td>2015</td></tr>
+                </table>
+              </div>
+
+
+           
     
       </div>
     </div>
+
   </div>
-  <div class="row" id="section-2">
-    
+  <div class="row" id="section2">
+       
+    </div>
   </div>
   
 </div>
 
-<script src="js/walkway.js"></script>
+
+					
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="js/skrollr.js"></script>
+<script>
+    var s = skrollr.init({
+        documentElement: $("#imgContainer")
+    });
+    function Skrollr(options) {
+    if(options.documentElement){
+        documentElement = document.getElementById(options.documentElement);   
+                    //////  Incase you want a container wrapper
+    }else{
+        documentElement = document.documentElement;}
+    }
+</script>
+<script src="js/imagesloaded.js"></script>
+<script src="js/TweenMax.min.js"></script>
 <script src="js/jquery.scrollmagic.min.js"></script>
 <script src="js/jquery.scrollmagic.debug.js"></script>
-<script src="js/TweenMax.min.js"></script>
+<script src="js/_main.js"></script>
+<script src="js/walkway.js"></script>
 <script src="js/main.js"></script>
+<script src="js/lightbox.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 </body>

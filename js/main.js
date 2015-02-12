@@ -1,67 +1,33 @@
-var svg = new Walkway({
-  selector: '#camera',
-  duration: '3000',
-  // can pass in a function or a string like 'easeOutQuint'
-  easing: function (t) {
-    return  t<.5 ? 2*t*t : -1+(4-2*t)*t;
-  }
-});
-
-svg.draw();
 
 $(document).ready(function($) {
 		// init controller
-		var controller = new ScrollMagic();
+		var controller = new ScrollMagic({
+			container: "#box",
+		});
 
-		//pin the camera and the timeline
-		var cameraPin = new ScrollScene({
-			triggerElement: "#camera-container",
-			duration: 2000,
-		})
-		.setPin("#camera")
-		.setPin("#imgSliderContainer");
+		//offset: picSize * (picNo.-1) + (picNo.-1) *  duration  348, 696
+		var imgSize = 248;
+		var durationHeight = 100;
+		var img = $(".img");
+		var offsetHeight = [];
+		var scene = [];
 
-		var timelinePin = new ScrollScene({
-			triggerElement: "#timeline-container",
-			duration: 2000,
-		})
-		.setPin("#timeline");
-
-
-		//drawing timeline dots
-		function pathPrepare ($el) {
-					var lineLength = $el[0].getTotalLength();
-					$el.css("stroke-dasharray", lineLength);
-					$el.css("stroke-dashoffset", lineLength);
+		//pin other img
+		for(var i=1, l = img.length; i <=l; i++){
+			offsetHeight[i] = imgSize * i + durationHeight * i;
+			console.log(offsetHeight[i]);
+			scene[i] = new ScrollScene({offset: offsetHeight[i], duration: durationHeight})
+						.setPin(img[i-1]);
 		}
 
-		var $circle = $('#2012 path'); //find the path
-		pathPrepare($circle);
+		//pin img1
+		var pinImg1 = new ScrollScene({triggerHook: "onLeave", duration: durationHeight})
+					.setPin(".img1");
 
-		var dotTween = new TimelineMax()
-			.add(TweenMax.to($circle, 1, {strokeDashoffset: 0, ease:Linear.easeNone})) 
-
-		var circleScene = new ScrollScene({offset: 500, duration: 200, tweenChanges: true})
-			.setTween(dotTween);
-
-		//image Slider
-		//var imgSliderTween = new TweenMax.to("#imgSlider2", 1, {transform: "translateY(-248px)"});
-		var anim = new TimelineMax()
-			.add(TweenMax.to("#imgSlider2", 2, {transform: "translateY(-248px)",  delay:1}))
-			.add(TweenMax.to("#imgSlider1", 2, {transform: "translateY(-248px)"}))
-
-		var imgSliderScene = new ScrollScene({offset: 500, duration: 1000})
-			.setTween(anim);
-		
-		//add scenes to the controller
 		controller.addScene([
-			cameraPin,
-			timelinePin,
-			circleScene,
-			imgSliderScene,
-		]);
-		//imgPin.addIndicators();
-		
-		imgSliderScene.addIndicators();
+			pinImg1, 
+			scene,
 
-});
+		]);
+		
+});	

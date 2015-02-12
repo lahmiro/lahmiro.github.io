@@ -5,6 +5,8 @@ body {
   min-height: 100%;
 }
 
+
+
 #section-1 {
 	background: #3498db;
 	-webkit-background-size: cover;
@@ -18,15 +20,15 @@ body {
 	z-index: 100;
 }
 /* how to vertical align this item */
-#center-container {
+#centerContainer {
 	margin-top: 3em;
 }
 
-#camera-container {
+#cameraContainer {
   	   position: absolute;
 }
 
-#timeline-container {
+#timelineContainer {
 	position: relative;
 	width: 100px;
 	float: right;
@@ -60,3 +62,37 @@ path {
 #section-2 {
 	height: 500px;
 }
+
+#timelineContainer div {
+	display: table;
+}
+
+
+#timelineDateBlock {
+	margin-top: 5.5px;
+}
+
+#timelineDateBlock td{
+	padding-bottom: 171px;
+}
+
+/* img slider */
+#box {
+	width: 312px;
+	height: 248px;
+	border: 2px solid red;
+	
+	overflow-y: scroll;
+	overflow-x: hidden;
+	
+	position: absolute;
+       top: 0;
+       left: 0;
+       bottom: 0;
+       right: 0;
+       margin: auto;
+}
+
+#box::-webkit-scrollbar { width: 0 !important; }
+#box { -ms-overflow-style: none; }
+
