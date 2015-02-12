@@ -16,45 +16,31 @@ $(document).ready(function($) {
 	var pinCamera = new ScrollScene({offset: 0, duration: 900})
 					.setPin("#centerContainer");
 	//section1 bg fades to black, camera fades out at the same time
-	//var cameraFade = new ScrollScene({triggerElement: ".endImg", triggerHook:"onEnter", duration: 430})
-	//			.setTween(TweenLite.to("#camera, #timelineContainer", 1, {opacity:0}));
-
+	
 	var tl = new TimelineLite();
 	tl.to("#section1",2,{backgroundColor: "#000"});
 	tl.to("#camera, #timelineContainer", 1, {opacity:0});
-	//tl.to("#section2", 1, {y:-900});
-
+	
 	var bgGrad = new ScrollScene({triggerElement: ".endImg", triggerHook:"onEnter", duration: 300})
 				.setTween(tl);
 
 	var imgSlider = new ScrollScene({triggerElement: ".endImg", offset: 300, duration: 300})
 				.setTween(TweenMax.to("#imgBox", 1, {x:-200}));
 
-
 	var picFadeOut = new ScrollScene({offset: 1250, duration: 300})
-					.setTween(TweenLite.to("#imgBox", 1, {opacity:0}));
+					.setTween(TweenMax.to("#imgBox", 1, {opacity:0}));
 
+	var circleTween = new ScrollScene({triggerElement: ".img2012", triggerHook: "onEnter", duration: 1000})
+				.setTween(TweenMax.from("#2013", 1, {y:-179, fill: "#000"}));
 
-	//var tl = new TimelineLite();
-	//tl.to("#section1", 1, {backgroundColor: "#000"});
-	//tl.to("#camera, #timelineContainer", 1, {opacity:0});
-	//tl.to("#imgBox", 1, {opacity:0});
-
-
-	//section2 bg from left to right
-	//var bgLeftToRight = new ScrollScene({offset:1400, duration: 900})
-	//					.setTween(tl)
-	//					.setPin("#section2");
 
 	controller.addScene([
 		pinCamera,
 		bgGrad,
 		imgSlider,
-		//cameraFade,
 		picFadeOut,
-		//imgScale,
-		//bgFadeIn,
-		//bgLeftToRight,
+		circleTween,
+	
 	]);
 
 	// init controller
@@ -86,6 +72,6 @@ $(document).ready(function($) {
 		imgSlider,
 	]);
 
-	pinCamera.addIndicators();
+	circleTween.addIndicators();
 	//bgLeftToRight.addIndicators();
 });	
