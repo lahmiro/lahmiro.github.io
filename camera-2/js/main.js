@@ -19,7 +19,7 @@ $(document).ready(function($) {
 	
 	var tl = new TimelineLite();
 	tl.to("#section1",2,{backgroundColor: "#000"});
-	tl.to("#camera, #timelineContainer", 1, {opacity:0});
+	//tl.to("#camera, #timelineContainer", 1, {opacity:0});
 	
 	var bgGrad = new ScrollScene({triggerElement: ".endImg", triggerHook:"onEnter", duration: 300})
 				.setTween(tl);
@@ -30,8 +30,11 @@ $(document).ready(function($) {
 	var picFadeOut = new ScrollScene({offset: 1250, duration: 300})
 					.setTween(TweenMax.to("#imgBox", 1, {opacity:0}));
 
-	var circleTween = new ScrollScene({triggerElement: ".img2012", triggerHook: "onEnter", duration: 1000})
-				.setTween(TweenMax.from("#2013", 1, {y:-179, fill: "#000"}));
+	//var circleTween = new ScrollScene({triggerElement: ".img2012", triggerHook: "onEnter", duration: 900})
+				//.setTween(TweenMax.to("#dot2012", 1, {y:800, svg:{fill: "#000000"}, ease: Sine.easeOut}));
+
+	var circleTween = new ScrollScene({triggerElement: ".img2012", duration: 3172})
+				.setTween(TweenMax.to("#dot2012", 5, {y:570, svg:{fill: "#000000"}, ease: Sine.easeOut}))
 
 
 	controller.addScene([
@@ -43,7 +46,7 @@ $(document).ready(function($) {
 	
 	]);
 
-	// init controller
+	// init controller for imgSlider
 	var controller2 = new ScrollMagic({
 		container: "#imgBox",
 	});
@@ -55,7 +58,7 @@ $(document).ready(function($) {
 	var offsetHeight = [];
 	var imgSlider = [];
 
-	//pin other img
+	//pin other img when slidping to top of the imgBox
 	for(var i=1, l = img.length; i <=l; i++){
 		offsetHeight[i] = imgSize * i + durationHeight * i;
 		imgSlider[i] = new ScrollScene({offset: offsetHeight[i], duration: durationHeight})

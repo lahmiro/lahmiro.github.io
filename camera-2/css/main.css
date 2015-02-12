@@ -98,9 +98,12 @@ html, body, #timeline-container {
     min-height: 900px;
     overflow: hidden;
     background-color: #3498db;
-    overflow: hidden;
+    
 }
 
+body {
+    overflow: hidden;
+}
 
 #section2 {
     background: url('../img/bg.jpg') no-repeat center center;
@@ -165,11 +168,8 @@ path {
     z-index: 1000;
 }
 
-#imgBox::-webkit-scrollbar { width: 0 !important; }
-#imgBox { -ms-overflow-style: none; }
-
-#imgContainer img{
-    z-index: 0;
+#dot2012 {
+    position: absolute;
 }
 
 
