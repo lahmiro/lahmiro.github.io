@@ -34,7 +34,7 @@ $(document).ready(function($) {
 				//.setTween(TweenMax.to("#dot2012", 1, {y:800, svg:{fill: "#000000"}, ease: Sine.easeOut}));
 
 	var circleTween = new ScrollScene({triggerElement: ".img2012", duration: 3172})
-				.setTween(TweenMax.to("#dot2012", 5, {y:570, svg:{fill: "#000000"}, ease: Sine.easeOut}))
+				.setTween(TweenMax.to("#dot2012", 5, {y:596, ease: Sine.easeOut}));
 
 
 	controller.addScene([
