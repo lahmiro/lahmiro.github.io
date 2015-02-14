@@ -164,13 +164,74 @@ path {
     bottom: 0;
     right: 0;
     margin: 286px auto auto 128px;       
-   
     z-index: 1000;
 }
 
-#dot2012 {
-    position: absolute;
+
+body {
+    -webkit-perspective: 20000px;
 }
+
+#cubeContainer{
+    position: absolute;
+    width: 312px;
+    height: 30px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: 539px auto auto 128px; 
+    z-index: 1000;
+    text-align: center;
+    color: #000;
+    -webkit-transition: all 250ms ease;
+    transition: transform 250ms ease; /* Animate the transform properties */
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d; 
+}
+/* 
+
+.default-state, .active-state {
+    height: 34px;
+}
+
+.default-state {
+    -webkit-transform: translateZ(17px);
+    transform: translateZ(17px);
+    background: #000;
+}
+
+.flip-to-top, .active-state{
+    -webkit-transform: rotateX(90deg) translateZ(51px);
+    transform: rotateX(90deg) translateZ(51px);
+}
+
+.cube.flip-top-bop:hover{
+    -webkit-transform: rotateX(-89deg);
+    transform: rotateX(-89deg);
+}
+ */
+
+.flip, .flop {
+     height: 30px;
+     padding: 3px;
+}
+
+.flip {
+    -webkit-transform: translateZ(15px);
+    transform: translateZ(15px);
+    background: red;
+}
+
+.flop {
+    -webkit-transform: rotateX(-90deg) translateZ(-15px);
+    transform: rotateX(-90deg) translateZ(-15px);
+    background: white;
+}
+#cubeContainer:hover {
+    -webkit-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+} /* Text bleed at 90º */
 
 
 /* ==========================================================================

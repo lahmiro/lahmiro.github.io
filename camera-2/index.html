@@ -226,9 +226,9 @@
          <div id="imgContainer">
             <div class="img1"><a href="img/open.png" data-lightbox="imgSlider"> <img src="img/open.png"></a></div>
             <div class="img img2012"><a href="img/2012-1.png" data-lightbox="imgSlider"> <img src="img/2012-1.png"></a></div>
-            <div class="img"><a href="img/2012-2.png" data-lightbox="imgSlider" > <img src="img/2012-2.png"></a></div>
-            <div class="img"><a href="img/2012-3.png" data-lightbox="imgSlider"> <img src="img/2012-3.png"></a></div>
-            <div class="img"><a href="img/2012-4.png" data-lightbox="imgSlider"> <img src="img/2012-4.png"></a></div>
+            <div class="img img201202"><a href="img/2012-2.png" data-lightbox="imgSlider" > <img src="img/2012-2.png"></a></div>
+            <div class="img img201203"><a href="img/2012-3.png" data-lightbox="imgSlider"> <img src="img/2012-3.png"></a></div>
+            <div class="img img201204"><a href="img/2012-4.png" data-lightbox="imgSlider"> <img src="img/2012-4.png"></a></div>
             <div class="img img2013"><a href="img/2013-1.png" data-lightbox="imgSlider"> <img src="img/2013-1.png"></a></div>
             <div class="img"><a href="img/2013-2.png" data-lightbox="imgSlider"> <img src="img/2013-2.png"></a></div>
             <div class="img"><a href="img/2013-3.png" data-lightbox="imgSlider"> <img src="img/2013-3.png"></a></div>
@@ -240,7 +240,19 @@
             <div class="img endImg"><a href="img/end.png" data-lightbox="imgSlider"> <img src="img/end.png"></a></div>
           </div>
      </div>
-
+   <div id="cubeContainer">
+      <div class="flip">Flip</div>
+      <div class="flop">Flop</div>
+    </div>
+  <!--   <div class="cube flip-to-top">
+      <div class="default-state">
+          <span>Hover</span>
+      </div>
+      <div class="active-state">
+          <span>...and I flip</span>
+      </div>
+    </div>-->
+   
 
     </div>
     
@@ -248,33 +260,33 @@
               <div class="timelineSvg">
                             <svg id="timeline" height="600px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 100 616" enable-background="new 0 0 100 616" xml:space="preserve">
-                <g id="dot2015">
-                  <path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M55.9,606c0,3.8-3.1,6.9-6.9,6.9s-6.9-3.1-6.9-6.9
+                <g>
+                  <path class="dotPassing" id="dot2015" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M55.9,606c0,3.8-3.1,6.9-6.9,6.9s-6.9-3.1-6.9-6.9
                     s3.1-6.9,6.9-6.9S55.9,602.2,55.9,606z"/>
                 </g>
                 <g id="2014to2015">
                   <path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M49,416v183"/>
                 </g>
-                <g id="dot2014">
-                  <path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M55.9,408.7c0,3.8-3.1,6.9-6.9,6.9
+                <g>
+                  <path class="dotPassing" id="dot2014" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M55.9,408.7c0,3.8-3.1,6.9-6.9,6.9
                     s-6.9-3.1-6.9-6.9s3.1-6.9,6.9-6.9S55.9,404.9,55.9,408.7z"/>
                 </g>
                 <g id="2013to2014">
                   <path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M49,218v184"/>
                 </g>
-                <g id="dot2013">
-                  <path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M55.9,211.3c0,3.8-3.1,6.9-6.9,6.9
+                <g>
+                  <path class="dotPassing" id="dot2013" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M55.9,211.3c0,3.8-3.1,6.9-6.9,6.9
                     s-6.9-3.1-6.9-6.9s3.1-6.9,6.9-6.9S55.9,207.5,55.9,211.3z"/>
                 </g>
                 <g id="2012to2013">
                   <path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M49,21v183"/>
                 </g>
-                <g id="dot2012">
-                  <path fill= "white" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M55.9,14c0,3.8-3.1,6.9-6.9,6.9s-6.9-3.1-6.9-6.9
+                <g>
+                  <path id="dotMoving" fill= "white" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M55.9,14c0,3.8-3.1,6.9-6.9,6.9s-6.9-3.1-6.9-6.9
                     s3.1-6.9,6.9-6.9S55.9,10.2,55.9,14z"/>
                 </g>
-                <g id="dot2012-1">
-                  <path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M55.9,14c0,3.8-3.1,6.9-6.9,6.9s-6.9-3.1-6.9-6.9
+                <g>
+                  <path class="dotPassing" id="dot2012" fill= "white" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M55.9,14c0,3.8-3.1,6.9-6.9,6.9s-6.9-3.1-6.9-6.9
                     s3.1-6.9,6.9-6.9S55.9,10.2,55.9,14z"/>
                 </g>
                 </svg>
@@ -303,36 +315,16 @@
 </div>
 
 
-					
-
-
-
-
-
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script>
-<script src="js/skrollr.js"></script>
-<script>
-    var s = skrollr.init({
-        documentElement: $("#imgContainer")
-    });
-    function Skrollr(options) {
-    if(options.documentElement){
-        documentElement = document.getElementById(options.documentElement);   
-                    //////  Incase you want a container wrapper
-    }else{
-        documentElement = document.documentElement;}
-    }
-</script>
-<script src="js/imagesloaded.js"></script>
+
 <script src="js/TweenMax.min.js"></script>
 <script src="js/jquery.scrollmagic.min.js"></script>
 <script src="js/jquery.scrollmagic.debug.js"></script>
-<script src="js/_main.js"></script>
 <script src="js/walkway.js"></script>
-<script src="js/main.js"></script>
 <script src="js/lightbox.min.js"></script>
+
+<script src="js/main.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 </body>

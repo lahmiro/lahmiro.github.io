@@ -16,7 +16,6 @@ $(document).ready(function($) {
 	var pinCamera = new ScrollScene({offset: 0, duration: 900})
 					.setPin("#centerContainer");
 	//section1 bg fades to black, camera fades out at the same time
-	
 	var tl = new TimelineLite();
 	tl.to("#section1",2,{backgroundColor: "#000"});
 	//tl.to("#camera, #timelineContainer", 1, {opacity:0});
@@ -24,26 +23,53 @@ $(document).ready(function($) {
 	var bgGrad = new ScrollScene({triggerElement: ".endImg", triggerHook:"onEnter", duration: 300})
 				.setTween(tl);
 
-	var imgSlider = new ScrollScene({triggerElement: ".endImg", offset: 300, duration: 300})
-				.setTween(TweenMax.to("#imgBox", 1, {x:-200}));
-
+	//imgSlider fade out 
 	var picFadeOut = new ScrollScene({offset: 1250, duration: 300})
 					.setTween(TweenMax.to("#imgBox", 1, {opacity:0}));
+    
+    //moving dot 
+	var movingDot = new ScrollScene({triggerElement: ".img2012", duration: 3172})
+				.setTween(TweenMax.to("#dotMoving", 5, {y:596, ease:Sine.easeOut}));
 
-	//var circleTween = new ScrollScene({triggerElement: ".img2012", triggerHook: "onEnter", duration: 900})
-				//.setTween(TweenMax.to("#dot2012", 1, {y:800, svg:{fill: "#000000"}, ease: Sine.easeOut}));
+	//passing dot anim
+	/*
+	var dots = $(".dotPassing");
+	var tlDots = [];
+	for(var i=1, l =dots.length; i <=l; i++){
+		var dotPassing = $(".dotPassing:nth-child(i)"); //not working
+		tlDots[i] = new TimelineMax();
+		tlDots[i].to("dotPassing",0.3, {fill:"white", scale: 3, transformOrigin: "50% 50%", opacity: 0.2});
+		tlDots[i].to("dotPassing",0.2, {scale: 1, opacity:1});
+	} */
 
-	var circleTween = new ScrollScene({triggerElement: ".img2012", duration: 3172})
-				.setTween(TweenMax.to("#dot2012", 5, {y:596, ease: Sine.easeOut}));
+	//dots anim
+	//simply the code below
+	var tl3 = new TimelineMax();
+	tl3.to("#dot2013", 0.3, {fill:"white", scale: 3, transformOrigin: "50% 50%", opacity: 0.2});
+	tl3.to("#dot2013", 0.2, {scale: 1, opacity:1}); 
 
+	var tl4 = new TimelineMax();
+	tl4.to("#dot2014", 0.3, {fill:"white", scale: 3, transformOrigin: "50% 50%", opacity: 0.2});
+	tl4.to("#dot2014", 0.2, {scale: 1, opacity:1}); 
+
+
+	var passingDot2013 = new ScrollScene({triggerElement:".img2012", offset: 660, duration: 40})
+					.setTween(tl3);
+
+	var passingDot2014 = new ScrollScene({triggerElement:".img2012", offset: 1440, duration: 40})
+					.setTween(tl4);
+
+
+	//flipping cube
+	
 
 	controller.addScene([
 		pinCamera,
 		bgGrad,
-		imgSlider,
 		picFadeOut,
-		circleTween,
-	
+		movingDot,
+		passingDot2013,
+		passingDot2014,
 	]);
 
 	// init controller for imgSlider
@@ -75,6 +101,6 @@ $(document).ready(function($) {
 		imgSlider,
 	]);
 
-	circleTween.addIndicators();
+	//circleTween.addIndicators();
 	//bgLeftToRight.addIndicators();
 });	
