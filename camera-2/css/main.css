@@ -90,7 +90,8 @@ textarea {
 /*main CSS here*/
 
 html, body, #timeline-container {
-  height: 100%;
+    height: 100%;
+    
 }
 
 
@@ -172,7 +173,11 @@ body {
     -webkit-perspective: 20000px;
 }
 
-#cubeContainer{
+#centerContainer{
+     font-family: 'Open Sans', sans-serif;
+}
+
+#cube {
     position: absolute;
     width: 312px;
     height: 30px;
@@ -180,58 +185,53 @@ body {
     left: 0;
     bottom: 0;
     right: 0;
-    margin: 539px auto auto 128px; 
+    margin: 540px auto auto 128px; 
     z-index: 1000;
     text-align: center;
-    color: #000;
+    color: #FFF;
     -webkit-transition: all 250ms ease;
-    transition: transform 250ms ease; /* Animate the transform properties */
+    transition: all 250ms ease; /* Animate the transform properties */
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d; 
-}
-/* 
-
-.default-state, .active-state {
-    height: 34px;
+    transform-origin: 0 15px;
 }
 
-.default-state {
-    -webkit-transform: translateZ(17px);
-    transform: translateZ(17px);
-    background: #000;
+.textTransition {
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
 }
 
-.flip-to-top, .active-state{
-    -webkit-transform: rotateX(90deg) translateZ(51px);
-    transform: rotateX(90deg) translateZ(51px);
-}
-
-.cube.flip-top-bop:hover{
-    -webkit-transform: rotateX(-89deg);
-    transform: rotateX(-89deg);
-}
- */
-
-.flip, .flop {
+#cube div {
      height: 30px;
      padding: 3px;
 }
 
-.flip {
+.default, .flipToTop {
     -webkit-transform: translateZ(15px);
     transform: translateZ(15px);
-    background: red;
+    background: #3498db;
 }
 
-.flop {
-    -webkit-transform: rotateX(-90deg) translateZ(-15px);
-    transform: rotateX(-90deg) translateZ(-15px);
-    background: white;
+.active {
+    -webkit-transform: rotateX(-90deg) translateZ(-16px);
+    transform: rotateX(-90deg) translateZ(-16px);
+    border: 2px solid white;
 }
-#cubeContainer:hover {
-    -webkit-transform: rotateX(90deg);
-    transform: rotateX(90deg);
-} /* Text bleed at 90º */
+
+.flipTOBottom {
+    -webkit-transform: rotateX(90deg) translateZ(-15px);
+    transform: rotateX(90deg) translateZ(-15px);
+}
+
+
+.btn:hover {
+    stroke-width: 1.3;
+}
+
+
+.btn path, #arrowsBtn path, #LvBtn path, #rotateBtn path{
+    fill: #3498db;
+}
 
 
 /* ==========================================================================
