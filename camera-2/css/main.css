@@ -118,10 +118,12 @@ body {
 #centerContainer {
     width: 800px;
     height: 800px;
+    margin: auto;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -400px 0 0 -400px;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
 }
 
 #cameraContainer {
@@ -168,7 +170,7 @@ path {
     left: 0;
     bottom: 0;
     right: 0;
-    margin: 286px auto auto 128px;       
+    margin: 286px auto auto 110px;       
     z-index: 1000;
 }
 

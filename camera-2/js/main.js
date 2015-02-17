@@ -31,8 +31,8 @@ $(document).ready(function($) {
 
 	var controller = new ScrollMagic();
 	//pin camera and timeline
-	var pinCamera = new ScrollScene({offset: 0, duration: 900})
-					.setPin("#centerContainer");
+	//var pinCamera = new ScrollScene({offset: 0, duration: 900})
+					//.setPin("#centerContainer");
 	//section1 bg fades to black, camera fades out at the same time
 	var tl = new TimelineLite();
 	tl.to("#section1",2,{backgroundColor: "#000"});
@@ -46,7 +46,7 @@ $(document).ready(function($) {
 					.setTween(TweenMax.to("#imgBox", 1, {opacity:0}));
     
     //moving dot 
-	var movingDot = new ScrollScene({triggerElement: ".img2012", duration: 3172})
+	var movingDot = new ScrollScene({triggerElement: ".img2012", duration: 3170})
 				.setTween(TweenMax.to("#dotMoving", 5, {y:596, ease:Sine.easeOut}));
 
 	//passing dot anim
@@ -114,7 +114,7 @@ $(document).ready(function($) {
 			.setTween(TweenMax.to("#cube", 0.4, {rotationX:-10, transformOrigin: "bottom center", ease: Power1.easeOut}));
 
 	controller.addScene([
-		pinCamera,
+		//pinCamera,
 		bgGrad,
 		picFadeOut,
 		movingDot,
@@ -178,20 +178,20 @@ $(document).ready(function($) {
 	};
 
 	//arrow key anim when hover
-	var rotateStill = new TweenMax.to("#arrowsBtn", 1, {strokeWidth: "1", rotation: "+=0", ease: Bounce.easeOut, transformOrigin:"50% 43%"});
+	var rotateStill = new TweenMax.to("#arrowsBtn", 1, {rotation: "+=0", ease: Bounce.easeOut, transformOrigin:"50% 43%"});
 	$(".clickItems").hover(
 		function(){
 			if(($(this).is("#downArrow")) || ($(this).is("#centerArrow"))){
-				TweenMax.to("#arrowsBtn", 1, {strokeWidth: "1.3", rotation: "0", ease: Bounce.easeOut, transformOrigin:"50% 43%"});
+				TweenMax.to("#arrowsBtn", 1, {rotation: "0", ease: Bounce.easeOut, transformOrigin:"50% 43%"});
 			}
 			if($(this).is("#upArrow")){
-				TweenMax.to("#arrowsBtn", 1, {strokeWidth: "1.3", rotation: "-180", ease: Bounce.easeOut, transformOrigin:"50% 43%"});
+				TweenMax.to("#arrowsBtn", 1, {rotation: "-180", ease: Bounce.easeOut, transformOrigin:"50% 43%"});
 			}
 			if($(this).is("#leftArrow")){
-				TweenMax.to("#arrowsBtn", 0.5, {strokeWidth: "1.3", rotation: "90", ease: Bounce.easeOut, transformOrigin:"50% 43%"});
+				TweenMax.to("#arrowsBtn", 0.5, {rotation: "90", ease: Bounce.easeOut, transformOrigin:"50% 43%"});
 			}
 			if($(this).is("#rightArrow")){
-				TweenMax.to("#arrowsBtn", 0.5, {strokeWidth: "1.3", rotation: "-90", ease: Bounce.easeOut, transformOrigin:"50% 43%"});
+				TweenMax.to("#arrowsBtn", 0.5, {rotation: "-90", ease: Bounce.easeOut, transformOrigin:"50% 43%"});
 			}
 		},function(){
 				rotateStill;
