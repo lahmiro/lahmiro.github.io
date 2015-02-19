@@ -10,12 +10,10 @@ var svg = new Walkway({
 var svg2 = new Walkway({
   selector: '#timeline',
   duration: '1000',
-  // can pass in a function or a string like 'easeOutQuint'
   easing: function (t) {
     return  t<.5 ? 2*t*t : -1+(4-2*t)*t;
   }
 });
-
 
 svg.draw();
 svg2.draw();
@@ -30,13 +28,10 @@ function popup(url) {
 $(document).ready(function($) {
 
 	var controller = new ScrollMagic();
-	//pin camera and timeline
-	//var pinCamera = new ScrollScene({offset: 0, duration: 900})
-					//.setPin("#centerContainer");
-	//section1 bg fades to black, camera fades out at the same time
+
+	//section1 bg change colors overtime: need to be fixed
 	var tl = new TimelineLite();
 	tl.to("#section1",2,{backgroundColor: "#000"});
-	//tl.to("#camera, #timelineContainer", 1, {opacity:0});
 	
 	var bgGrad = new ScrollScene({triggerElement: ".endImg", triggerHook:"onEnter", duration: 300})
 				.setTween(tl);
@@ -62,30 +57,7 @@ $(document).ready(function($) {
 	var passingDot2014 = new ScrollScene({triggerElement:".img2012", offset: 1440, duration: 40})
 					.setTween(tl4);
 
-
-	//flipping cube
-	/* 
-		flip everytime an image enters
-		change text (store in an array)
-		an array of scroll scene
-	*/
-	//hover to change text
-
-	/*
-	$('.default').hover(
-	    function() {
-	        var $this = $(this); 
-	        $this.data('initialText', $this.text());
-	        $this.text("I'm replaced!").addClass("textTransition");
-	    },
-	    function() {
-	        var $this = $(this); 
-	        $this.text($this.data('initialText'));
-	    }
-	);
-
-*/
-
+	//testing: need to be fixed later
 	function changeCaption(){
 		var originText = $(".default");
 		originText.data('initalText', originText.text());
