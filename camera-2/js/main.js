@@ -49,17 +49,6 @@ $(document).ready(function($) {
 	var movingDot = new ScrollScene({triggerElement: ".img2012", duration: 3170})
 				.setTween(TweenMax.to("#dotMoving", 5, {y:596, ease:Sine.easeOut}));
 
-	//passing dot anim
-	/*
-	var dots = $(".dotPassing");
-	var tlDots = [];
-	for(var i=1, l =dots.length; i <=l; i++){
-		var dotPassing = $(".dotPassing:nth-child(i)"); //not working
-		tlDots[i] = new TimelineMax();
-		tlDots[i].to("dotPassing",0.3, {fill:"white", scale: 3, transformOrigin: "50% 50%", opacity: 0.2});
-		tlDots[i].to("dotPassing",0.2, {scale: 1, opacity:1});
-	} */
-
 	//dots anim
 	//simply the code below
 	var tl3 = new TimelineMax();
