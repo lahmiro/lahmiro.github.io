@@ -89,61 +89,55 @@ textarea {
    ========================================================================== */
 /*main CSS here*/
 
-html, body, #timeline-container {
+html, body{
     height: 100%;
     
 }
 
-
 #section1{
-    min-height: 900px;
+    height: 100vh;
     overflow: hidden;
     background-color: #3498db;
     position: relative;
 }
 
-body {
-    overflow: hidden;
-}
-
-#section2 {
-    background: url('../img/bg.jpg') no-repeat center center;
-     min-height: 900px;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 /* how to vertical align this item */
 #centerContainer {
-    width: 800px;
-    height: 800px;
+    width: 804px;
+    height: 620px;
     margin: auto;
     position: absolute;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    left: 0;
-}
-
-#cameraContainer {
-       position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -310px 0 0 -402px;
+    border: 1px solid white;
+    font-family: 'Open Sans', sans-serif;
 }
 
 #timelineContainer {
-    position: relative;
+    position: absolute;
     width: 100px;
+    top: 0;
+    bottom: 0;
+    right: 0;
     float: right;
     color: white;
-    margin-top: 5px;
+}
+
+#imgBox {
+    position: absolute;
+    border: 2px solid white;
+    width: 312px;
+    height: 248px;
+    top: 66.5%;
+    left: 34%;
+    margin: -124px 0 0 -160px;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 path {
     stroke: white;
-}
-
-#section-2 {
-    height: 500px;
 }
 
 #timelineContainer div {
@@ -159,29 +153,12 @@ path {
     padding-bottom: 171px;
 }
 
-#imgBox {
-    position: absolute;
-    border: 2px solid white;
-    max-width: 312px;
-    max-height: 248px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    margin: 286px auto auto 110px;       
-    z-index: 1000;
-}
 
 
 body {
     -webkit-perspective: 20000px;
 }
 
-#centerContainer{
-     font-family: 'Open Sans', sans-serif;
-}
 
 #cube {
     position: absolute;
