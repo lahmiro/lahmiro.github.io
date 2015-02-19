@@ -110,7 +110,6 @@ html, body{
     top: 50%;
     left: 50%;
     margin: -310px 0 0 -402px;
-    border: 1px solid white;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -154,7 +153,6 @@ path {
 }
 
 
-
 body {
     -webkit-perspective: 20000px;
 }
@@ -164,12 +162,9 @@ body {
     position: absolute;
     width: 312px;
     height: 30px;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    margin: 540px auto auto 128px; 
-    z-index: 1000;
+    top: 80%;
+    left: 34%;
+    margin: 45px 0 0 -160px;
     text-align: center;
     color: #FFF;
     -webkit-transition: all 250ms ease;
