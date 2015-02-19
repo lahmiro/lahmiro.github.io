@@ -91,12 +91,11 @@ textarea {
 
 html, body{
     height: 100%;
-    
+    overflow: hidden;
 }
 
 #section1{
     height: 100vh;
-    overflow: hidden;
     background-color: #3498db;
     position: relative;
 }
