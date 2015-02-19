@@ -29,12 +29,7 @@ $(document).ready(function($) {
 
 	var controller = new ScrollMagic();
 
-	//section1 bg change colors overtime: need to be fixed
-	var tl = new TimelineLite();
-	tl.to("#section1",2,{backgroundColor: "#000"});
-	
-	var bgGrad = new ScrollScene({triggerElement: ".endImg", triggerHook:"onEnter", duration: 300})
-				.setTween(tl);
+
 
     //moving dot 
 	var movingDot = new ScrollScene({triggerElement: ".img2012", duration: 3170})
@@ -71,8 +66,6 @@ $(document).ready(function($) {
 			.setTween(TweenMax.to("#cube", 0.4, {rotationX:-10, transformOrigin: "bottom center", ease: Power1.easeOut}));
 
 	controller.addScene([
-		//pinCamera,
-		bgGrad,
 		movingDot,
 		passingDot2013,
 		passingDot2014,
