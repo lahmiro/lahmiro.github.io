@@ -130,7 +130,7 @@ $(document).ready(function($) {
 	});
 
 	//offset: picSize * (picNo.-1) + (picNo.-1) *  duration  348, 696
-	var imgSize = 244;
+	var imgSize = 248;
 	var durationHeight = 0;
 	var img = $(".img");
 	var offsetHeight = [];
