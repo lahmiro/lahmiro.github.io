@@ -41,10 +41,6 @@ $(document).ready(function($) {
 	var bgGrad = new ScrollScene({triggerElement: ".endImg", triggerHook:"onEnter", duration: 300})
 				.setTween(tl);
 
-	//imgSlider fade out 
-	var picFadeOut = new ScrollScene({offset: 1250, duration: 300})
-					.setTween(TweenMax.to("#imgBox", 1, {opacity:0}));
-    
     //moving dot 
 	var movingDot = new ScrollScene({triggerElement: ".img2012", duration: 3170})
 				.setTween(TweenMax.to("#dotMoving", 5, {y:596, ease:Sine.easeOut}));
@@ -105,7 +101,6 @@ $(document).ready(function($) {
 	controller.addScene([
 		//pinCamera,
 		bgGrad,
-		picFadeOut,
 		movingDot,
 		passingDot2013,
 		passingDot2014,
