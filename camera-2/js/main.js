@@ -119,7 +119,7 @@ $(document).ready(function($) {
 	});
 
 	//offset: picSize * (picNo.-1) + (picNo.-1) *  duration  348, 696
-	var imgSize = 248;
+	var imgHeight = 244;
 	var durationHeight = 0;
 	var img = $(".img");
 	var offsetHeight = [];
@@ -127,7 +127,7 @@ $(document).ready(function($) {
 
 	//pin other img when slidping to top of the imgBox
 	for(var i=1, l = img.length; i <=l; i++){
-		offsetHeight[i] = imgSize * i + durationHeight * i;
+		offsetHeight[i] = imgHeight * i + durationHeight * i;
 		imgSlider[i] = new ScrollScene({offset: offsetHeight[i], duration: durationHeight})
 					.setTween(TweenLite.to(img, 2, {ease: Power1.easeOut}))
 					.setPin(img[i-1]);
