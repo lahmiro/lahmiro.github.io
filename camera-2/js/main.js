@@ -76,7 +76,6 @@ $(document).ready(function($) {
 	// init controller for imgSlider
 	var controller2 = new ScrollMagic({
 		container: "#imgBox",
-		reverse: true,
 	});
 
 	//offset: picSize * (picNo.-1) + (picNo.-1) *  duration  348, 696
