@@ -124,7 +124,7 @@ $(document).ready(function($) {
 	for(var i=1, l = img.length; i <=l; i++){
 		offsetHeight[i] = imgHeight * i + durationHeight * i;
 		imgSlider[i] = new ScrollScene({offset: offsetHeight[i], duration: durationHeight})
-					.setTween(TweenLite.to(img, 2, {ease: Power1.easeOut}))
+					.setTween(TweenLite.to(img, 1, {ease: Power1.easeOut}))
 					.setPin(img[i-1]);
 	}
 
