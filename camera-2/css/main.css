@@ -140,6 +140,10 @@ html, body{
     height: 100%;
 }
 
+#imgContainer div{
+    height: 100%;
+}
+
 path {
     stroke: white;
 }
