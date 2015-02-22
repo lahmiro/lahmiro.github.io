@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Clean Blog - Sample Post</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                  
+                    <li>
+                        <a href="post.html">Dropbox Case Study</a>
+                    </li>
+                   
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url('img/post-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>Dropbox Case Study</h1>
+                        <span class="meta">Posted by Xinyi Chen</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <h2 class="section-heading">Intro</h2>
+                    <p>Dropbox is a cloud storage service using proprietary protocols and making the share and exchange of files and folders more convenient and efficiently.</p>
+
+                    <h2 class="section-heading">Servers</h2>
+                    <p>Dropbox depends on <a href="http://aws.amazon.com/ec2/">Amazon EC2</a> and <a href="http://aws.amazon.com/s3/">S3</a> to store files, including direct links, client storage, back-traces, web storage and API storage. It uses <a href="http://en.wikipedia.org/wiki/Go_(programming_language)">Go</a> as its backend infrastructure and also relies on the <a href="http://en.wikipedia.org/wiki/Rsync">librsync</a> binary-delta library. For desktop client, it utilizes python GUI toolkits such as <a href="http://en.wikipedia.org/wiki/WxWidgets">wxWidgets</a>and <a href="http://en.wikipedia.org/wiki/Cocoa_(API)">Cocoa</a>. Dropbox’s full browser-side codebase is written in <a href="http://en.wikipedia.org/wiki/CoffeeScript">CoffeScript</a>. <a href="#1">[1]</a></p>
+
+                    <h2 class="section-heading">Network Flow</h2>
+                    This graphic shows teh network flow of Dropbox. <a href="#2">[2]</a>
+                    <img src="img/network-flow1.png" alt="">
+                    <p>A study conducted by Idilio Drago and his colleague<a href="#5">[5]</a> revealed the interactions bewteen a dropbox client and the offical servers using <a href="http://wiki.squid-cache.org/Features/SslBump">SSLBump</a> running on <a href="http://www.squid-cache.org/">squid</a>.</p>
+                    <img src="img/network-flow2.png" alt="" style="width: 600px">
+
+                    <h2 class="section-heading">A Brief History<a href="#3">[3]</a></h2>
+                    <p>Dropbox started with 2 employees with 0 user in mid 2007.</p>
+                    <img src="img/mid2007.png" alt="">
+                    <p>In late 2007, Dropbox increased its employees to 3 and started using S3 and MySQL.</p>
+                    <img src="img/late2007.png" alt="">
+                    <p>In early 2008, Dropbox split its server into 3 servers: noteserver, metaserver (storing meta data) and blockserver (hosting files). At that time it had about 50k users. </p>
+                    <img src="img/early2008.png" alt="">
+                    <p>In late 2008, Dropbox added more meta and block servers to server for the increasing amount of users (100k at that time). It also added Memecache to the database to avoid database scaling issues. Load balancing method was added to improve the system performance.</p>
+                    <img src="img/late2008.png" alt="">
+                    <p>In early 2012, users increased to 50M. Dropbox added more DBs and the use of load balancing became more ubiquitous.</p>
+                    <img src="img/early2012.png" alt="">
+                    <p>In 2014, Dropbox developed its users to 200M. There were 1 billion of files sync a day. </p>
+                    <img src="img/2014.png" alt="">
+
+                    <h2 class="section-heading">Security</h2>
+                    <p>Dropbox uses SSL protocol and AES-256 to encrypt data. More specifically, the latter is used for web connections and connections with desktop applications. Diffie-Hellman key exchange24, authenticated with RSA, is used as a password negotiation algorithm. But according a research by Jesús Díaz Vico, the data is not secured in every mobile device.  “Not every mobile client is compatible with the transmission of ciphered data, so there could be instances in which certain information is not encrypted before it is sent.”<a href="#4">[4]</a>.  Moreover, Dropbox receives passwords from users through TLS without processing a hash function or similar, which could result in the leak of users’ information by attackers. The server also has access to the passwords.</p>
+
+                    <h2 class="section-heading">Other Tools:</h2>
+                    Information from Wikipedia<a href="#1">[1]</a>:
+                    <ul>
+                         <li>"Dropbox developed a technology called <a href="https://www.dropbox.com/en/help/137">LAN sync,</a> which allows computers on a local area network to securely download files locally from each other instead of always hitting the central servers."</li>
+                         <li>"An open source tool called <a href="http://en.wikipedia.org/wiki/Dropship_(software)">Dropship</a> provided unauthenticated access to Dropbox-hosted files by using the DropboxAPI to access files by their hash."</li>
+                     </ul> 
+
+
+                     <h2 class="section-heading">References</h2>
+                     <p>[1]<a id="1" href="http://en.wikipedia.org/wiki/Dropbox_%28service%29"> Dropbox (service), Wikipedia</a></p>
+                     <p>[2]<a id="2" href="http://www.slideshare.net/JulieKim1/inside-dropbox?qid=c02fac07-e3eb-4b4f-9230-2703e83f4fc7&v=qf1&b=&from_search=4">Inside dropbox</a></p>
+                     <p>[3]<a id="3" href="http://www.slideshare.net/ChiaraCilardo/dropbox-architecture-and-business-prospective?qid=11b9e350-58b5-4a6c-bdad-7635bfb48985&v=default&b=&from_search=8">Dropbox - Architecture and Business Prospective</a></p>
+                     <p>[4]<a id="4" href="https://www.incibe.es/extfrontinteco/img/File/intecocert/EstudiosInformes/incibe_security_storage_dropbox_mega.pdf">Security in cloud storage services, analysis of dropbox and Mega</a></p>
+                     <p>[5] <a id="5" href="http://perso.uclouvain.be/olivier.bonaventure/blog/html/2012/09/14/understanding_the_dropbox_protocol_and_quantifying_the_usage_of_cloud_storage_services.html#id1">Understanding the dropbox protocol and quantifying the usage of cloud storage services</a></p>
+                     
+                  
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; Your Website 2014</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
