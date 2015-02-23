@@ -206,7 +206,6 @@ body {
 .active {
     -webkit-transform: rotateX(-90deg) translateZ(-16px);
     transform: rotateX(-90deg) translateZ(-16px);
-    border: 2px solid white;
 }
 
 .flipTOBottom {

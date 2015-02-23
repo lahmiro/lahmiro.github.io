@@ -1,4 +1,8 @@
-var svg = new Walkway({
+
+
+$(document).ready(function($) {
+
+	var svg = new Walkway({
   selector: '#camera',
   duration: '2500',
   // can pass in a function or a string like 'easeOutQuint'
@@ -25,7 +29,6 @@ function popup(url) {
 }
 
 
-$(document).ready(function($) {
 
 	var controller = new ScrollMagic();
 
@@ -53,24 +56,16 @@ $(document).ready(function($) {
 					.setTween(tl4);
 
 	//testing: need to be fixed later
-	function changeCaption(){
-		var originText = $(".default");
-		originText.data('initalText', originText.text());
-		originText.text("Replaced").addClass("textTransition");
-	}
 
-	var flip01 = new ScrollScene({triggerElement:"#imgContainer", offset: 180, duration: 30})
-			.setTween(TweenMax.to("#cube", 0.4, {rotationX:90, ease: Power1.easeOut,  onComplete: changeCaption}));
+	var flip01 = new ScrollScene({triggerElement:"#imgContainer", offset: 200, duration: 50})
+			.setTween(TweenMax.to("#cube", 1, {rotationX:90, ease: Power1.easeOut}));
 
-	var flip02 = new ScrollScene({triggerElement:"#imgContainer", offset: 302, duration: 30})
-			.setTween(TweenMax.to("#cube", 0.4, {rotationX:-10, transformOrigin: "bottom center", ease: Power1.easeOut}));
-
+	
 	controller.addScene([
 		movingDot,
 		passingDot2013,
 		passingDot2014,
 		flip01,
-		flip02,
 	]);
 
 	// init controller for imgSlider
@@ -105,18 +100,31 @@ $(document).ready(function($) {
 	//circleTween.addIndicators();
 	//bgLeftToRight.addIndicators();
 
+	//opening aminations
 	//arrows anim at the start
 	var btn = $(".clickItems");
 	var btnTl = [];
 	for(var i=0, l=btn.length; i<l; i++){
 		btnTl[i] = new TimelineMax();
-		btnTl[i].to(btn[i],0.1,{y:2, ease: Power0.easeNone, delay:2.5});
-		btnTl[i].to(btn[i], 0.1,{y:0, strokeWidth: "1.5", ease: Power0.easeNone});
+		btnTl[i].to(btn[i],0.2,{y:2, strokeWidth:"1.5", ease: Power0.easeNone, delay:2.5});
+		btnTl[i].to(btn[i], 0.1,{y:0, strokeWidth: "1", ease: Power0.easeNone});
+		btnTl[i].to(btn[i],0.2,{y:2, strokeWidth:"1.5", ease: Power0.easeNone});
+		btnTl[i].to(btn[i],0.1,{y:0, strokeWidth:"1", ease: Power0.easeNone});
 		btnTl[i].to(btn[i],0.1,{strokeWidth:"1", ease: Power0.easeNone});
 	}
+	//gear rotation
+	var gearRotate = TweenMax.to("#AEAFBtn", 3, {rotation: "60", ease:Power1.easeOut, transformOrigin: "50% 50%", delay:2.5});
 
-	//other btns
-	
+	//left btns rotation
+	var leftBtnRotate = TweenMax.staggerTo(".rotateBtn", 3, {rotation: "360",  ease: Bounce.easeOut, transformOrigin: "50% 50%", delay:2.5}, 0.3);
+
+	//lvBtn rotate
+	var LvBtnRotate = TweenMax.to("#LvBtn", 1, {rotation: "60", ease: Bounce.easeOut, transformOrigin:"40% 48%", delay: 2.5});
+
+	//arrowsBtn rotate
+	var arrowsBtnRotate = new TimelineMax();
+	arrowsBtnRotate.from("#arrowsBtn", 1, {rotation: "-90", ease: Bounce.easeOut, transformOrigin:"50% 43%", delay: 2.5});
+	arrowsBtnRotate.to("#arrowsBtn", 2, {rotation: "0", ease: Bounce.easeOut, transformOrigin:"50% 43%"});
 
 	//click arrows anim
 	$(".clickItems").click(clickHandler);
