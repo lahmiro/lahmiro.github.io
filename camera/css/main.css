@@ -206,9 +206,12 @@ body {
 .active {
     -webkit-transform: rotateX(-90deg) translateZ(-16px);
     transform: rotateX(-90deg) translateZ(-16px);
+
 }
 
 .active span {
+    background: #3498db;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
