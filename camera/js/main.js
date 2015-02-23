@@ -56,7 +56,6 @@ function popup(url) {
 					.setTween(tl4);
 
 	//testing: need to be fixed later
-
 	var flip01 = new ScrollScene({triggerElement:"#imgContainer", offset: 200, duration: 50})
 			.setTween(TweenMax.to("#cube", 1, {rotationX:90, ease: Power1.easeOut}));
 
