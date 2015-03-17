@@ -30,13 +30,7 @@ function popup(url) {
 
 //set up iScroll 
 
-var myScroll;
 
-function loaded () {
-	myScroll = new IScroll('#imgBox', { mouseWheel: true });
-}
-
-document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 
 
 	//init scrollMagic controller
