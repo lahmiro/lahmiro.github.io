@@ -28,11 +28,17 @@ function popup(url) {
 	return false;
 }
 
+var myScroll;
+
+function loaded () {
+	myScroll = new IScroll('#imgBox', { mouseWheel: true });
+}
+
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
 
 
 	var controller = new ScrollMagic();
-
-
 
     //moving dot 
 	var movingDot = new ScrollScene({triggerElement: ".img2012", duration: 3170})

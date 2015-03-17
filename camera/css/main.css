@@ -130,8 +130,7 @@ html, body{
     top: 66.5%;
     left: 34%;
     margin: -124px 0 0 -160px;
-    overflow-y: scroll;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 #imgContainer {
