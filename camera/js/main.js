@@ -32,7 +32,7 @@ function popup(url) {
 
 var myScroll;
 
-function loaded () {
+function loaded(){
 	myScroll = new IScroll('#imgBox', { mouseWheel: true });
 }
 
