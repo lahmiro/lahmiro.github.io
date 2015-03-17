@@ -38,9 +38,7 @@ function loaded () {
 
 document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 
-$(window).load(function() {
-  loaded();
-});
+
 	//init scrollMagic controller
 	var controller = new ScrollMagic();
 
