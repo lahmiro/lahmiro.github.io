@@ -138,14 +138,21 @@ html, body{
     overflow-x: hidden;
 }
 
+#imgBox::-webkit-scrollbar {
+    display: none;
+}
+
 #imgContainer {
     width: 100%;
     height: 100%;
 }
 
+/* 
 #imgContainer:-webkit-scrollbar {
     width: 0 !important;
 }
+ */
+
 
 #imgContainer div{
     height: 100%;
