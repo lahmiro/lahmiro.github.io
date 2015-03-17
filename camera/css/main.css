@@ -130,7 +130,9 @@ html, body{
     top: 66.5%;
     left: 34%;
     margin: -124px 0 0 -160px;
-
+    -ms-overflow-style: none; /* for IE 10+ */
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 #imgContainer {
