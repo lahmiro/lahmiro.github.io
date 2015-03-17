@@ -28,6 +28,7 @@ function popup(url) {
 	return false;
 }
 
+//set up iScroll 
 var myScroll;
 
 function loaded () {
@@ -37,7 +38,7 @@ function loaded () {
 document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 
 
-
+	//init scrollMagic controller
 	var controller = new ScrollMagic();
 
     //moving dot 
