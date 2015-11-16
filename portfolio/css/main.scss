@@ -32,7 +32,7 @@ $pale-sky: #6b717f;
 body {
 	font-family: 'Playfair Display', serif;
 	color: darken($pale-sky, 10);
-	
+	background-image: url('../img/lightpaperfibers.png');
 }
 
 html, body{
@@ -47,30 +47,46 @@ html, body{
 }
 
 section {
-	height:100%;
+	height: 100%;
 	width: 100%;
 	overflow: hidden;
-	//border: 1px solid red;
 }
 
-#about, #skills{
+#about{
 	height: 100%;
 	width: 100%;
 	position: absolute;
 	top:0;
 	right: 0;
-	transform: translateY(100%);
-	//transition: all 1s ease-in;	
 }
 
+#about{
+	background-color: $yellow;
+	background-image: url('../img/yellow-bg.png');
+	transform: translateY(100%);
+}
 
+#skills{
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+#portfolio {
+	border: 1px solid red;
+}
 
 footer {
 	text-align: center;
 }
 
+.title{
+	font-weight: 300;
+	font-size: 3.5em;
+}
+
 /* snow mountain img */
-.snow-mountain, .blue-circle-container, .center-container{
+.snow-mountain, .blue-circle-container, .yellow-circle-container, .center-container{
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -86,7 +102,7 @@ footer {
     top: 38%;
 }
 
-#blue-circle {
+#blue-circle, #yellow-circle {
 	width: 300px;
 	height: 300px;
 }
@@ -284,29 +300,24 @@ $easing: cubic-bezier(.6, .05, .28, .91);
 }
 
 //about page
-#about {
-	background-color: $yellow;
-}
 
 .tilt-mountain{
 	img{
 		position: absolute;
-		width:100%;
+		width: 100%;
 		max-height: 600px;
-		bottom:0
+		bottom: 20px;
 	}
 }
+
 .intro{
 	position: absolute;
 	top: 12%;
-	left: -2%;
 	padding: 1.5em;
 	max-width: 600px;
 	max-height: 380px;
 	box-sizing: border-box;
 	.intro-title{
-		font-weight: 300;
-		font-size: 3.5em;
 		display: inline-block;
 		max-width: 220px;
 		max-height:72px;
@@ -345,12 +356,176 @@ body{
 .flip-front{
 	transform: translateZ(50px);
 	border: 3px solid #fff;
-	margin-bottom: .2em;
+	&.about-me{
+		margin-bottom: .2em;
+	}
 }
 
 .flip-back{
 	transform: rotateX(-90deg) translateZ(-50px);
 }
 
+//skills page
+//drops/bottles container
+.bottles-container{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: table;
+	margin: 0 auto;
+}
+//single drop/bottle container
+.bottle{
+	position: relative;
+	display: table-cell;
+	width: 120px;
+	height: 180px;
+	margin: 4em;
+	&:first-child{
+		margin-left: 0;
+	}
+	&:last-child{
+		margin-right: 0;
+	}
+}
 
 
+//drop path
+.drop{
+	fill: $yellow;
+}
+
+.circle-drop-container{
+	z-index: 7;
+	width: 30px;
+	height: 30px;
+	position: relative;
+	//drop position
+	top: 130px;
+	left:50%;
+	transform: translateX(-50%);
+}
+
+.circle-drop{
+	width: 100%;
+	height: 100%;
+}
+
+//bottle
+@keyframes spin{
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.bottle{
+	width: 120px;
+	height: 180px;
+}
+
+//bottle styless
+.fu-progress{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-bottom: 1em;
+  width: 100%;
+  height: 100%;
+  border: 5px solid $blue;
+  .fu-inner{
+    position: absolute;
+    overflow: hidden;
+    bottom: 0;
+    z-index: 2;
+    width: 110px;
+    height: 170px;
+    border: 5px solid #ffffff;
+    background: #fff;
+    .water{
+      position: absolute;
+      z-index:1;
+      background: $blue;
+      width: 200%;
+      height: 140%;
+      //water height, less - higher
+      top: 90%;
+      left: -50%;
+      border: 1px solid transparent;
+      border-radius: 40% !important;
+      
+      transform: translateZ(0);
+      -webkit-transform: translateZ(0);
+      transition: all 1s ease !important;
+      -webkit-transition: all 1s ease !important;
+      animation-duration: 10s;
+      animation-name: spin;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+    .glare{
+      position: absolute;
+      top: -120%;
+      left: -120%;
+      z-index: 5;
+      width: 200%;
+      height: 200%;
+      transform: rotate(45deg);
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 20%;
+    }
+    .fu-text {
+      z-index: 6;
+      position: absolute;
+      color: #fff;
+      top: 40%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+  }
+}
+
+.table-container{
+	height: 100px;
+	width: 83%;
+	top: 62%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	-webkit-perspective: 300px; 
+    perspective: 300px;
+}
+
+.table{
+	border: 3px solid $yellow;
+	width: 100%;
+	height: 100%;
+	-webkit-transform: rotateX(45deg); 
+    transform: rotateX(45deg);
+}
+
+.skills-title{
+	top: 19%;
+	left: 8%;
+	position: absolute;
+}
+
+
+svg#rects-04{
+	position: relative;
+	width: 55px;
+	margin-left: -10px;
+	rect{
+		stroke: $blue;
+	}
+}
