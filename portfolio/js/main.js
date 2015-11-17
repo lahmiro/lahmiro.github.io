@@ -61,6 +61,19 @@ $(function(){
         }
     });
 
+	//onEnter controller
+	var ctrl2 = new ScrollMagic.Controller({
+		globalSceneOptions: {
+            triggerHook: 'onEnter'
+        }
+	});
+
+	//onCenter controller
+	var ctrl3 = new ScrollMagic.Controller({
+		globalSceneOptions: {
+            triggerHook: 'onCenter'
+        }
+	});
 	
 	//home page anim when pinnning
 	var homeAni = new TimelineMax()
@@ -84,19 +97,7 @@ $(function(){
 		.addTo(ctrl)
 		.addIndicators(); 
 
-	//onEnter controller
-	var ctrl2 = new ScrollMagic.Controller({
-		globalSceneOptions: {
-            triggerHook: 'onEnter'
-        }
-	});
-
-	//onCenter controller
-	var ctrl2 = new ScrollMagic.Controller({
-		globalSceneOptions: {
-            triggerHook: 'onCenter'
-        }
-	});
+	
 
 	//about page text fades out
 	var fadeOut = new TimelineMax()
@@ -128,22 +129,24 @@ $(function(){
 		dropAnim.set(drops, {width: 100, height:100, left: "50%", xPercent: "-50%", y: -0.72*vh})
 				.to(drops, 1, {y: 0, width: 30, height:30, left: "70%", xPercent: "-50%", ease: Power1.easeIn}, 0)
 				.to(dropSvg, 0.5, {fill:"#6dcff6"}, 0.5)
-				.add("rect")
+				.from(skillsTitle, 1, {y:-50, opacity:0, ease: Power1.easeNone}, 0)
 				.to(dropSvg, 0.5, {attr: {d: changedDropPath}}, 0.5)
 				.to(dropSvg, 1, {opacity:0})
 				.to(water, 0.8, {top: "5%", ease: Power1.easeIn}, 0.3)
-				.from(bottleText, 0.5, {opacity: 0, y: -10, ease: Elastic.easeOut.config(1, 0.3)}, 1)
-				.from(skillsTitle, 1, {y:-50, opacity:0, ease: Power1.easeIn}, 0);
+				.from(bottleText, 0.5, {opacity: 0, y: -10, ease: Elastic.easeOut.config(1, 0.3)}, 1);
+				
 		
-	
 
 	new ScrollMagic.Scene({
 	  		triggerElement: "#skills",
-	  		duration: '100%'
+	  		duration: '50%'
 		})
 		.setTween(dropAnim)
-		.addTo(ctrl2)
+		.addTo(ctrl3)
 		.addIndicators(); 
+
+	//new ScrollMagic.
+
 	/*
 	
 	var pinani = new TimelineMax()

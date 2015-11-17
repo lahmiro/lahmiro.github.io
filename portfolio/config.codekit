@@ -74,13 +74,13 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/img\/camera-img.jpg": {
-		"fileType": 16384,
+	"\/img\/blue-bg.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 38717,
-		"inputAbbreviatedPath": "\/img\/camera-img.jpg",
-		"outputAbbreviatedPath": "\/img\/camera-img.jpg",
+		"initialSize": 135329,
+		"inputAbbreviatedPath": "\/img\/blue-bg.png",
+		"outputAbbreviatedPath": "\/img\/blue-bg.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -92,17 +92,6 @@
 		"initialSize": 134783,
 		"inputAbbreviatedPath": "\/img\/lightpaperfibers.png",
 		"outputAbbreviatedPath": "\/img\/lightpaperfibers.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/snow-mountain.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 35064,
-		"inputAbbreviatedPath": "\/img\/snow-mountain.jpg",
-		"outputAbbreviatedPath": "\/img\/snow-mountain.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -125,6 +114,17 @@
 		"initialSize": 159434,
 		"inputAbbreviatedPath": "\/img\/tilt-mountain.png",
 		"outputAbbreviatedPath": "\/img\/tilt-mountain.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/wave-border.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/img\/wave-border.png",
+		"outputAbbreviatedPath": "\/img\/wave-border.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
