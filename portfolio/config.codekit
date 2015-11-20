@@ -74,6 +74,17 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/img\/2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 11249,
+		"inputAbbreviatedPath": "\/img\/2.png",
+		"outputAbbreviatedPath": "\/img\/2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/blue-bg.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -81,6 +92,50 @@
 		"initialSize": 135329,
 		"inputAbbreviatedPath": "\/img\/blue-bg.png",
 		"outputAbbreviatedPath": "\/img\/blue-bg.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/cat-01.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 45727,
+		"inputAbbreviatedPath": "\/img\/cat-01.jpg",
+		"outputAbbreviatedPath": "\/img\/cat-01.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/cat-02.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 23794,
+		"inputAbbreviatedPath": "\/img\/cat-02.jpg",
+		"outputAbbreviatedPath": "\/img\/cat-02.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/cat-03.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9439,
+		"inputAbbreviatedPath": "\/img\/cat-03.jpg",
+		"outputAbbreviatedPath": "\/img\/cat-03.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/cat-04.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 27014,
+		"inputAbbreviatedPath": "\/img\/cat-04.jpg",
+		"outputAbbreviatedPath": "\/img\/cat-04.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -331,6 +386,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/vendor\/ScrollMagic.min.js",
 		"outputAbbreviatedPath": "\/js\/vendor\/min\/ScrollMagic.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/vendor\/snap.svg-min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/vendor\/snap.svg-min.js",
+		"outputAbbreviatedPath": "\/js\/vendor\/min\/snap.svg-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,

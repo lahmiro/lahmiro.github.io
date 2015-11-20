@@ -135,8 +135,6 @@ $(function(){
 				.to(water, 0.8, {top: "5%", ease: Power1.easeIn}, 0.3)
 				.from(bottleText, 0.5, {opacity: 0, y: -10, ease: Elastic.easeOut.config(1, 0.3)}, 1);
 				
-		
-
 	new ScrollMagic.Scene({
 	  		triggerElement: "#skills",
 	  		duration: '50%'
@@ -145,30 +143,29 @@ $(function(){
 		.addTo(ctrl3)
 		.addIndicators(); 
 
-	//new ScrollMagic.
+	//categories svg
+	function init() {
+		var speed = 250,
+			easing = mina.easeinout;
 
-	/*
-	
-	var pinani = new TimelineMax()
-    .add(TweenMax.to(about, 1, {y:0}))
-    .add(TweenMax.to(skills, 1, {y:0}));
+		[].slice.call ( document.querySelectorAll( '.portfolio-categories > a' ) ).forEach( function( el ) {
+			var s = Snap( el.querySelector( 'svg' ) ), path = s.select( 'path' ),
+				pathConfig = {
+					from : path.attr( 'd' ),
+					to : el.getAttribute( 'data-path-hover' )
+				};
 
-	ctrl.addScene([
-		
-	]);
+			el.addEventListener( 'mouseenter', function() {
+				path.animate( { 'path' : pathConfig.to }, speed, easing );
+			} );
 
-	new ScrollMagic.Scene({
-		offset: vh,
-		triggerElement: about,
-		duration: "200%"
-	})
-		.setPin(tiltMountain)
-		.addTo(ctrl)
-		.addIndicators();
-	*/
-	//onCenter controller
-	
+			el.addEventListener( 'mouseleave', function() {
+				path.animate( { 'path' : pathConfig.from }, speed, easing );
+			} );
+		} );
+	}
 
+	init();
 
 
 

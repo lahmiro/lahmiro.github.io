@@ -28,6 +28,7 @@ $blue: #6dcff6;
 $yellow: #fff568;
 $pale-sky: #6b717f;
 @mixin serif-font{font-family: 'Playfair Display', serif;}
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
 body {
 	font-family: 'Playfair Display', serif;
@@ -209,8 +210,8 @@ rect.rect{
 //nav
 $easing: cubic-bezier(.6, .05, .28, .91);
 #nav-icon{
-	position: fixed;
-	z-index: 5;
+	position: absolute;
+	z-index: 500;
 	top: 2em;
 	left: 3%;
 	cursor: pointer;
@@ -530,25 +531,35 @@ svg#rects-04{
 }
 
 //portfolio page
+
 .portfolio-container{
 	height: 100%;
 	background-image: url('../img/blue-bg.png');
 	background-color: $blue;
-	padding-top: 6%;
+	padding-top: 2%;
 	.portfolio-title{
 		color: #fff;
 	}
 }
 
 .portfolio-categories-container{
-	position: relative;
+	margin: 40px auto 120px;
+	max-width: 1400px;
+	width: 100%;
+	div{
+		max-width:240px;
+	}
+	div:nth-child(odd) {
+			a{
+				margin: 30px 0 -30px 0;
+			}
+	}
 	.portfolio-categories{
-		height: 420px;
-		border: 1px solid red;
-		margin-right: 4em;
-		margin-top: 1em;
-		background: #FFF;
-		
+		width: 25%;
+		margin-right: 2em;
+		min-width: 260px;
+		max-height: 320px;
+		//border: 1px solid red;
 	}
 }
 
@@ -574,3 +585,118 @@ svg#rects-04{
 	border-color: $blue;
 	border-image-source: url('../img/yellow-wave.svg');
 }
+
+//portfolio grids
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+ 
+.clearfix:after {
+	clear: both;
+}
+
+.portfolio-categories{
+	a{
+		float: left;
+		width: 100%;
+		height: 100%;
+		color: #333;
+		//box-shadow: 5px 5px 0px 1px $yellow;
+	}
+	figure{
+		position: relative;
+		overflow: hidden;
+		background: #333;
+		img{
+			position: relative;
+			display: block;
+			width: 100%;
+			height: 100%;
+			opacity: 0.9;
+			-webkit-transition: opacity 0.3s;
+			transition: opacity 0.3s;
+		}
+		button{
+			position: absolute;
+			padding: 12px;
+			width: 100%;
+			//text-transform: uppercase;
+			letter-spacing: 1px;
+			font-weight: bold;
+			-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+			transition: opacity 0.3s, transform 0.3s;
+			top: 50%;
+			left: 50%;
+			border: 3px solid transparent;
+			background: rgba(#fff,0.8);
+			color: darken($pale-sky, 10);
+			opacity: 0;
+			-webkit-transform: translateY(-50%) translateX(-50%) scale(0.25);
+			transform: translateY(-50%) translateX(-50%) scale(0.25);
+		}
+	}
+	figcaption{
+		position: absolute;
+		top: 0;
+		z-index: 11;
+		padding: 10px;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		h2{
+			margin: 0 0 20px 0;
+			color: darken($pale-sky, 10);
+			//text-transform: uppercase;
+			letter-spacing: 1px;
+			font-weight: 300;
+			font-size: 130%;
+			-webkit-transition: -webkit-transform 0.3s;
+			transition: transform 0.3s;
+		}
+		
+	}
+	svg{
+		position: absolute;
+		top: -1px; /* fixes rendering issue in FF */
+		z-index: 10;
+		width: 100%;
+		height: 80%;
+	}
+	svg path{
+		fill: rgba($yellow, 0.9);
+		mix-blend-mode: multply;
+	}
+}
+
+
+.portfolio-categories {
+	figcaption,figcaption h2, button{
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+	}
+	figcaption{
+		h2,p{
+			transform: translateY(50px);
+		}
+	} 
+}
+
+.portfolio-categories a:hover {
+	figure {
+		img {
+			opacity: 1;
+		}
+		button{
+			opacity: 1;
+			transform: translateY(-50%) translateX(-50%) scale(1);
+		}
+	}
+	figcaption h2{
+		transform: translateY(0);
+	}
+	
+}
+
+
