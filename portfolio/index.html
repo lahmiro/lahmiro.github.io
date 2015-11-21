@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/lightgallery.css">
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
@@ -223,21 +224,21 @@
             </div><!-- /bottle -->
           </div><!-- /bottle-container row -->
         </div><!-- /container -->
-        <div class="container">
-          
-        </div><!-- container skills -->
+    
       </section><!-- skills -->
       
       <section id="portfolio">
-        <div class="containter portfolio-container">
-          <div class="row portfolio-title">
-            <div class="title col-md-3 col-md-offset-1">
-              Portfolio
-            </div><!-- /col -->
-          </div><!-- /portfolio-title -->
-          <div class="row">
+        <div class="portfolio-container">
+        <div class="container">
+            <div class="row portfolio-title">
+              <div class="title col-md-3">
+                Portfolio
+              </div><!-- /col -->
+            </div><!-- /row portfolio-title -->
+
+            <div class="row">
             <div class="portfolio-categories-container">
-             <div class="portfolio-categories col-md-2 col-md-offset-1">
+             <div class="portfolio-categories col-md-2">
                <a href="#" data-path-hover="M0,0h200v42c0,0-58.002,12.74-100,12.74S0,42,0,42V0z">
                 <figure>
                   <img src="img/cat-01.jpg" /> 
@@ -248,7 +249,7 @@
                   </figcaption>
                 </figure>
               </a>
-             </div>
+             </div><!-- /portfolio-categories -->
              <div class="portfolio-categories col-md-2">
                <a href="#" data-path-hover="M0,0h200v42c0,0-58.002,12.74-100,12.74S0,42,0,42V0z">
                 <figure>
@@ -260,7 +261,7 @@
                   </figcaption>
                 </figure>
               </a>
-             </div>
+             </div><!-- /portfolio-categories -->
              <div class="portfolio-categories col-md-2">
                <a href="#" data-path-hover="M0,0h200v42c0,0-58.002,12.74-100,12.74S0,42,0,42V0z">
                 <figure>
@@ -272,7 +273,7 @@
                   </figcaption>
                 </figure>
               </a>
-             </div>
+             </div><!-- /portfolio-categories -->
              <div class="portfolio-categories col-md-2">
                <a href="#" data-path-hover="M0,0h200v42c0,0-58.002,12.74-100,12.74S0,42,0,42V0z">
                 <figure>
@@ -284,12 +285,29 @@
                   </figcaption>
                 </figure>
               </a>
-             </div> 
+             </div> <!-- /portfolio-categories -->
+            </div><!-- /portfolio-categories-container -->
+          </div><!-- /row -->
+          </div><!-- container -->
+        </div><!-- /portfolio-container -->
+  
+      </section><!-- /portfolio -->
+      
+      <section id="photography">
+        <div class="container">
+          <div class="row">
+            <div id="lightgallery">
+              <div id="captions">
+                <a href="img/photo-01.jpg">
+                  <img src="img/photo-thumb-01" alt="">
+                </a>
+              </div>
+              
+
             </div>
           </div>
-        </div><!-- /portfolio-container -->
-      </section><!-- /portfolio -->
-
+        </div>
+      </section>
 <!-- <footer>
         <p>&copy; Xinyi Chen 2015</p>
       </footer> -->
@@ -305,8 +323,18 @@
     <script src="js/vendor/debug.addIndicators.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/vendor/snap.svg-min.js"></script>
+    <script src="js/vendor/lightgallery.min.js"></script>
+    <script src="js/vendor/jquery.mousewheel.min.js"></script>
+    <script src="js/vendor/lg-fullscreen.min.js"></script>
+    <script src="js/vendor/lg-thumbnail.min.js"></script>
     <script src="js/main.js"></script>
-
+    
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $("#lightgallery").lightGallery(); 
+          $('#captions').lightGallery(); 
+      });
+    </script>
     <!-- 
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
      <script src="js/vendor/focuspoint.min.js"></script>

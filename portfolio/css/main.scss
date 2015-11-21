@@ -42,6 +42,30 @@ html, body{
 	margin: 0;
 }
 
+@mixin transition($in) {
+	transition:$in;
+	-webkit-transition:$in;
+	-moz-transition:$in;
+	-o-transition:$in;
+	-ms-transition:$in;
+}
+@mixin transform($in) {
+	transform:$in;
+	-webkit-transform:$in;
+	-moz-transform:$in;
+	-o-transform:$in;
+	-ms-transform:$in;
+}
+@mixin animation($in) {
+	animation:$in;
+	-webkit-animation:$in;
+	-moz-animation:$in;
+	-o-animation:$in;
+	-ms-animation:$in;
+}
+
+
+
 .wrapper{
 	height: 100%;
 	width: 100%;
@@ -72,6 +96,12 @@ section {
 	height: 100%;
 	width: 100%;
 	position: relative;
+}
+
+#photography{
+	.col-md-offset-1{
+		border: 1px solid red;
+	}
 }
 
 
@@ -210,7 +240,7 @@ rect.rect{
 //nav
 $easing: cubic-bezier(.6, .05, .28, .91);
 #nav-icon{
-	position: absolute;
+	position: fixed;
 	z-index: 500;
 	top: 2em;
 	left: 3%;
@@ -290,13 +320,28 @@ $easing: cubic-bezier(.6, .05, .28, .91);
 		position: relative;
 		cursor: pointer;
 		padding: 15px 35px;
-		transition: all 250ms;
+	  	&:after {
+	  		width: 0;
+		    height: 3px;
+		    content: " ";
+		    background-color: #fff;
+		    position: absolute;
+		    left: 25%;
+		    @include transition(all 0.3s ease-in-out);
+			top: 75%;
+		}
+
 		&:hover{
-			color: $blue;
-			transition: all 250ms ease-in;
+			@include transition(all 0.3s ease-in-out);
+		    &:after {
+				width: 38%;
+				left: 8%;
+			}
 		}
 	}
 }
+
+
 
 //about page
 
@@ -516,7 +561,7 @@ body{
 
 .skills-title{
 	top: 19%;
-	left: 8%;
+	//left: 8%;
 	position: absolute;
 }
 
@@ -531,14 +576,19 @@ svg#rects-04{
 }
 
 //portfolio page
-
 .portfolio-container{
 	height: 100%;
 	background-image: url('../img/blue-bg.png');
 	background-color: $blue;
-	padding-top: 2%;
+	padding-top: 4%;
 	.portfolio-title{
-		color: #fff;
+		//margin-top: 1%;
+	}
+}
+
+#portfolio {
+	.row:nth-child(1){
+		margin-top: -1%;
 	}
 }
 
@@ -603,7 +653,8 @@ svg#rects-04{
 		width: 100%;
 		height: 100%;
 		color: #333;
-		//box-shadow: 5px 5px 0px 1px $yellow;
+		box-shadow: 3px 3px 0px 1px rgba($yellow, 0.6);
+		transition: box-shadow 0.3s ease;
 	}
 	figure{
 		position: relative;
@@ -614,7 +665,7 @@ svg#rects-04{
 			display: block;
 			width: 100%;
 			height: 100%;
-			opacity: 0.9;
+			opacity: 0.8;
 			-webkit-transition: opacity 0.3s;
 			transition: opacity 0.3s;
 		}
@@ -630,7 +681,7 @@ svg#rects-04{
 			top: 50%;
 			left: 50%;
 			border: 3px solid transparent;
-			background: rgba(#fff,0.8);
+			background: rgba($yellow,0.9);
 			color: darken($pale-sky, 10);
 			opacity: 0;
 			-webkit-transform: translateY(-50%) translateX(-50%) scale(0.25);
@@ -684,6 +735,7 @@ svg#rects-04{
 }
 
 .portfolio-categories a:hover {
+	box-shadow: none;
 	figure {
 		img {
 			opacity: 1;
