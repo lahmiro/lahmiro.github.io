@@ -97,8 +97,6 @@ $(function(){
 		.addTo(ctrl)
 		.addIndicators(); 
 
-	
-
 	//about page text fades out
 	var fadeOut = new TimelineMax()
 		fadeOut.to(introText, 3, {opacity:0, y: -30, delay: 2},0)
@@ -143,8 +141,8 @@ $(function(){
 		.addTo(ctrl3)
 		.addIndicators(); 
 
-	//categories svg
-	function init() {
+	//portfolio categories changed shapes svg
+	function ChangeCatShape() {
 		var speed = 250,
 			easing = mina.easeinout;
 
@@ -165,9 +163,246 @@ $(function(){
 		} );
 	}
 
-	init();
+	ChangeCatShape();
+
+	$( 'a' ).imageLightbox();
+
+	// ACTIVITY INDICATOR
+
+		var activityIndicatorOn = function()
+			{
+				$( '<div id="imagelightbox-loading"><div></div></div>' ).appendTo( 'body' );
+			},
+			activityIndicatorOff = function()
+			{
+				$( '#imagelightbox-loading' ).remove();
+			},
 
 
+			// OVERLAY
+
+			overlayOn = function()
+			{
+				$( '<div id="imagelightbox-overlay"></div>' ).appendTo( 'body' );
+			},
+			overlayOff = function()
+			{
+				$( '#imagelightbox-overlay' ).remove();
+			},
+
+
+			// CLOSE BUTTON
+
+			closeButtonOn = function( instance )
+			{
+				$( '<button type="button" id="imagelightbox-close" title="Close"></button>' ).appendTo( 'body' ).on( 'click touchend', function(){ $( this ).remove(); instance.quitImageLightbox(); return false; });
+			},
+			closeButtonOff = function()
+			{
+				$( '#imagelightbox-close' ).remove();
+			},
+
+
+			// CAPTION
+
+			captionOn = function()
+			{
+				var description = $( 'a[href="' + $( '#imagelightbox' ).attr( 'src' ) + '"] img' ).attr( 'alt' );
+				if( description.length > 0 )
+					$( '<div id="imagelightbox-caption">' + description + '</div>' ).appendTo( 'body' );
+			},
+			captionOff = function()
+			{
+				$( '#imagelightbox-caption' ).remove();
+			},
+
+
+			// NAVIGATION
+
+			navigationOn = function( instance, selector )
+			{
+				var images = $( selector );
+				if( images.length )
+				{
+					var nav = $( '<div id="imagelightbox-nav"></div>' );
+					for( var i = 0; i < images.length; i++ )
+						nav.append( '<button type="button"></button>' );
+
+					nav.appendTo( 'body' );
+					nav.on( 'click touchend', function(){ return false; });
+
+					var navItems = nav.find( 'button' );
+					navItems.on( 'click touchend', function()
+					{
+						var $this = $( this );
+						if( images.eq( $this.index() ).attr( 'href' ) != $( '#imagelightbox' ).attr( 'src' ) )
+							instance.switchImageLightbox( $this.index() );
+
+						navItems.removeClass( 'active' );
+						navItems.eq( $this.index() ).addClass( 'active' );
+
+						return false;
+					})
+					.on( 'touchend', function(){ return false; });
+				}
+			},
+			navigationUpdate = function( selector )
+			{
+				var items = $( '#imagelightbox-nav button' );
+				items.removeClass( 'active' );
+				items.eq( $( selector ).filter( '[href="' + $( '#imagelightbox' ).attr( 'src' ) + '"]' ).index( selector ) ).addClass( 'active' );
+			},
+			navigationOff = function()
+			{
+				$( '#imagelightbox-nav' ).remove();
+			},
+
+
+			// ARROWS
+
+			arrowsOn = function( instance, selector )
+			{
+				var $arrows = $( '<button type="button" class="imagelightbox-arrow imagelightbox-arrow-left"></button><button type="button" class="imagelightbox-arrow imagelightbox-arrow-right"></button>' );
+
+				$arrows.appendTo( 'body' );
+
+				$arrows.on( 'click touchend', function( e )
+				{
+					e.preventDefault();
+
+					var $this	= $( this ),
+						$target	= $( selector + '[href="' + $( '#imagelightbox' ).attr( 'src' ) + '"]' ),
+						index	= $target.index( selector );
+
+					if( $this.hasClass( 'imagelightbox-arrow-left' ) )
+					{
+						index = index - 1;
+						if( !$( selector ).eq( index ).length )
+							index = $( selector ).length;
+					}
+					else
+					{
+						index = index + 1;
+						if( !$( selector ).eq( index ).length )
+							index = 0;
+					}
+
+					instance.switchImageLightbox( index );
+					return false;
+				});
+			},
+			arrowsOff = function()
+			{
+				$( '.imagelightbox-arrow' ).remove();
+			};
+
+
+		//	WITH ACTIVITY INDICATION
+
+		$( 'a[data-imagelightbox="a"]' ).imageLightbox(
+		{
+			onLoadStart:	function() { activityIndicatorOn(); },
+			onLoadEnd:		function() { activityIndicatorOff(); },
+			onEnd:	 		function() { activityIndicatorOff(); }
+		});
+
+
+		//	WITH OVERLAY & ACTIVITY INDICATION
+
+		$( 'a[data-imagelightbox="b"]' ).imageLightbox(
+		{
+			onStart: 	 function() { overlayOn(); },
+			onEnd:	 	 function() { overlayOff(); activityIndicatorOff(); },
+			onLoadStart: function() { activityIndicatorOn(); },
+			onLoadEnd:	 function() { activityIndicatorOff(); }
+		});
+
+
+		//	WITH "CLOSE" BUTTON & ACTIVITY INDICATION
+
+		var instanceC = $( 'a[data-imagelightbox="c"]' ).imageLightbox(
+		{
+			quitOnDocClick:	false,
+			onStart:		function() { closeButtonOn( instanceC ); },
+			onEnd:			function() { closeButtonOff(); activityIndicatorOff(); },
+			onLoadStart: 	function() { activityIndicatorOn(); },
+			onLoadEnd:	 	function() { activityIndicatorOff(); }
+		});
+
+
+		//	WITH CAPTION & ACTIVITY INDICATION
+
+		$( 'a[data-imagelightbox="d"]' ).imageLightbox(
+		{
+			onLoadStart: function() { captionOff(); activityIndicatorOn(); },
+			onLoadEnd:	 function() { captionOn(); activityIndicatorOff(); },
+			onEnd:		 function() { captionOff(); activityIndicatorOff(); }
+		});
+
+
+		//	WITH ARROWS & ACTIVITY INDICATION
+
+		var selectorG = 'a[data-imagelightbox="g"]';
+		var instanceG = $( selectorG ).imageLightbox(
+		{
+			onStart:		function(){ arrowsOn( instanceG, selectorG ); },
+			onEnd:			function(){ arrowsOff(); activityIndicatorOff(); },
+			onLoadStart: 	function(){ activityIndicatorOn(); },
+			onLoadEnd:	 	function(){ $( '.imagelightbox-arrow' ).css( 'display', 'block' ); activityIndicatorOff(); }
+		});
+
+
+		//	WITH NAVIGATION & ACTIVITY INDICATION
+
+		var selectorE = 'a[data-imagelightbox="e"]';
+		var instanceE = $( selectorE ).imageLightbox(
+		{
+			onStart:	 function() { navigationOn( instanceE, selectorE ); },
+			onEnd:		 function() { navigationOff(); activityIndicatorOff(); },
+			onLoadStart: function() { activityIndicatorOn(); },
+			onLoadEnd:	 function() { navigationUpdate( selectorE ); activityIndicatorOff(); }
+		});
+
+
+		//	ALL COMBINED
+
+		var selectorF = 'a[data-imagelightbox="f"]';
+		var instanceF = $( selectorF ).imageLightbox(
+		{
+			onStart:		function() { overlayOn(); closeButtonOn( instanceF ); arrowsOn( instanceF, selectorF ); },
+			onEnd:			function() { overlayOff(); captionOff(); closeButtonOff(); arrowsOff(); activityIndicatorOff(); },
+			onLoadStart: 	function() { captionOff(); activityIndicatorOn(); },
+			onLoadEnd:	 	function() { captionOn(); activityIndicatorOff(); $( '.imagelightbox-arrow' ).css( 'display', 'block' ); }
+		});
+
+
+			// Create a clone of the menu, right next to original.
+		$('#nav-icon').addClass('original').clone().insertAfter('#nav-icon').addClass('cloned').css('position','fixed').css('top','0').css('margin-top','0').css('z-index','500').removeClass('original').hide();
+
+		scrollIntervalID = setInterval(stickIt, 10);
+
+
+		function stickIt() {
+
+		  var orgElementPos = $('.original').offset();
+		  orgElementTop = orgElementPos.top;               
+
+		  if ($(window).scrollTop() >= (orgElementTop)) {
+		    // scrolled past the original position; now only show the cloned, sticky element.
+
+		    // Cloned element should always have same left position and width as original element.     
+		    orgElement = $('.original');
+		    coordsOrgElement = orgElement.offset();
+		    leftOrgElement = coordsOrgElement.left;  
+		    widthOrgElement = orgElement.css('width');
+		    $('.cloned').css('left',leftOrgElement+'px').css('top',0).css('width',widthOrgElement).show();
+		    $('.original').css('visibility','hidden');
+		  } else {
+		    // not scrolled past the menu; only show the original menu.
+		    $('.cloned').hide();
+		    $('.original').css('visibility','visible');
+		  }
+		}
 
 });
 

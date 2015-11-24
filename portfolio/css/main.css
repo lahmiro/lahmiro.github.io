@@ -50,13 +50,9 @@ section {
   overflow: hidden; }
 
 #about {
-  height: 100%;
-  width: 100%;
   position: absolute;
   top: 0;
-  right: 0; }
-
-#about {
+  right: 0;
   background-color: #fff568;
   background-image: url("../img/yellow-bg.png");
   -webkit-transform: translateY(100%);
@@ -64,12 +60,7 @@ section {
           transform: translateY(100%); }
 
 #skills {
-  height: 100%;
-  width: 100%;
   position: relative; }
-
-#photography .col-md-offset-1 {
-  border: 1px solid red; }
 
 footer {
   text-align: center; }
@@ -189,20 +180,22 @@ rect.rect {
   margin-bottom: 1em; }
 
 #nav-icon {
-  position: fixed;
-  z-index: 500;
+  position: absolute;
+  z-index: 1000;
   top: 2em;
   left: 3%;
   cursor: pointer;
   -webkit-transition: left 500ms cubic-bezier(0.6, 0.05, 0.28, 0.91);
-          transition: left 500ms cubic-bezier(0.6, 0.05, 0.28, 0.91); }
+  transition: left 500ms cubic-bezier(0.6, 0.05, 0.28, 0.91); }
   #nav-icon div {
     width: 35px;
     height: 2px;
     margin-bottom: 8px;
     background-color: #6dcff6;
-    -webkit-transition: -webkit-transform 500ms cubic-bezier(0.6, 0.05, 0.28, 0.91), opacity 500ms, background-color 250ms;
-            transition: transform 500ms cubic-bezier(0.6, 0.05, 0.28, 0.91), opacity 500ms, background-color 250ms; }
+    -webkit-transition: opacity 500ms, background-color 250ms, -webkit-transform 500ms cubic-bezier(0.6, 0.05, 0.28, 0.91);
+    transition: opacity 500ms, background-color 250ms, -webkit-transform 500ms cubic-bezier(0.6, 0.05, 0.28, 0.91);
+    transition: transform 500ms cubic-bezier(0.6, 0.05, 0.28, 0.91), opacity 500ms, background-color 250ms;
+    transition: transform 500ms cubic-bezier(0.6, 0.05, 0.28, 0.91), opacity 500ms, background-color 250ms, -webkit-transform 500ms cubic-bezier(0.6, 0.05, 0.28, 0.91); }
   #nav-icon.active {
     left: 13%; }
     #nav-icon.active div {
@@ -229,7 +222,7 @@ rect.rect {
   padding: 25px 0px;
   height: 100%;
   -webkit-transition: all 350ms cubic-bezier(0.6, 0.05, 0.28, 0.91);
-          transition: all 350ms cubic-bezier(0.6, 0.05, 0.28, 0.91); }
+  transition: all 350ms cubic-bezier(0.6, 0.05, 0.28, 0.91); }
   #nav-box.active {
     left: 0;
     opacity: 1; }
@@ -246,7 +239,7 @@ rect.rect {
   border-style: solid;
   border-color: #fff568 transparent transparent transparent;
   -webkit-transition: all 350ms cubic-bezier(0.6, 0.05, 0.28, 0.91);
-          transition: all 350ms cubic-bezier(0.6, 0.05, 0.28, 0.91); }
+  transition: all 350ms cubic-bezier(0.6, 0.05, 0.28, 0.91); }
   #nav-bg.active {
     left: 0;
     opacity: 1; }
@@ -555,7 +548,7 @@ svg#rects-04 {
   color: #333;
   box-shadow: 3px 3px 0px 1px rgba(255, 245, 104, 0.6);
   -webkit-transition: box-shadow 0.3s ease;
-          transition: box-shadow 0.3s ease; }
+  transition: box-shadow 0.3s ease; }
 .portfolio-categories figure {
   position: relative;
   overflow: hidden;
@@ -575,7 +568,9 @@ svg#rects-04 {
     letter-spacing: 1px;
     font-weight: bold;
     -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, -webkit-transform 0.3s;
     transition: opacity 0.3s, transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
     top: 50%;
     left: 50%;
     border: 3px solid transparent;
@@ -600,7 +595,9 @@ svg#rects-04 {
     font-weight: 300;
     font-size: 130%;
     -webkit-transition: -webkit-transform 0.3s;
-    transition: transform 0.3s; }
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s; }
 .portfolio-categories svg {
   position: absolute;
   top: -1px;

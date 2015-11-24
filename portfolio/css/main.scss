@@ -64,8 +64,6 @@ html, body{
 	-ms-animation:$in;
 }
 
-
-
 .wrapper{
 	height: 100%;
 	width: 100%;
@@ -79,29 +77,17 @@ section {
 }
 
 #about{
-	height: 100%;
-	width: 100%;
 	position: absolute;
 	top:0;
 	right: 0;
-}
-
-#about{
 	background-color: $yellow;
 	background-image: url('../img/yellow-bg.png');
 	transform: translateY(100%);
 }
 
-#skills{
-	height: 100%;
-	width: 100%;
-	position: relative;
-}
 
-#photography{
-	.col-md-offset-1{
-		border: 1px solid red;
-	}
+#skills{
+	position: relative;
 }
 
 
@@ -240,8 +226,8 @@ rect.rect{
 //nav
 $easing: cubic-bezier(.6, .05, .28, .91);
 #nav-icon{
-	position: fixed;
-	z-index: 500;
+	position: absolute;
+	z-index: 1000;
 	top: 2em;
 	left: 3%;
 	cursor: pointer;
@@ -581,9 +567,6 @@ svg#rects-04{
 	background-image: url('../img/blue-bg.png');
 	background-color: $blue;
 	padding-top: 4%;
-	.portfolio-title{
-		//margin-top: 1%;
-	}
 }
 
 #portfolio {

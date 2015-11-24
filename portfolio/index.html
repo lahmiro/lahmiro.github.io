@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/lightgallery.css">
+        <link rel="stylesheet" href="css/imagelightbox.css">
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
@@ -296,26 +296,20 @@
       <section id="photography">
         <div class="container">
           <div class="row">
-            <div id="lightgallery">
-              <div id="captions">
-                <a href="img/photo-01.jpg">
-                  <img src="img/photo-thumb-01" alt="">
-                </a>
-              </div>
-              
+              <a href="img/photo-01.jpg" data-imagelightbox="f">
+                <img src="img/photo-01.jpg" alt="Stargazer">
+              </a>
 
-            </div>
-          </div>
-        </div>
-      </section>
+            </div><!-- /row -->
+        </div><!-- /container -->
+      </section><!-- /photography -->
 <!-- <footer>
         <p>&copy; Xinyi Chen 2015</p>
       </footer> -->
       
     </div><!-- /wrapper -->
-    
 
-    <script src="js/vendor/jquery-1.11.3.min.js"></script>
+    <script src="js/vendor/jquery-2.1.4.min.js"></script>
     <script src="js/vendor/bootstrap.min.js"></script>
     <script src="js/vendor/TweenMax.min.js"></script>
     <script src="js/vendor/ScrollMagic.js"></script>
@@ -323,18 +317,10 @@
     <script src="js/vendor/debug.addIndicators.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/vendor/snap.svg-min.js"></script>
-    <script src="js/vendor/lightgallery.min.js"></script>
-    <script src="js/vendor/jquery.mousewheel.min.js"></script>
-    <script src="js/vendor/lg-fullscreen.min.js"></script>
-    <script src="js/vendor/lg-thumbnail.min.js"></script>
+    <script src="js/vendor/imagelightbox.min.js"></script>
     <script src="js/main.js"></script>
     
-    <script type="text/javascript">
-      $(document).ready(function() {
-          $("#lightgallery").lightGallery(); 
-          $('#captions').lightGallery(); 
-      });
-    </script>
+    
     <!-- 
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
      <script src="js/vendor/focuspoint.min.js"></script>
