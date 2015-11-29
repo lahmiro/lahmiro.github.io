@@ -11,6 +11,7 @@ $blue: #6dcff6;
 $yellow: #fff568;
 $pale-sky: #6b717f;
 $dark-grey: darken($pale-sky, 10);
+$phi: 1.61803398875;
 @mixin serif-font{font-family: 'Playfair Display', serif;}
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 @mixin border{border: 1px solid red;}
@@ -133,19 +134,36 @@ $easing: cubic-bezier(.6, .05, .28, .91);
 	position: fixed;
 	z-index: 1000;
 	top: 2em;
-	left: 1.5%;
+	left: 1.6%;
 	cursor: pointer;
-	@include transition(left 500ms $easing);
+	padding: .7em;
+	padding-bottom: .3em;
+	background: rgba(#fff, .4);
+	border-radius: 50%;
+	@include transition(all 500ms $easing);
 	div{
-		width: 35px;
+		width: 30px;
         height: 2px;
         margin-bottom: 8px;
         background-color: $blue;
-        transition: transform 500ms $easing, opacity 500ms, background-color 250ms;
+       	-webkit-transition: transform 500ms $easing, opacity 500ms, background-color 250ms;
+       	   -moz-transition: transform 500ms $easing, opacity 500ms, background-color 250ms;
+       	    -ms-transition: transform 500ms $easing, opacity 500ms, background-color 250ms;
+       	     -o-transition: transform 500ms $easing, opacity 500ms, background-color 250ms;
+       	        transition: transform 500ms $easing, opacity 500ms, background-color 250ms;
+       	&:first-child{
+       		margin-top: 7px;
+       	}
 	}
-	
+	&:hover{
+		div{
+			background-color: $dark-grey;	
+			@include transition(all 500ms $easing);
+		}
+	}
 	&.active{
 		left: 13%;
+		background: none;
 		div{
 			background-color: darken($pale-sky, 10);
 		}
@@ -648,9 +666,9 @@ rect.rect{
 		}
 		button{
 			position: absolute;
-			padding: 12px;
+			padding: 8px;
 			width: 100%;
-			//text-transform: uppercase;
+			text-transform: uppercase;
 			letter-spacing: 1px;
 			font-weight: bold;
 			-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
@@ -658,7 +676,7 @@ rect.rect{
 			top: 50%;
 			left: 50%;
 			border: 3px solid transparent;
-			background: rgba($yellow,0.9);
+			background: rgba($yellow,0.8);
 			color: darken($pale-sky, 10);
 			opacity: 0;
 			-webkit-transform: translateY(-50%) translateX(-50%) scale(0.25);
@@ -716,7 +734,7 @@ rect.rect{
 
 	.photography-title{
 		font-size: 2.5em;
-		margin-top: 1em;
+		margin-top: .5em;
 	}
 	ul{
 		padding-left:0;
@@ -751,7 +769,7 @@ rect.rect{
 					width: 100%;
 					height: 100%;
 					max-width: em(250);					
-					@include opacity(.6);
+					@include opacity(.7);
 					@include transition(all 0.3s ease-in-out);
 				}
 				div{
@@ -790,11 +808,12 @@ rect.rect{
 //design page
 .design-title{
 	font-size: 2.5em;
-	margin-top: 1em;
+	margin-top: 1.5em;
 	margin-bottom: .5em;
 }
 //inspired by http://tympanus.net/Tutorials/CircleHoverEffects/index3.html
 #design{
+	background-image: url('../img/yellow-bg.png');
 	ul.round-thumbs{
 		padding-left: 0;
 		position: relative;
@@ -821,12 +840,13 @@ rect.rect{
 				border-radius: 50%;
 				position: relative;
 				float: left;
-				@include box-shadow(0 1px 3px rgba(#000, .2));
+				//@include box-shadow(0 1px 3px rgba(#000, .2));
+				@include box-shadow(5px 5px 0 rgba($blue, .6));
+				@include transition(box-shadow .3s ease);
 				&:before{
 					content: '';
 					display: table;
 				}
-
 				.design-thumb{
 					width: 100%;
 					height: 100%;
@@ -866,9 +886,11 @@ rect.rect{
 						height: 100%;
 						border-radius: 50%;
 						overflow: hidden;
+						background: url(../img/blue-bg.png);
 						button.md-trigger{
 							background: transparent;
     						border: 0;
+    						@include transition(all .3s ease);
     						&:hover{
     							@include transform(scale(1.1));
     							@include transition(all .3s ease);
@@ -925,22 +947,7 @@ rect.rect{
 							@include box-shadow(inset 0 0 0 15px rgba(#fff, 0.5) 0 1px 3px rgba(#000,0.2));
 							@include transform(rotate(-110deg));
 						}
-					}
-				}
-				&:nth-child(odd){
-					.design-info{
-						background: url(../img/blue-bg.png);
-					}
-				}
-				&:nth-child(even){
-					.design-info{
-						background: url(../img/yellow-bg.png);
-						h3, p{
-							color: $dark-grey;
-						}
-						p{
-							border-top: 1px solid rgba(#000, .5);
-						}
+						box-shadow: 0 0 0 rgba($blue, .6);
 					}
 				}
 				
@@ -972,7 +979,7 @@ rect.rect{
 		width: 90%;
 		margin: 0 auto;
 		.md-close{
-			
+
 			float: right;
 			cursor: pointer;
 			&:before, &:after{
@@ -1099,4 +1106,75 @@ rect.rect{
 		}
 	}
 }
+
+//painting page
+#painting{
+	.painting-title{
+		@include subTitle;
+		margin-top: 7%;
+	}
+	.painting-img-container{
+		text-align: center;
+		.painting-img-row{
+			float: left;
+			margin: $phi*1em;
+			display: inline-block;
+			position: relative;
+			//@include box-shadow(5px 5px 0 rgba($blue, .6));
+			&:nth-child(odd){
+				img, .painting-img-overlay{
+					clip-path: url(#triangle-path);
+				}
+
+			}
+			&:nth-child(even){
+				img, .painting-img-overlay{
+					clip-path: url(#reverse-triangle-path);
+				}
+				.painting-img-overlay{
+				  	.painting-img-overlay-content{
+				  		top: 40%;
+				  	}
+				}
+			}
+			img{
+				//max-width: 100%; height: auto;
+				width: 240px;
+				height: 388.33px;
+			}
+	
+			.painting-img-overlay{				
+				  background: rgba(#fff, 0.3);
+				  position: absolute;
+				  left: 0;
+				  right: 0;
+				  top: 0;
+				  bottom: 0;
+				  pointer-events: none;
+				  .painting-img-overlay-content{
+				  	color: rgba(#fff, .8);
+				  	font-size: 1.5em;
+				  	@include centerEl;
+				  	top: 60%;
+				  	text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+				  	opacity: 0;
+				  	@include transition(all .3s ease-in);
+				  }
+			}
+			&:hover{
+				.painting-img-overlay{
+					@include transition(all .3s ease-in);
+					background: none;
+					.painting-img-overlay-content{
+						opacity: 1;
+					}
+				}
+			}
+		}
+		
+	}
+
+	
+}
+
 

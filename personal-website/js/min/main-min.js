@@ -227,41 +227,22 @@ $(function(){
 	//photo-thumbs hover 
 	$(' .photo-thumbs > li ').each( function() { $(this).hoverdir(); } );
 
-
-	//modals
-
-
+	
+	//anchor scrolling
+	$('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
 });
 
- ;(function($) {
-
-         // DOM Ready
-        $(function() {
-
-            // Binding a click event
-            // From jQuery v.1.7.0 use .on() instead of .bind()
-            $('#button-01').bind('click', function(e) {
-
-                // Prevents the default action to be triggered. 
-                e.preventDefault();
-
-                // Triggering bPopup when click event is fired
-                $('#modal-9').bPopup({
-                	//modalClose: false,
-                	positionStyle: 'fixed',
-                	modalColor: 'white',
-                	position: [500, 500]
-                	//easing: 'easeOutCubic',
-                	//speed: 500,
-                	//transition: 'slideDown',
-
-                });
-
-            });
-
-        });
-
- })(jQuery);
 
 
 
