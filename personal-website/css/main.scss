@@ -11,10 +11,25 @@ $blue: #6dcff6;
 $yellow: #fff568;
 $pale-sky: #6b717f;
 $dark-grey: darken($pale-sky, 10);
-$phi: 1.61803398875;
+$phi: 1.618;
 @mixin serif-font{font-family: 'Playfair Display', serif;}
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 @mixin border{border: 1px solid red;}
+//convert px to em
+$browser-context: 16; // Default
+
+@function em($pixels, $context: $browser-context) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1em;
+}
+
 body {
 	@include serif-font;
 	color: $dark-grey;
@@ -28,10 +43,27 @@ section{
 	height: 100vh;
 	overflow: hidden;
 	position: relative;
+	.container{
+		margin-bottom: $phi * 1em + em(29);
+	}
+	
 }
 
 .title{
-	font-size: 3.5em;
+	margin-top: $phi * 1em;
+	
+}
+h1 {
+	font-size: 3em;
+}
+h2{
+	font-size: 2.5em;
+}
+p {
+	font-size: 1em;
+}
+h1, h2{
+	font-weight: normal;
 }
 //scss mixins
 @mixin box-sizing( $type: border-box ) {
@@ -110,24 +142,10 @@ section{
 	}
 }
 @mixin subTitle(){
-	font-size: 2.5em;
 	margin-top: 1em;
 }
 
-//convert px to em
-$browser-context: 16; // Default
 
-@function em($pixels, $context: $browser-context) {
-  @if (unitless($pixels)) {
-    $pixels: $pixels * 1px;
-  }
-
-  @if (unitless($context)) {
-    $context: $context * 1px;
-  }
-
-  @return $pixels / $context * 1em;
-}
 //nav
 $easing: cubic-bezier(.6, .05, .28, .91);
 #nav-icon{
@@ -230,6 +248,10 @@ $easing: cubic-bezier(.6, .05, .28, .91);
 		position: relative;
 		cursor: pointer;
 		padding: 15px 35px;
+		a{
+			text-decoration: none;
+			color: $dark-grey;
+		}
 	  	&:after {
 	  		width: 0;
 		    height: 3px;
@@ -369,6 +391,9 @@ rect.rect{
 	background-color: $yellow;
 	background-image: url('../img/yellow-bg.png');
 	position: relative;
+	.about-title{
+		font-size: 3em;
+	}
 }
 
 .tilt-mountain{
@@ -441,7 +466,6 @@ rect.rect{
 }
 
 .skills-title{
-	margin-top: 2em;
 	svg#rects-04{
 	position: relative;
 	width: 55px;
@@ -476,7 +500,7 @@ rect.rect{
 }
 
 .bottle{
-	@include border;
+	//@include border;
 }
 @keyframes spin{
   from {
@@ -595,8 +619,8 @@ rect.rect{
 	}
 	
 	.portfolio-title{
-		margin-top: 1em;
-		font-size: 3em;
+		
+		
 	}
 	&:before{
 		@include waveBorder;
@@ -731,13 +755,10 @@ rect.rect{
 #photography{
 	//add to mobile view
 	//overflow: scroll;
+	height: auto;
 
-	.photography-title{
-		font-size: 2.5em;
-		margin-top: .5em;
-	}
-	ul{
-		padding-left:0;
+	ul.photo-thumbs{
+		padding:0;
 		position: relative;
 		li{	
 			min-height: em(150);
@@ -806,47 +827,69 @@ rect.rect{
 }
 
 //design page
-.design-title{
-	font-size: 2.5em;
-	margin-top: 1.5em;
-	margin-bottom: .5em;
-}
+
 //inspired by http://tympanus.net/Tutorials/CircleHoverEffects/index3.html
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
 #design{
 	background-image: url('../img/yellow-bg.png');
+		
+	.row.design-thumbs-container{
+			margin-top: -1em;	
+	}
+
+}
+
+
 	ul.round-thumbs{
+		//padding:$phi * 1em;
+		//padding-top: 0;
+		//modify for mobile view
 		padding-left: 0;
 		position: relative;
 		display: block;
 		text-align: center;
-		width: 100%;
-		margin: 0 auto;
+		width: 100%;		
 		&:after{
 			content: '';
 			display: table;
 			clear:both
 		}
-		li{
-			
+		li{	
+			////@include border;		
 			list-style: none;
 			padding: 0;
 			display: inline-block;
-			
+			position: relative;
+			margin: $phi * 1rem auto;
+			padding-bottom: $phi * 3rem;
+			//modify for mobile view
+			//padding-left: 6%;
 			.design-item{
-				width: em(250);
-				height: em(250);
 				//modify for mobiel view
-				margin: em(25) em(50);
-				border-radius: 50%;
-				position: relative;
-				float: left;
-				//@include box-shadow(0 1px 3px rgba(#000, .2));
+				width: em(200);
+				height: em(200);
+				position: relative;					
+				border-radius: 50%;		
 				@include box-shadow(5px 5px 0 rgba($blue, .6));
 				@include transition(box-shadow .3s ease);
 				&:before{
 					content: '';
 					display: table;
 				}
+				&:first-child{
+					margin-left: 0;
+				}
+
 				.design-thumb{
 					width: 100%;
 					height: 100%;
@@ -898,7 +941,7 @@ rect.rect{
 						}
 						@include box-shadow(inset 0 0 0 5px rgba(#000,0.05));
 						h3{
-							//@include border;
+							////@include border;
 							color: #fff;
 							text-transform: uppercase;
 							position: relative;
@@ -913,7 +956,6 @@ rect.rect{
 							padding: 0.3em;
 							font-style: italic;
 							margin: 0 em(30);
-							font-size: 1em;
 							border-top: 1px solid rgba(#fff, .5);
 						}
 					}
@@ -953,8 +995,6 @@ rect.rect{
 				
 			}
 	}
-}
-
 //popup modals
 .md-modal{
 	position: fixed;
@@ -997,12 +1037,6 @@ rect.rect{
 			}
 		}
 
-			.design-modal-title{
-				@include subTitle;
-				padding-bottom: .5em;
-				font-size: 2.5em;
-				
-			}
 			.design-full-img{
 				a{	
 					img{
@@ -1074,20 +1108,15 @@ rect.rect{
 
 
 //videos page
-.videos-title{
-	@include subTitle;
-	margin-top: 0;
-}
 
 #videos{
-	@include clearUl;
-	.container{
-		@include centerEl;
-	}
+	//@include clearUl;
 	ul{
+		padding-left: 0;
 		li{
 			//add right padding for moviel view
 			//eliminate right padding for the first element
+			list-style: none;
 			padding: 1em 2em .5em 0;
 			&:nth-child(2){
 				padding-right: 0;
@@ -1110,8 +1139,7 @@ rect.rect{
 //painting page
 #painting{
 	.painting-title{
-		@include subTitle;
-		margin-top: 7%;
+		
 	}
 	.painting-img-container{
 		text-align: center;
@@ -1175,6 +1203,40 @@ rect.rect{
 	}
 
 	
+}
+
+
+//contact page
+#contact{
+	//background-image: url('../img/blue-bg.png');
+	.contact-title{
+		text-align: right;
+	}
+	.row{
+		position: relative;
+		.contact-title{
+			//color: #fff;
+		}
+	}
+}
+
+.left-column, .right-column, .middle-offset{
+  ////@include border;
+  //padding-top: $phi*5rem;
+  //padding-bottom: $phi*5rem;
+  height: 100vh;
+}
+
+.left-column{
+	position: relative;
+	
+	h2{
+		margin-top: 7rem;
+	}	
+}
+
+.right-column, .middle-offset{
+	background-image: url('../img/yellow-bg.png');
 }
 
 

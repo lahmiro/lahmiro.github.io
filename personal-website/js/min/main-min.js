@@ -241,6 +241,9 @@ $(function(){
       }
     }
   });
+
+	$('.vcenter').flexVerticalCenter();
+	//$('.contact-title').flexVerticalCenter();
 });
 
 
