@@ -101,6 +101,24 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/css\/remodal-default-theme.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/remodal-default-theme.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/css\/remodal.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/remodal.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/img\/blue-bg.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -292,7 +310,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 58688,
+		"initialSize": 75950,
 		"inputAbbreviatedPath": "\/img\/full\/photo-01.jpg",
 		"outputAbbreviatedPath": "\/img\/full\/photo-01.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -446,7 +464,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 50879,
+		"initialSize": 68631,
 		"inputAbbreviatedPath": "\/img\/full\/photo-15.jpg",
 		"outputAbbreviatedPath": "\/img\/full\/photo-15.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -589,7 +607,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 38735,
+		"initialSize": 35515,
 		"inputAbbreviatedPath": "\/img\/thumb\/design-01.jpg",
 		"outputAbbreviatedPath": "\/img\/thumb\/design-01.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -611,7 +629,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 51430,
+		"initialSize": 41690,
 		"inputAbbreviatedPath": "\/img\/thumb\/design-03.jpg",
 		"outputAbbreviatedPath": "\/img\/thumb\/design-03.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -644,7 +662,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 52330,
+		"initialSize": 42446,
 		"inputAbbreviatedPath": "\/img\/thumb\/design-06.jpg",
 		"outputAbbreviatedPath": "\/img\/thumb\/design-06.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -1078,39 +1096,6 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/js\/vendor\/classie.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/vendor\/classie.js",
-		"outputAbbreviatedPath": "\/js\/vendor\/min\/classie-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/js\/vendor\/css-filters-polyfill.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/vendor\/css-filters-polyfill.js",
-		"outputAbbreviatedPath": "\/js\/vendor\/min\/css-filters-polyfill-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/js\/vendor\/cssParser.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/vendor\/cssParser.js",
-		"outputAbbreviatedPath": "\/js\/vendor\/min\/cssParser-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
 	"\/js\/vendor\/debug.addIndicators.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -1133,17 +1118,6 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/js\/vendor\/focuspoint.min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/vendor\/focuspoint.min.js",
-		"outputAbbreviatedPath": "\/js\/vendor\/min\/focuspoint.min-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
 	"\/js\/vendor\/imagelightbox.min.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -1161,17 +1135,6 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/vendor\/jquery-2.1.4.min.js",
 		"outputAbbreviatedPath": "\/js\/vendor\/min\/jquery-2.1.4.min-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/js\/vendor\/jquery.bpopup.min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/vendor\/jquery.bpopup.min.js",
-		"outputAbbreviatedPath": "\/js\/vendor\/min\/jquery.bpopup.min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -1210,28 +1173,6 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/js\/vendor\/masonry-docs.min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/vendor\/masonry-docs.min.js",
-		"outputAbbreviatedPath": "\/js\/vendor\/min\/masonry-docs.min-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/js\/vendor\/modalEffects.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/vendor\/modalEffects.js",
-		"outputAbbreviatedPath": "\/js\/vendor\/min\/modalEffects-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
 	"\/js\/vendor\/modernizr-2.8.3-respond-1.4.2.min.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -1249,6 +1190,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/vendor\/npm.js",
 		"outputAbbreviatedPath": "\/js\/vendor\/min\/npm-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/vendor\/remodal.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/vendor\/remodal.min.js",
+		"outputAbbreviatedPath": "\/js\/vendor\/min\/remodal.min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -1339,7 +1291,7 @@
 	},
 "projectAttributes": {
 	"bowerAbbreviatedPath": "",
-	"displayValue": "portfolio",
+	"displayValue": "personal-website",
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "\/apple-touch-icon.png"
 	},

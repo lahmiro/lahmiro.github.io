@@ -60,7 +60,8 @@ section {
           transform: translateY(100%); }
 
 #skills {
-  position: relative; }
+  position: relative;
+  height: 60%; }
 
 footer {
   text-align: center; }
@@ -213,7 +214,7 @@ rect.rect {
 
 #nav-box {
   position: fixed;
-  z-index: 4;
+  z-index: 900;
   overflow: auto;
   top: 0px;
   left: -20%;
@@ -229,7 +230,7 @@ rect.rect {
 
 #nav-bg {
   position: fixed;
-  z-index: 3;
+  z-index: 800;
   overflow: hidden;
   top: 0px;
   left: -20%;

@@ -16,7 +16,10 @@
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/imagelightbox.css"> 
+        <link rel="stylesheet" href="css/remodal.css">
+        <link rel="stylesheet" href="css/remodal-default-theme.css">
         <link rel="stylesheet" href="css/main.css">
+        
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     	
@@ -46,7 +49,7 @@
     </div><!-- nav-box -->
     <div id="nav-bg"></div>
 
-    <div class="wrapper">
+    <div class="wrapper remodal-bg">
       
       <section id="home">
         <div class="conatiner">  
@@ -229,22 +232,10 @@
             <div class="row">
             <div class="portfolio-categories-container">
              <div class="portfolio-categories col-md-3 col-sm-2 col-xs-6">
-               <a href="#photography" data-path-hover="M0,0h200v42c0,0-58.002,12.74-100,12.74S0,42,0,42V0z">
-                <figure>
-                  <img src="img/cat-01.jpg" /> 
-                  <svg viewBox="0 0 200 300" preserveAspectRatio="none"><path class="categoriesSVG" d="M200,139.667L0,216.334V0h200V139.667z"/></svg>
-                  <figcaption>
-                    <h2>Photography</h2>
-                    <button>View</button>
-                  </figcaption>
-                </figure>
-              </a>
-             </div><!-- /portfolio-categories -->
-             <div class="portfolio-categories col-md-3 col-sm-2 col-xs-6">
-               <a href="#design-02" data-path-hover="M0,0h200v42c0,0-58.002,12.74-100,12.74S0,42,0,42V0z">
+               <a href="#design" data-path-hover="M0,0h200v42c0,0-58.002,12.74-100,12.74S0,42,0,42V0z">
                 <figure>
                   <img src="img/cat-02.jpg" /> 
-                  <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M0,0h200v246L0,170V0z"/></svg>
+                  <svg viewBox="0 0 200 300" preserveAspectRatio="none"><path class="categoriesSVG" d="M200,139.667L0,216.334V0h200V139.667z"/></svg>
                   <figcaption>
                     <h2>Web/Graphic Design</h2>
                     <button>View</button>
@@ -252,25 +243,37 @@
                 </figure>
               </a>
              </div><!-- /portfolio-categories -->
-            <div class="portfolio-categories col-md-3 col-sm-2 col-xs-6">
-               <a href="#painting" data-path-hover="M0,0h200v42c0,0-58.002,12.74-100,12.74S0,42,0,42V0z">
+             <div class="portfolio-categories col-md-3 col-sm-2 col-xs-6">
+               <a href="#photography" data-path-hover="M0,0h200v42c0,0-58.002,12.74-100,12.74S0,42,0,42V0z">
                 <figure>
-                  <img src="img/cat-04.jpg" /> 
+                  <img src="img/cat-01.jpg" /> 
                   <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M0,0h200v246L0,170V0z"/></svg>
                   <figcaption>
-                    <h2>Painting</h2>
+                    <h2>Photography</h2>
+                    <button>View</button>
+                  </figcaption>
+                </figure>
+              </a>
+             </div><!-- /portfolio-categories -->
+            <div class="portfolio-categories col-md-3 col-sm-2 col-xs-6">
+               <a href="#videos" data-path-hover="M0,0h200v42c0,0-58.002,12.74-100,12.74S0,42,0,42V0z">
+                <figure>
+                  <img src="img/cat-03.jpg" /> 
+                  <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M0,0h200v246L0,170V0z"/></svg>
+                  <figcaption>
+                    <h2>Videos</h2>
                     <button>View</button>
                   </figcaption>
                 </figure>
               </a>
              </div> <!-- /portfolio-categories -->
              <div class="portfolio-categories col-md-3 col-sm-2 col-xs-6">
-               <a href="#videos" data-path-hover="M0,0h200v42c0,0-58.002,12.74-100,12.74S0,42,0,42V0z">
+               <a href="#painting" data-path-hover="M0,0h200v42c0,0-58.002,12.74-100,12.74S0,42,0,42V0z">
                 <figure>
-                  <img src="img/cat-03.jpg" /> 
+                  <img src="img/cat-04.jpg" /> 
                   <svg viewBox="0 0 200 300" preserveAspectRatio="none"><path class="categoriesSVG" d="M200,139.667L0,216.334V0h200V139.667z"/></svg>
                   <figcaption>
-                    <h2>Animation/Videos</h2>
+                    <h2>Painting</h2>
                     <button>View</button>
                   </figcaption>
                 </figure>
@@ -283,337 +286,14 @@
         </div><!-- /portfolio-full-container -->
       </section><!-- /portfolio -->
 
-      <section id="photography">
+      
+
+      <!-- design page -->
+      <section id="design" class="float-left">
         <div class="container">
           <div class="row">
-            <div class="title photography-title col-md-3">
-              <h2>Photography</h2>
-            </div><!-- /photography-title -->
-          </div><!-- /row -->        
-          <div class="row">
-            <ul class="photo-thumbs">
-                <li class="photo col-md-2 col-sm-3 col-xs-6">
-                  <a href="img/full/photo-01.jpg" data-imagelightbox="f"><img src="img/thumb/photo-01.jpg" alt="Alaska Mountain Range">
-                  <div><span>Alaska Mountain Range</span></div></a>
-                </li>
-                <li class="photo col-md-2 col-sm-3 col-xs-6">
-                  <a href="img/full/photo-02.jpg" data-imagelightbox="f"><img src="img/thumb/photo-02.jpg" alt="Alaska Mountain Range">
-                  <div><span>Alaska Mountain Range</span></div></a>
-                </li>
-                <li class="photo col-md-2 col-sm-3 col-xs-6">
-                  <a href="img/full/photo-03.jpg" data-imagelightbox="f"><img src="img/thumb/photo-03.jpg" alt="Alaska Mountain Range">
-                  <div><span>Alaska Mountain Range</span></div></a>
-                </li>
-                <li class="photo col-md-2 col-sm-3 col-xs-6">
-                  <a href="img/full/photo-04.jpg" data-imagelightbox="f"><img src="img/thumb/photo-04.jpg" alt="Alaska Mountain Range">
-                  <div><span>Alaska Mountain Range</span></div></a>
-                </li>
-                <li class="photo col-md-2 col-sm-3 col-xs-6">
-                  <a href="img/full/photo-05.jpg" data-imagelightbox="f"><img src="img/thumb/photo-05.jpg" alt="Arctic Circle">
-                  <div><span>Arctic Circle</span></div></a>
-                </li>
-                <li class="photo col-md-2 col-sm-3 col-xs-6">
-                  <a href="img/full/photo-06.jpg" data-imagelightbox="f"><img src="img/thumb/photo-06.jpg" alt="Arctic White">
-                  <div><span>Arctic White</span></div></a>
-                </li>
-                <li class="photo col-md-2 col-sm-3 col-xs-6">
-                  <a href="img/full/photo-07.jpg" data-imagelightbox="f"><img src="img/thumb/photo-07.jpg" alt="Iridescence">
-                  <div><span>Iridescence</span></div></a>          
-                </li>
-                <li class="photo col-md-2 col-sm-3 col-xs-6">
-                  <a href="img/full/photo-08.jpg" data-imagelightbox="f"><img src="img/thumb/photo-08.jpg" alt="Pinky Moon">
-                  <div><span>Pinky Moon</span></div></a>
-                </li>
-                <li class="photo col-md-2 col-sm-3 col-xs-6">
-                  <a href="img/full/photo-09.jpg" data-imagelightbox="f"><img src="img/thumb/photo-09.jpg" alt="Aurora">
-                  <div><span>Aurora</span></div></a>
-                </li>
-                <li class="photo col-md-2 col-sm-3 col-xs-6">
-                  <a href="img/full/photo-10.jpg" data-imagelightbox="f"><img src="img/thumb/photo-10.jpg" alt="Majesty">
-                  <div><span>Majesty</span></div></a>
-                </li>
-                <li class="photo col-md-2 col-sm-3 col-xs-6">
-                  <a href="img/full/photo-11.jpg" data-imagelightbox="f"><img src="img/thumb/photo-11.jpg" alt="Flying Eagle">
-                  <div><span>Flying Eagle</span></div>
-                  </a>
-                </li>
-                <li class="photo col-md-2 col-sm-3 col-xs-6">
-                  <a href="img/full/photo-12.jpg" data-imagelightbox="f"><img src="img/thumb/photo-12.jpg" alt="Green Pattern">
-                  <div><span>Green Pattern</span></div></a>                
-                </li>
-                <li class="photo col-md-2 col-sm-3 col-xs-6">
-                  <a href="img/full/photo-13.jpg" data-imagelightbox="f"><img src="img/thumb/photo-13.jpg" alt="Serene">
-                  <div><span>Serene</span></div></a>
-                </li>
-                <li class="photo col-md-2 col-sm-3 col-xs-6">
-                  <a href="img/full/photo-14.jpg" data-imagelightbox="f"><img src="img/thumb/photo-14.jpg" alt="Winter Highway">
-                  <div><span>Winter Highway</span></div></a>
-                </li>
-                <li class="photo col-md-2 col-sm-3 col-xs-6">
-                  <a href="img/full/photo-15.jpg" data-imagelightbox="f"><img src="img/thumb/photo-15.jpg" alt="The Top Men">
-                  <div><span>The Top Men</span></div></a>              
-                </li>
-                <li class="photo col-md-2 col-sm-3 col-xs-6">
-                  <a href="img/full/photo-16.jpg" data-imagelightbox="f"><img src="img/thumb/photo-16.jpg" alt="Joy">
-                  <div><span>Joy</span></div>
-                  </a>
-                </li>
-                <li class="photo col-md-2 col-sm-3 col-xs-6">
-                  <a href="img/full/photo-17.jpg" data-imagelightbox="f"><img src="img/thumb/photo-17.jpg" alt="Golden Hour">
-                  <div><span>Golden Hour</span></div></a>
-                </li>
-                <li class="photo col-md-2 col-sm-3 col-xs-6">
-                  <a href="img/full/photo-18.jpg" data-imagelightbox="f"><img src="img/thumb/photo-18.jpg" alt="Bubble Mirror">
-                  <div><span>Bubble Mirror</span></div></a>
-                </li>
-                <li class="photo col-md-2 col-sm-3 col-xs-6">
-                  <a href="img/full/photo-19.jpg" data-imagelightbox="f"><img src="img/thumb/photo-19.jpg" alt="Love">
-                  <div><span>Love</span></div>
-                  </a>
-                </li>
-                <li class="photo col-md-2 col-sm-3 col-xs-6">
-                  <a href="img/full/photo-20.jpg" data-imagelightbox="f"><img src="img/thumb/photo-20.jpg" alt="Unter den Linden">
-                  <div><span>Unter den Linden</span></div>
-                  </a>
-                </li>
-                <li class="photo col-md-2 col-sm-3 col-xs-6">
-                  <a href="img/full/photo-21.jpg" data-imagelightbox="f"><img src="img/thumb/photo-21.jpg" alt="Solitude">
-                  <div><span>Solitude</span></div>
-                  </a>
-                 </li>
-                <li class="photo col-md-2 col-sm-3 col-xs-6">
-                  <a href="img/full/photo-22.jpg" data-imagelightbox="f"><img src="img/thumb/photo-22.jpg" alt="Miniature">
-                  <div><span>Miniature</span></div>
-                  </a>
-                </li>
-                <li class="photo col-md-2 col-sm-3 col-xs-6">
-                  <a href="img/full/photo-23.jpg" data-imagelightbox="f"><img src="img/thumb/photo-23.jpg" alt="Pride">
-                  <div><span>Pride</span></div>
-                  </a>
-                </li>
-                <li class="photo col-md-2 col-sm-3 col-xs-6">
-                  <a href="img/full/photo-24.jpg" data-imagelightbox="f"><img src="img/thumb/photo-24.jpg" alt="Sony Center">
-                  <div><span>Sony Center</span></div>
-                  </a>
-                 </li>
-              </ul>  
-          </div><!-- row -->
-        </div><!-- /container -->
-      </section><!-- /photography -->
-
-
-
-      <!-- design modal 01 -->
-      <div class="md-modal md-effect-9" id="modal-01">
-        <div class="container md-content">
-              <div class="row">
-                <div class="col-md-12 title design-modal-title">
-                  <h2>Billy Elliot Poster</h2>
-                  <a class="md-close"></a>
-                </div><!-- /design-modal-title -->
-            
-              </div><!-- /row -->
-              <div class="row">
-                <div class="col-md-5 col-sm-5 design-full-img">
-                  <a href="img/full/design-01.jpg" data-imagelightbox="b">
-                    <img data-imagelightbox="b" src="img/full/design-01.jpg" alt="Billy Elliot the Musical Poster">
-                  </a>
-                </div><!-- /design-full-img -->
-                <div class="col-md-7 col-sm-7 design-intro">
-                  <div class="tool-used">
-                    <!-- place icon -->
-                    <ul>
-                      <li>icon</li>
-                      <li>text</li>
-                    </ul>
-                  </div><!-- /tool-used -->
-                  <div class="design-text">
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-                  </div><!-- /design-text -->
-                </div><!-- /design-intro -->
-
-              </div><!-- /row -->       
-        </div>
-      </div><!-- /modal-01 -->
-
-      <div class="md-modal md-effect-9" id="modal-02">
-        <div class="container md-content">
-              <div class="row">
-                <div class="col-md-12 title design-modal-title">
-                  <h2>Online Dating Infographic</h2>
-                  <a class="md-close"></a>
-                </div><!-- /design-modal-title -->
-            
-              </div><!-- /row -->
-              <div class="row">
-                <div class="col-md-5 col-sm-5 design-full-img">
-                  <a href="img/full/design-02.jpg" data-imagelightbox="b">
-                    <img data-imagelightbox="b" src="img/full/design-02.jpg" alt="Online Dating Infographic">
-                  </a>
-                </div><!-- /design-full-img -->
-                <div class="col-md-7 col-sm-7 design-intro">
-                  <div class="tool-used">
-                    <!-- place icon -->
-                    <ul>
-                      <li>icon</li>
-                      <li>text</li>
-                    </ul>
-                  </div><!-- /tool-used -->
-                  <div class="design-text">
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-                  </div><!-- /design-text -->
-                </div><!-- /design-intro -->
-
-              </div><!-- /row -->       
-        </div>
-      </div><!-- /modal-02 -->
-
-      <div class="md-modal md-effect-9" id="modal-03">
-        <div class="container md-content">
-              <div class="row">
-                <div class="col-md-12 title design-modal-title">
-                  <h2>Barcelona Street Performer</h2>
-                  <a class="md-close"></a>
-                </div><!-- /design-modal-title -->
-            
-              </div><!-- /row -->
-              <div class="row">
-                <div class="col-md-5 col-sm-5 design-full-img">
-                  <a href="img/full/design-03.jpg" data-imagelightbox="b">
-                    <img data-imagelightbox="b" src="img/full/design-03.jpg" alt="Barcelona Street Performer">
-                  </a>
-                </div><!-- /design-full-img -->
-                <div class="col-md-7 col-sm-7 design-intro">
-                  <div class="tool-used">
-                    <!-- place icon -->
-                    <ul>
-                      <li>icon</li>
-                      <li>text</li>
-                    </ul>
-                  </div><!-- /tool-used -->
-                  <div class="design-text">
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-                  </div><!-- /design-text -->
-                </div><!-- /design-intro -->
-
-              </div><!-- /row -->       
-        </div>
-      </div><!-- /modal-03 -->
-
-      <div class="md-modal md-effect-9" id="modal-04">
-        <div class="container md-content">
-              <div class="row">
-                <div class="col-md-12 title design-modal-title">
-                  <h2>Cover Design</h2>
-                  <a class="md-close"></a>
-                </div><!-- /design-modal-title -->
-            
-              </div><!-- /row -->
-              <div class="row">
-                <div class="col-md-5 col-sm-5 design-full-img">
-                  <a href="img/full/design-04-1.jpg" data-imagelightbox="b">
-                    <img data-imagelightbox="b" src="img/full/design-04-1.jpg" alt="Cover Design">
-                  </a>
-                  <a href="img/full/design-04-2.jpg" data-imagelightbox="b">
-                    <img data-imagelightbox="b" src="img/full/design-04-2.jpg" alt="Cover Design">
-                  </a>
-                </div><!-- /design-full-img -->
-                <div class="col-md-7 col-sm-7 design-intro">
-                  <div class="tool-used">
-                    <!-- place icon -->
-                    <ul>
-                      <li>icon</li>
-                      <li>text</li>
-                    </ul>
-                  </div><!-- /tool-used -->
-                  <div class="design-text">
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-                  </div><!-- /design-text -->
-                </div><!-- /design-intro -->
-
-              </div><!-- /row -->       
-        </div>
-      </div><!-- /modal-04 -->      
-
-       <div class="md-modal md-effect-9" id="modal-05">
-        <div class="container md-content">
-              <div class="row">
-                <div class="col-md-12 title design-modal-title">
-                  <h2>Scrolling Camera</h2>
-                  <a class="md-close"></a>
-                </div><!-- /design-modal-title -->
-            
-              </div><!-- /row -->
-              <div class="row">
-                <div class="col-md-5 col-sm-5 design-full-img">
-                  <a href="img/full/design-05.jpg" data-imagelightbox="b">
-                    <img data-imagelightbox="b" src="img/full/design-05.jpg" alt="Scrolling Camera">
-                  </a>
-                 
-                </div><!-- /design-full-img -->
-                <div class="col-md-7 col-sm-7 design-intro">
-                  <div class="tool-used">
-                    <!-- place icon -->
-                    <ul>
-                      <li>icon</li>
-                      <li>text</li>
-                    </ul>
-                  </div><!-- /tool-used -->
-                  <div class="design-text">
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-                  </div><!-- /design-text -->
-                </div><!-- /design-intro -->
-
-              </div><!-- /row -->       
-        </div>
-      </div><!-- /modal-05 -->  
-
-       <div class="md-modal md-effect-9" id="modal-06">
-        <div class="container md-content">
-              <div class="row">
-                <div class="col-md-12 title design-modal-title">
-                  <h2>Notepad</h2>
-                  <a class="md-close"></a>
-                </div><!-- /design-modal-title -->
-              </div><!-- /row -->
-              <div class="row">
-                <div class="col-md-5 col-sm-5 design-full-img">
-                  <a href="img/full/design-06-1.jpg" data-imagelightbox="b">
-                    <img data-imagelightbox="b" src="img/full/design-06-1.jpg" alt="Notepad">
-                  </a>
-                  <a href="img/full/design-06-2.jpg" data-imagelightbox="b">
-                    <img data-imagelightbox="b" src="img/full/design-06-2.jpg" alt="Cover Design">
-                  </a>
-                </div><!-- /design-full-img -->
-                <div class="col-md-7 col-sm-7 design-intro">
-                  <div class="tool-used">
-                    <!-- place icon -->
-                    <ul>
-                      <li>icon</li>
-                      <li>text</li>
-                    </ul>
-                  </div><!-- /tool-used -->
-                  <div class="design-text">
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-                  </div><!-- /design-text -->
-                </div><!-- /design-intro -->
-
-              </div><!-- /row -->       
-        </div>
-      </div><!-- /modal-06 -->          
-      <!-- modals overlay -->
-      <div class="md-overlay"></div>
-
-
-      
-      
-
-
-      <section id="design-02">
-        <div class="container-fluid">
-          <div class="row">
             <div class="col-md-3 left-column">
-              <div class="title contact-title">
+              <div class="title">
                 <h2 class="pull-right">Web/Graphic Design</h2>
               </div>
 
@@ -627,7 +307,7 @@
                 <div class="design-item">
                   
                     <div class="design-info">
-                      <button class="md-trigger" data-modal="modal-01">
+                      <button class="md-trigger" data-remodal-target="modal-012">
                         <h3>Billy Elliot Poster</h3>
                       </button>
                       <p>Graphic Design</p>
@@ -639,7 +319,7 @@
               <li class="col-md-4 col-sm-4 col-xs-6">
                 <div class="design-item">
                   <div class="design-info">
-                    <button class="md-trigger" data-modal="modal-02">
+                    <button class="md-trigger" data-remodal-target="modal-012">
                       <h3>Online Dating Infographic</h3>
                     </button>
                     <p>Graphic Design</p>
@@ -650,7 +330,7 @@
               <li class="col-md-4 col-sm-4 col-xs-6">
                 <div class="design-item">
                   <div class="design-info">
-                    <button class="md-trigger" data-modal="modal-03">
+                    <button class="md-trigger" data-remodal-target="modal-012">
                       <h3>Barcelona Street Performer</h3>
                     </button>
                     <p>Graphic Design</p>
@@ -661,7 +341,7 @@
               <li class="col-md-4 col-sm-4 col-xs-6">
                 <div class="design-item">
                   <div class="design-info">
-                    <button class="md-trigger" data-modal="modal-04">
+                    <button class="md-trigger" data-remodal-target="modal-012">
                       <h3>Cover Design</h3>
                     </button>  
                     <p>Graphic Design</p>
@@ -672,7 +352,7 @@
               <li class="col-md-4 col-sm-4 col-xs-6">
                 <div class="design-item">
                   <div class="design-info">
-                    <button class="md-trigger" data-modal="modal-05">
+                    <button class="md-trigger" data-remodal-target="modal-012">
                       <h3>Scrolling Camera</h3>
                     </button>
                     <p>Web Design</p>
@@ -683,7 +363,7 @@
               <li class="col-md-4 col-sm-4 col-xs-6">
                 <div class="design-item">
                   <div class="design-info">
-                    <button class="md-trigger" data-modal="modal-06">
+                    <button class="md-trigger" data-remodal-target="modal-012">
                       <h3>Notepad</h3>
                     </button>
                     <p>Web Design</p>
@@ -694,97 +374,244 @@
               
             </ul>
               </div><!-- /row -->
-              </div>
+              </div><!-- vcenter -->
                 
-            </div><!--  -->
+            </div><!-- /right-column -->
           </div><!-- /row -->
 
         </div><!-- /container -->
-      </section><!-- /design-02 -->
+      </section><!-- /design -->
 
-      <section id="painting">
+      <!-- modals -->
+      <!-- modal-01 billy elliiot poster -->
+      <div class="remodal" data-remodal-id="modal-012">
+        <button data-remodal-action="close" class="remodal-close"></button>
+        <h1>Remodal</h1>
+        <p>
+          Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
+        </p>
+        <br>
+        <button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
+        <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
+      </div>
+
+
+
+      <!-- photography page --> 
+      <section id="photography" class="float-right">
+        <div class="container">
+          <div class="row">       
+            <div class="col-md-8 left-column">
+              <div class="vcenter">
+              <div class="row">
+                <ul class="photo-thumbs">
+                <li class="photo col-md-3 col-sm-3 col-xs-6">
+                  <a href="img/full/photo-01.jpg" data-imagelightbox="f"><img src="img/thumb/photo-01.jpg" alt="Alaska Mountain Range">
+                  <div><span>Alaska Mountain Range</span></div></a>
+                </li>
+                <li class="photo col-md-3 col-sm-3 col-xs-6">
+                  <a href="img/full/photo-02.jpg" data-imagelightbox="f"><img src="img/thumb/photo-02.jpg" alt="Alaska Mountain Range">
+                  <div><span>Alaska Mountain Range</span></div></a>
+                </li>
+                <li class="photo col-md-3 col-sm-3 col-xs-6">
+                  <a href="img/full/photo-03.jpg" data-imagelightbox="f"><img src="img/thumb/photo-03.jpg" alt="Alaska Mountain Range">
+                  <div><span>Alaska Mountain Range</span></div></a>
+                </li>
+                <li class="photo col-md-3 col-sm-3 col-xs-6">
+                  <a href="img/full/photo-04.jpg" data-imagelightbox="f"><img src="img/thumb/photo-04.jpg" alt="Alaska Mountain Range">
+                  <div><span>Alaska Mountain Range</span></div></a>
+                </li>
+                <li class="photo col-md-3 col-sm-3 col-xs-6">
+                  <a href="img/full/photo-06.jpg" data-imagelightbox="f"><img src="img/thumb/photo-06.jpg" alt="Arctic White">
+                  <div><span>Arctic White</span></div></a>
+                </li>
+                <li class="photo col-md-3 col-sm-3 col-xs-6">
+                  <a href="img/full/photo-07.jpg" data-imagelightbox="f"><img src="img/thumb/photo-07.jpg" alt="Iridescence">
+                  <div><span>Iridescence</span></div></a>          
+                </li>
+                <li class="photo col-md-3 col-sm-3 col-xs-6">
+                  <a href="img/full/photo-08.jpg" data-imagelightbox="f"><img src="img/thumb/photo-08.jpg" alt="Pinky Moon">
+                  <div><span>Pinky Moon</span></div></a>
+                </li>
+                <li class="photo col-md-3 col-sm-3 col-xs-6">
+                  <a href="img/full/photo-11.jpg" data-imagelightbox="f"><img src="img/thumb/photo-11.jpg" alt="Flying Eagle">
+                  <div><span>Flying Eagle</span></div>
+                  </a>
+                </li>
+                <li class="photo col-md-3 col-sm-3 col-xs-6">
+                  <a href="img/full/photo-12.jpg" data-imagelightbox="f"><img src="img/thumb/photo-12.jpg" alt="Green Pattern">
+                  <div><span>Green Pattern</span></div></a>                
+                </li>
+                <li class="photo col-md-3 col-sm-3 col-xs-6">
+                  <a href="img/full/photo-14.jpg" data-imagelightbox="f"><img src="img/thumb/photo-14.jpg" alt="Winter Highway">
+                  <div><span>Winter Highway</span></div></a>
+                </li>
+                <li class="photo col-md-3 col-sm-3 col-xs-6">
+                  <a href="img/full/photo-15.jpg" data-imagelightbox="f"><img src="img/thumb/photo-15.jpg" alt="The Top Men">
+                  <div><span>The Top Men</span></div></a>              
+                </li>
+                <li class="photo col-md-3 col-sm-3 col-xs-6">
+                  <a href="img/full/photo-16.jpg" data-imagelightbox="f"><img src="img/thumb/photo-16.jpg" alt="Joy">
+                  <div><span>Joy</span></div>
+                  </a>
+                </li>
+                <li class="photo col-md-3 col-sm-3 col-xs-6">
+                  <a href="img/full/photo-17.jpg" data-imagelightbox="f"><img src="img/thumb/photo-17.jpg" alt="Golden Hour">
+                  <div><span>Golden Hour</span></div></a>
+                </li>
+                <li class="photo col-md-3 col-sm-3 col-xs-6">
+                  <a href="img/full/photo-18.jpg" data-imagelightbox="f"><img src="img/thumb/photo-18.jpg" alt="Bubble Mirror">
+                  <div><span>Bubble Mirror</span></div></a>
+                </li>
+                <li class="photo col-md-3 col-sm-3 col-xs-6">
+                  <a href="img/full/photo-21.jpg" data-imagelightbox="f"><img src="img/thumb/photo-21.jpg" alt="Solitude">
+                  <div><span>Solitude</span></div>
+                  </a>
+                 </li>
+                <li class="photo col-md-3 col-sm-3 col-xs-6">
+                  <a href="img/full/photo-24.jpg" data-imagelightbox="f"><img src="img/thumb/photo-24.jpg" alt="Sony Center">
+                  <div><span>Sony Center</span></div>
+                  </a>
+                 </li>
+              </ul>  
+              </div><!-- /row -->
+            </div><!-- /vcenter -->
+                
+            </div><!-- /left-column -->
+
+            <div class="col-md-1 middle-offset"></div>
+            <div class="col-md-3 right-column">
+              <div class="title">
+                <h2 class="pull-left">Photography</h2>
+              </div>
+
+            </div><!-- /right-column -->
+
+          </div><!-- /row -->
+
+        </div><!-- /container -->
+       </section><!-- /photography -->
+       
+
+       <!-- videos page -->   
+       <section id="videos-02" class="float-left">
         <div class="container">
           <div class="row">
-            <div class="col-md-4 title painting-title">
-              <h2>Painting</h2>
-            </div><!-- /painting -->
-          </div><!-- /row -->
-          
-          <div class="row">
-            <!-- triangle svg -->
-            <svg height="0" width="0">
-              <defs>
-                  <clipPath id="triangle-path">
-                      <path d="M0.003,387.662l120-388.326l120,388.326H0.003z"/>
-                  </clipPath>
-              </defs>
-            </svg>
-            <svg height="0" width="0">
-              <defs>
-                  <clipPath id="reverse-triangle-path">
-                      <path d="M240.003-0.338l-120,388.326L0.003-0.338H240.003z"/>
-                  </clipPath>
-              </defs>
-            </svg>
-            <div class="painting-img-container">
-              <div class="painting-img-row" class="col-md-3 col-sm-3 col-xs-6">
-                <a href="img/full/painting-01.jpg" data-imagelightbox="f">
-                      <img data-imagelightbox="b" src="img/thumb/painting-01.jpg" alt="Stargazer">
+            <div class="col-md-3 left-column">
+              <div class="title">
+                <h2 class="pull-right">Videos</h2>
+              </div><!-- /title -->
+
+            </div><!-- /left-column -->
+            <div class="col-md-1 middle-offset"></div>
+            <div class="col-md-8 right-column">
+              <div class="vcenter">
+                <div class="row">
                 
-                      <div class="painting-img-overlay">
-                        <div class="painting-img-overlay-content">
-                          Stargazer
-                        </div><!-- painting-img-overlay-content -->
-                      </div><!-- painting-img-overlay -->
-                </a>
-              </div><!-- /painting-img -->
-
-              <div class="painting-img-row" class="col-md-3 col-sm-3 col-xs-6">
-                <a href="img/full/painting-02.jpg" data-imagelightbox="f">
-                      <img data-imagelightbox="b" src="img/thumb/painting-02.jpg" alt="Sky Dome">
+                </div><!-- /row -->
+              </div><!-- vcenter -->
                 
-                      <div class="painting-img-overlay">
-                        <div class="painting-img-overlay-content">
-                          Sky Dome
-                        </div><!-- painting-img-overlay-content -->
-                      </div><!-- painting-img-overlay -->
-                </a>
-              </div><!-- /painting-img -->
-
-              <div class="painting-img-row" class="col-md-3 col-sm-3 col-xs-6">
-                <a href="img/full/painting-03.jpg" data-imagelightbox="f">
-                      <img data-imagelightbox="b" src="img/thumb/painting-03.jpg" alt="Solitude">
-                
-                      <div class="painting-img-overlay">
-                        <div class="painting-img-overlay-content">
-                          Solitude
-                        </div><!-- painting-img-overlay-content -->
-                      </div><!-- painting-img-overlay -->
-                </a>
-              </div><!-- /painting-img -->
-
-              <div class="painting-img-row" class="col-md-3 col-sm-2 col-xs-6">
-                <a href="img/full/painting-04.jpg" data-imagelightbox="f">
-                      <img data-imagelightbox="b" src="img/thumb/painting-04.jpg" alt="Illusion">
-                
-                      <div class="painting-img-overlay">
-                        <div class="painting-img-overlay-content">
-                          Illusion
-                        </div><!-- painting-img-overlay-content -->
-                      </div><!-- painting-img-overlay -->
-                </a>
-              </div><!-- /painting-img -->
-
-
-
-
-            </div><!-- /painitng-img-container -->
+            </div><!-- /right-column -->          
 
           </div><!-- /row -->
 
         </div><!-- /container -->
-      </section><!-- /painting -->
-      
+       </section><!-- /videos-02 -->
+
+
+        <!-- painting page --> 
+        <section id="painting" class="float-right">
+          <div class="container">
+            <div class="row">
+              
+              <div class="col-md-8 left-column">
+                <div class="vcenter">
+                  <div class="row">
+                      <!-- triangle svg -->
+                      <svg height="0" width="0">
+                        <defs>
+                            <clipPath id="triangle-path">
+                                <path d="M0.003,290.121l90-291.244l90,291.244H0.003z"/>
+                            </clipPath>
+                        </defs>
+                      </svg>
+                      <svg height="0" width="0">
+                        <defs>
+                            <clipPath id="reverse-triangle-path">
+                                <path d="M180.003-0.879l-90,291.244l-90-291.244H180.003z"/>
+                            </clipPath>
+                        </defs>
+                      </svg>
+                      <div class="painting-img-container">
+                        <div class="painting-img-row" class="col-md-3 col-sm-3 col-xs-6">
+                          <a href="img/full/painting-01.jpg" data-imagelightbox="f">
+                                <img data-imagelightbox="b" src="img/thumb/painting-01.jpg" alt="Stargazer">
+                          
+                                <div class="painting-img-overlay">
+                                  <div class="painting-img-overlay-content">
+                                    Stargazer
+                                  </div><!-- painting-img-overlay-content -->
+                                </div><!-- painting-img-overlay -->
+                          </a>
+                        </div><!-- /painting-img -->
+
+                        <div class="painting-img-row" class="col-md-3 col-sm-3 col-xs-6">
+                          <a href="img/full/painting-02.jpg" data-imagelightbox="f">
+                                <img data-imagelightbox="b" src="img/thumb/painting-02.jpg" alt="Sky Dome">
+                          
+                                <div class="painting-img-overlay">
+                                  <div class="painting-img-overlay-content">
+                                    Sky Dome
+                                  </div><!-- painting-img-overlay-content -->
+                                </div><!-- painting-img-overlay -->
+                          </a>
+                        </div><!-- /painting-img -->
+
+                        <div class="painting-img-row" class="col-md-3 col-sm-3 col-xs-6">
+                          <a href="img/full/painting-03.jpg" data-imagelightbox="f">
+                                <img data-imagelightbox="b" src="img/thumb/painting-03.jpg" alt="Solitude">
+                          
+                                <div class="painting-img-overlay">
+                                  <div class="painting-img-overlay-content">
+                                    Solitude
+                                  </div><!-- painting-img-overlay-content -->
+                                </div><!-- painting-img-overlay -->
+                          </a>
+                        </div><!-- /painting-img -->
+
+                        <div class="painting-img-row" class="col-md-3 col-sm-2 col-xs-6">
+                          <a href="img/full/painting-04.jpg" data-imagelightbox="f">
+                                <img data-imagelightbox="b" src="img/thumb/painting-04.jpg" alt="Illusion">
+                          
+                                <div class="painting-img-overlay">
+                                  <div class="painting-img-overlay-content">
+                                    Illusion
+                                  </div><!-- painting-img-overlay-content -->
+                                </div><!-- painting-img-overlay -->
+                          </a>
+                        </div><!-- /painting-img -->
+                      </div><!-- /painitng-img-container -->
+
+
+                  </div><!-- /row -->
+                </div><!-- vcenter -->
+                  
+              </div><!-- /left-column -->
+              <div class="col-md-1 middle-offset"></div>
+              <div class="col-md-3 right-column">
+                <div class="title painting-title">
+                  <h2 class="pull-left">Painting</h2>
+                </div>
+
+              </div><!-- /right-column -->
+
+            </div><!-- /row -->
+
+          </div><!-- /container -->
+         </section><!-- /painting -->
+       
+
+
 
     </div><!-- /wrapper -->
 
@@ -799,19 +626,8 @@
     <script src="js/vendor/imagelightbox.min.js"></script>
     <script src="js/vendor/jquery.hoverdir.js"></script>
 
-    <!-- classie.js by @desandro: https://github.com/desandro/classie -->
-    <script src="js/vendor/classie.js"></script>
-    <script src="js/vendor/modalEffects.js"></script>
-    <!-- for the blur effect -->
-    <!-- by @derSchepp https://github.com/Schepp/CSS-Filters-Polyfill -->
-    <script>
-      // this is important for IEs
-      var polyfilter_scriptpath = '/js/';
-    </script>
-    <script src="js/vendor/cssParser.js"></script>
-    <script src="js/vendor/css-filters-polyfill.js"></script>
-    <script src="js/vendor/masonry-docs.min.js"></script>
     <script src="js/vendor/jquery.flexverticalcenter.js"></script>
+    <script src="js/vendor/remodal.min.js"></script>
     <script src="js/main.js"></script>
     
     

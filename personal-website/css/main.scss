@@ -39,7 +39,7 @@ body {
 
 
 section{
-	border: 1px solid red;
+	//@include border;
 	height: 100vh;
 	overflow: hidden;
 	position: relative;
@@ -455,7 +455,7 @@ rect.rect{
 //skills page
 	//bottles container
 #skills{
-	height: 85vh;
+	height: 95vh;
 }
 
 #skills:before{
@@ -482,7 +482,7 @@ rect.rect{
 	max-width: em(1200);
 	position: absolute;
 	display: block;
-	bottom: 15%;
+	bottom: 20%;
     left:0;
     right:0;
     margin-left:auto;
@@ -755,11 +755,13 @@ rect.rect{
 #photography{
 	//add to mobile view
 	//overflow: scroll;
-	height: auto;
+	//height: auto;
 
 	ul.photo-thumbs{
 		padding:0;
-		position: relative;
+		//position: relative;
+		max-height: em(150)*4+2.5em;
+		overflow: auto;
 		li{	
 			min-height: em(150);
 			list-style: none;
@@ -826,9 +828,7 @@ rect.rect{
 	}
 }
 
-//design page
 
-//inspired by http://tympanus.net/Tutorials/CircleHoverEffects/index3.html
 .clearfix:after {
 	visibility: hidden;
 	display: block;
@@ -840,16 +840,8 @@ rect.rect{
 * html .clearfix             { zoom: 1; } /* IE6 */
 *:first-child+html .clearfix { zoom: 1; } /* IE7 */
 
-#design{
-	background-image: url('../img/yellow-bg.png');
-		
-	.row.design-thumbs-container{
-			margin-top: -1em;	
-	}
-
-}
-
-
+//design page
+//inspired by http://tympanus.net/Tutorials/CircleHoverEffects/index3.html
 	ul.round-thumbs{
 		//padding:$phi * 1em;
 		//padding-top: 0;
@@ -941,21 +933,23 @@ rect.rect{
 						}
 						@include box-shadow(inset 0 0 0 5px rgba(#000,0.05));
 						h3{
-							////@include border;
+							//@include border;
+							font-size: 1em;
 							color: #fff;
 							text-transform: uppercase;
 							position: relative;
 							letter-spacing: em(2);
-							margin: em(35) em(40) em(10) em(40);
+							margin: em(25) em(30) em(5) em(30);
 							padding: em(15) 0 0 0;
-							height: em(90);
+							min-height: em(90);
 						}
 						p{
 							position: relative;
+							font-size: .9em;
 							color: #fff;
 							padding: 0.3em;
 							font-style: italic;
-							margin: 0 em(30);
+							margin: em(8) em(30);
 							border-top: 1px solid rgba(#fff, .5);
 						}
 					}
@@ -987,7 +981,7 @@ rect.rect{
 					&:hover{
 						.design-thumb{
 							@include box-shadow(inset 0 0 0 15px rgba(#fff, 0.5) 0 1px 3px rgba(#000,0.2));
-							@include transform(rotate(-110deg));
+							@include transform(rotate(-130deg));
 						}
 						box-shadow: 0 0 0 rgba($blue, .6);
 					}
@@ -995,6 +989,7 @@ rect.rect{
 				
 			}
 	}
+
 //popup modals
 .md-modal{
 	position: fixed;
@@ -1144,8 +1139,6 @@ rect.rect{
 	.painting-img-container{
 		text-align: center;
 		.painting-img-row{
-			float: left;
-			margin: $phi*1em;
 			display: inline-block;
 			position: relative;
 			//@include box-shadow(5px 5px 0 rgba($blue, .6));
@@ -1167,8 +1160,8 @@ rect.rect{
 			}
 			img{
 				//max-width: 100%; height: auto;
-				width: 240px;
-				height: 388.33px;
+				width: 180px;
+				height: 291.244px;
 			}
 	
 			.painting-img-overlay{				
@@ -1206,37 +1199,41 @@ rect.rect{
 }
 
 
-//design page
-#design-02{
-	//background-image: url('../img/blue-bg.png');
-	.contact-title{
-		text-align: right;
+//work pages
+#design{
+	.title{
+		margin-top: 7rem;
 	}
-	.row{
-		position: relative;
-		.contact-title{
-			//color: #fff;
-		}
+}
+
+#painting{
+	.painting-title{
+		margin-top: 17rem;
 	}
 }
 
 .left-column, .right-column, .middle-offset{
-  ////@include border;
-  //padding-top: $phi*5rem;
-  //padding-bottom: $phi*5rem;
   height: 100vh;
 }
 
-.left-column{
-	position: relative;
-	
-	h2{
-		margin-top: 7rem;
-	}	
-}
 
-.right-column, .middle-offset{
+.float-left{
 	background-image: url('../img/yellow-bg.png');
+	.title{
+		text-align: right;
+	}
+	.left-column{
+		background-image: url('../img/lightpaperfibers.png');
+	}
 }
 
+.float-right{
+	background-image: url('../img/blue-bg.png');
+	.right-column{
+		background-image: url('../img/lightpaperfibers.png');
+	}
+	.title{
+		text-align: left;
+	}
+}
 

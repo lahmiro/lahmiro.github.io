@@ -88,6 +88,7 @@ section {
 
 #skills{
 	position: relative;
+	height: 60%;
 }
 
 
@@ -261,7 +262,7 @@ $easing: cubic-bezier(.6, .05, .28, .91);
 
 #nav-box{
 	position: fixed;
-	z-index: 4;
+	z-index: 900;
     overflow: auto;
     top: 0px;
     left: -20%;
@@ -278,7 +279,7 @@ $easing: cubic-bezier(.6, .05, .28, .91);
 
 #nav-bg{
 	position: fixed;
-	z-index: 3;
+	z-index: 800;
     overflow: hidden;
     top: 0px;
     left: -20%;
