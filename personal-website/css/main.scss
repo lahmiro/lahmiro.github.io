@@ -617,11 +617,7 @@ rect.rect{
 		background-color: $blue;
 		height: 100%;
 	}
-	
-	.portfolio-title{
-		
-		
-	}
+
 	&:before{
 		@include waveBorder;
 		background-color: $blue;
