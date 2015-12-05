@@ -51,7 +51,6 @@ section{
 
 .title{
 	margin-top: $phi * 1em;
-	
 }
 h1 {
 	font-size: 3em;
@@ -408,6 +407,7 @@ rect.rect{
 .intro{
 	padding: 1.5em;
 	margin-top: 2.5em;
+	position: relative;
 	.intro-title{
 		-webkit-transform-style: preserve-3d;
 		   -moz-transform-style: preserve-3d;
@@ -420,11 +420,12 @@ rect.rect{
 		text-align: justify;
 	}
 	.rects-03{
-		margin-left: 14.5em;
-		margin-top: -2em;
+		position: absolute;
+		margin-left: 12.5em;
+		margin-top: -1em;
 	}
 	svg#rects-03{
-		width: 50px;
+		width: em(60);
 	}
 	rect.rect-white{
 		stroke:white;
@@ -466,13 +467,16 @@ rect.rect{
 }
 
 .skills-title{
-	svg#rects-04{
 	position: relative;
-	width: 55px;
-	margin-left: -10px;
+	margin-top: $phi * 2em;
+	svg#rects-04{
+	position: absolute;
+	width: em(60);
+	margin: -8em 0 0 7em;
+	//margin-left: -10px;
 		rect{
 			stroke: $blue;
-			}
+		}
 	}
 }
 
@@ -482,7 +486,7 @@ rect.rect{
 	max-width: em(1200);
 	position: absolute;
 	display: block;
-	bottom: 20%;
+	bottom: 27%;
     left:0;
     right:0;
     margin-left:auto;
@@ -499,9 +503,6 @@ rect.rect{
 	}
 }
 
-.bottle{
-	//@include border;
-}
 @keyframes spin{
   from {
     @include transform(rotate(0deg));
@@ -1208,6 +1209,16 @@ rect.rect{
 	}
 }
 
+#videos{
+	ul{
+		position: relative;
+		li{
+			//padding-right: 0;
+			//margin-right: -.5em;
+		}
+	}
+}
+
 .left-column, .right-column, .middle-offset{
   height: 100vh;
 }
@@ -1221,7 +1232,16 @@ rect.rect{
 	.left-column{
 		background-image: url('../img/lightpaperfibers.png');
 	}
+	.categories-menu{
+		ul{
+			text-align: right;
+			a:hover{
+				margin-right: .5em;
+			}
+		}
+	}
 }
+
 
 .float-right{
 	background-image: url('../img/blue-bg.png');
@@ -1231,5 +1251,35 @@ rect.rect{
 	.title{
 		text-align: left;
 	}
+	.categories-menu{
+		ul{
+			text-align: left;
+			padding-left:0;
+		}
+		a:hover{
+			margin-left: .5em;	
+		}
+	}
 }
 
+//categories menu
+.categories-menu{
+	ul{
+		//color: $pale-sky;
+		list-style: none;
+		li{
+			padding: .3em;
+			position: relative;	
+			a{
+				text-decoration: none;
+				color: $dark-grey;
+				@include opacity(.6);
+				@include transition(.3s all ease-in);
+				&:hover{
+					@include transition(.3s all ease-in);
+					@include opacity(1);
+				}
+			}
+		}
+	}
+}
