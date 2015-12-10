@@ -1101,31 +1101,13 @@ rect.rect{
 
 //videos page
 
-#videos{
-	//@include clearUl;
-	ul{
-		padding-left: 0;
-		li{
-			//add right padding for moviel view
-			//eliminate right padding for the first element
-			list-style: none;
-			padding: 1em 2em .5em 0;
-			&:nth-child(2){
-				padding-right: 0;
-			}
-			iframe{
-				min-width: em(400);
-				max-width: 560;
-				width: 100%;
-			}
-			.video-info{
-				width: 90%;
-				margin-top: .5em;
-				padding: .3em;
-				font-size: 1em;
-			}
-		}
-	}
+.video-container{
+	iframe {
+        max-width: 100%;
+    }
+    .video-info{
+    	margin-top: 1rem;
+    }
 }
 
 //painting page
@@ -1283,3 +1265,51 @@ rect.rect{
 		}
 	}
 }
+
+//contact form
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes shake {
+  0%, 100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+.shake {
+  -webkit-animation-name: shake;
+  animation-name: shake;
+}
+

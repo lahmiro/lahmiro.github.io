@@ -242,8 +242,15 @@ $(function(){
     }
   });
 
+	//vertical center 
 	$('.vcenter').flexVerticalCenter();
 	//$('.contact-title').flexVerticalCenter();
+
+	//video resizing 
+	$(".video-container").fitVids();
+	$('.bxslider').bxSlider({
+		adaptiveHeight: true,
+	});
 });
 
 

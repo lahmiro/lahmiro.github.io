@@ -18,6 +18,7 @@
         <link rel="stylesheet" href="css/imagelightbox.css"> 
         <link rel="stylesheet" href="css/remodal.css">
         <link rel="stylesheet" href="css/remodal-default-theme.css">
+        <link rel="stylesheet" href="css/jquery.bxslider.css">
         <link rel="stylesheet" href="css/main.css">
         
 
@@ -591,31 +592,18 @@
             <div class="col-md-8 right-column">
               <div class="vcenter">
               <div class="row">
-                <ul class="round-thumbs">
-                  <li class="col-md-4 col-sm-4 col-xs-6">
-                    <div class="design-item">                
-                        <div class="design-info">
-                          <button class="md-trigger" data-remodal-target="modal-01">
-                            <h3>Nightmare</h3>
-                          </button>
-                          <p>Music Video</p>
-                        </div><!-- /design-info -->
-                      
-                      <div class="design-thumb design-img-1"></div>
-                    </div>
-                  </li>
-                  <li class="col-md-4 col-sm-4 col-xs-6">
-                    <div class="design-item">
-                      <div class="design-info">
-                        <button class="md-trigger" data-remodal-target="modal-02">
-                          <h3>Sherlock Solmes</h3>
-                        </button>
-                        <p>Animation</p>
-                      </div>
-                      <div class="design-thumb design-img-2"></div>
-                    </div>
-                  </li>
-                </ul>
+                  <div class="video-container">
+                    <ul class="bxslider">
+                      <li>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/PR-XWALgN4I" frameborder="0" allowfullscreen></iframe>
+                        <div class="video-info">This video is about</div>
+                      </li>
+                      <li>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/vsW1MV6eZ8c" frameborder="0" allowfullscreen></iframe>
+                        <div class="video-info">This video is about</div>
+                      </li>
+                    </ul>
+                  </div>
               </div><!-- /row -->
               </div><!-- vcenter -->
                 
@@ -772,6 +760,9 @@
 
     <script src="js/vendor/jquery.flexverticalcenter.js"></script>
     <script src="js/vendor/remodal.min.js"></script>
+    <script src="js/vendor/jquery.fitvids.js"></script>
+    <script src="js/vendor/jquery.bxslider.js"></script>
+
     <script src="js/vendor/validator.min.js"></script>
     <script src="js/vendor/form-scripts.js"></script>
     <script src="js/main.js"></script>
