@@ -1266,6 +1266,62 @@ rect.rect{
 	}
 }
 
+//divider
+.blue-divider{
+		height: 2px;
+		width: 100%;
+		background-color: $blue;
+}
+
+//contact page
+#contact{
+	height: auto;
+	.title{
+		//margin-top: 9rem;
+	}
+	.container{
+		margin: $phi * 3rem auto;
+		//margin-bottom: $phi * 3rem;
+	}
+	.social-media{
+		ul{
+			list-style: none;
+			padding-left: 0;
+			li{
+				text-align: center;
+				float: left;
+				padding-right: 2em;
+				//border: 1px solid $yellow;
+				a{
+					text-decoration: none;
+					color: $blue;
+					i{
+						@include transition(all .2s ease-in);
+					}
+					&:hover{
+						i{
+							margin-top: -.2em;
+							@include transition(all .2s ease-in);
+						}
+					}
+				}
+				&:first-child{
+					padding-left: 0;
+				}
+			}
+		}
+	}
+
+}
+.contact-form-container{
+	button#form-submit {
+		background: $blue;
+		color: #fff;
+		&:hover{
+			
+		}
+	}
+}
 //contact form
 .animated {
   -webkit-animation-duration: 1s;
@@ -1311,5 +1367,10 @@ rect.rect{
 .shake {
   -webkit-animation-name: shake;
   animation-name: shake;
+}
+
+//footer
+footer{
+	text-align: center;
 }
 
