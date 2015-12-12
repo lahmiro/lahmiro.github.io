@@ -9,7 +9,7 @@
   box-sizing: border-box; }
 
 /* Mobile devices less than 768px */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   h1, h2 {
     font-size: 2em; }
 
@@ -154,8 +154,12 @@
 @media (min-width: 768px) and (max-width: 991px) {
   .bottle-container .bottle {
     margin: 1em; } }
-/* Large devices (large desktops, 1200px and up) */
+/* tablet landscape and mobile */
+/* tablet landscpae */
 @media (min-width: 992px) and (max-width: 1199px) {
   .bottle-container .bottle {
-    margin: 2.5em; } }
+    margin: 2.5em; }
+
+  .portfolio-categories {
+    margin-right: 0; } }
 /* Large devices (large desktops, 1200px and up) */

@@ -668,7 +668,6 @@ rect.rect {
   max-height: 40em;
   overflow: auto; }
   #photography ul.photo-thumbs li {
-    min-height: 9.375em;
     list-style: none;
     padding: .1em;
     float: left;

@@ -7,7 +7,7 @@ $screen-lg-min: 1200px;
 
 
 /* Mobile devices less than 768px */ 
-@media (max-width: 768px){
+@media (max-width: 767px){
 	//general
 	h1, h2{
 		font-size: 2em;
@@ -244,7 +244,15 @@ $screen-lg-min: 1200px;
 	//contact page
 }
 
-/* Large devices (large desktops, 1200px and up) */
+/* tablet landscape and mobile */
+@media (max-width: 992px){
+
+
+
+}
+
+
+/* tablet landscpae */
 @media (min-width: 992px) and (max-width: 1199px) { 
 	//home page
 
@@ -257,10 +265,13 @@ $screen-lg-min: 1200px;
 			margin: 2.5em;
 		}
 	}
-
+	
 
 	//portfolio page
-	
+	.portfolio-categories{
+		margin-right: 0;	
+	}
+
 	//design page
 	
 	//photography page
