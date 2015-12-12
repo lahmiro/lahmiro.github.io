@@ -31,6 +31,23 @@ $(function(){
 					sidebarBg.classList.remove('active');
 			}
 	});
+
+	//disable scrollmagic for mobile/tablet view
+	/*
+	$(window).on("resize", function(e) {
+	  if (vw < 991 && controller.enabled()) {
+	    controller.enabled(false);
+	  } else if (!controller.enabled()) {
+	    controller.enabled(true);
+	  }
+	});
+	*/
+	
+
+	//scrollmagic animation
+
+
+
 	//set nav bg as a full-height triangle
 	$('#nav-bg').css({"border-right-width": vw*0.2, "border-top-width": vh});
 
@@ -246,11 +263,48 @@ $(function(){
 	$('.vcenter').flexVerticalCenter();
 	//$('.contact-title').flexVerticalCenter();
 
-	//video resizing 
-	$(".video-container").fitVids();
+	//video resizing and carousel
+	$('#video-carousel').fitVids();
+	$("#video-carousel").owlCarousel({
+		slideSpeed: 400,
+		paginationSpeed : 400,
+      	singleItem:true
+
+	});
+
+	/*
 	$('.bxslider').bxSlider({
 		adaptiveHeight: true,
 	});
+	*/
+
+	//media mobile/tablet/large screen
+	var smScreen = "screen and (max-width: 768px)",
+		mdScreen = "screen and (max-width: 992px)",
+		lgScreen = "screen and (min-width: 1200px)";
+
+	smView = {
+		match: function(){
+			console.log("mobile view matched");		
+			$(".reset-right-column").removeClass("col-md-push-8").addClass("col-sm-12");
+			$(".reset-left-column").removeClass("col-md-pull-4").addClass("col-sm-12");
+		}
+	},
+	mdView = {
+		match: function(){
+			console.log("tablet view matched");
+		}
+	},
+	lgView = {
+		match: function(){
+			console.log("large screen view matched");
+		}
+	};
+
+	enquire.register(smScreen, smView);
+	enquire.register(mdScreen, mdView);
+	enquire.register(lgScreen, lgView);
+
 });
 
 

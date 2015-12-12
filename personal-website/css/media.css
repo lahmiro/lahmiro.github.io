@@ -1,0 +1,135 @@
+@charset "UTF-8";
+/* general */
+*, *:after, *:before {
+  box-sizing: border-box; }
+
+* {
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* Mobile devices less than 768px */
+@media (max-width: 768px) {
+  h1, h2 {
+    font-size: 2em; }
+
+  .title {
+    margin-top: 1.618em; }
+
+  section, #skills, .left-column, .right-column {
+    height: auto; }
+
+  .middle-offset {
+    display: none; }
+
+  #home {
+    height: 100vh; }
+
+  .snow-mountain img {
+    max-width: 350px; }
+
+  .home-title-container {
+    top: 74%; }
+
+  .rects-01 {
+    top: 16%;
+    right: 8%; }
+
+  .rects-02 {
+    top: 53%;
+    left: 5%; }
+
+  .skills-title, .portfolio-title {
+    margin-top: 2.617924em; }
+
+  .skills-title svg#rects-04 {
+    width: 2.75em;
+    margin: -6em 0 0 4.8em; }
+
+  .table-container {
+    display: none; }
+
+  .bottle-container {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; }
+    .bottle-container .bottle {
+      margin: 2em;
+      width: 6.875em;
+      height: 10.625em; }
+    .bottle-container .circle-drop-container {
+      width: 1.875em;
+      height: 1.875em;
+      top: 7.5em; }
+
+  .fu-progress {
+    border: 5px solid #6dcff6; }
+    .fu-progress .fu-inner {
+      width: 6.25em;
+      height: 10em;
+      border: 0.3125em solid #ffffff; }
+    .fu-progress .fu-text {
+      font-size: 1em; }
+
+  .portfolio-categories {
+    min-width: 12.5em;
+    margin-right: 0;
+    margin-bottom: 1.5em; }
+    .portfolio-categories:nth-child(odd) a {
+      margin: 0; }
+    .portfolio-categories figcaption h2 {
+      margin-top: -1em; }
+
+  #design .title {
+    margin-top: 1.618em; }
+
+  .float-left .left-column, .float-right .right-column {
+    background-image: none; }
+
+  .categories-menu {
+    margin-top: -1.618em;
+    margin-bottom: 1.618em; }
+    .categories-menu li {
+      display: inline-block;
+      padding: .5em; }
+
+  ul.round-thumbs li {
+    padding-bottom: 0; }
+    ul.round-thumbs li .design-item {
+      width: 10.625em;
+      height: 10.625em; }
+      ul.round-thumbs li .design-item .design-info h3 {
+        margin: 1em 1.875em 0.3125em 1.875em; }
+
+  .remodal {
+    margin: 0; }
+
+  #photography ul.photo-thumbs {
+    width: 100%;
+    padding: 0 15px; }
+
+  div#video-carousel {
+    padding: 1.618em 15px; }
+
+  .title.videos-title {
+    margin-top: 1.618em; }
+
+  #painting .painting-title {
+    margin-top: 1.618em; }
+  #painting .painting-img-row {
+    margin-bottom: 1.618em; }
+
+  #contact .container {
+    margin: 1.618em auto; } }
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .bottle-container .bottle {
+    margin: 1em; } }
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .bottle-container .bottle {
+    margin: 2.5em; } }
+/* Large devices (large desktops, 1200px and up) */
