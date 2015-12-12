@@ -47,7 +47,6 @@ $(function(){
 	//scrollmagic animation
 
 
-
 	//set nav bg as a full-height triangle
 	$('#nav-bg').css({"border-right-width": vw*0.2, "border-top-width": vh});
 
@@ -289,6 +288,7 @@ $(function(){
 			$(".reset-right-column").removeClass("col-md-push-8").addClass("col-sm-12");
 			$(".reset-left-column").removeClass("col-md-pull-4").addClass("col-sm-12");
 			$("circle.blue-circle").attr('r', "110" );
+			$('#nav-bg').css({"border-right-width": vw});
 		}
 	},
 	mdView = {

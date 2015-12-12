@@ -34,6 +34,9 @@
   svg#rects-02 {
     width: 50px; }
 
+  .home-title-container {
+    top: 73%; }
+
   .rects-01 {
     top: 14%;
     right: 8%; }
@@ -48,6 +51,19 @@
       letter-spacing: 5px; }
     .home-title-container .home-title {
       letter-spacing: 8px; }
+
+  .arrow {
+    width: 30px;
+    height: 30px; }
+    .arrow:before {
+      width: 15px;
+      height: 15px; }
+
+  #nav-icon.active {
+    left: 60%; }
+
+  #nav-box {
+    top: 3em; }
 
   .skills-title, .portfolio-title {
     margin-top: 2.617924em; }
