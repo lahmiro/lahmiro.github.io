@@ -62,6 +62,9 @@
   #nav-icon.active {
     left: 60%; }
 
+  #nav-box {
+    top: 1.5em; }
+
   .skills-title, .portfolio-title {
     margin-top: 2.617924em; }
 
