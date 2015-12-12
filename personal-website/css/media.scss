@@ -32,22 +32,40 @@ $screen-lg-min: 1200px;
 	}
 	.snow-mountain{
 		img{
-			max-width: 350px;
+			max-width: 290px;
 		}
 	}
 
+	svg#rects-01{
+		width: 60px;	
+	}
+
+	svg#rects-02{
+		width: 50px;
+	}
+
 	.home-title-container{
-		top: 74%;
+		//top: 74%;
 	}
 	
 	.rects-01{
-	    top: 16%;
+	    top: 14%;
     	right: 8%;
 	}
 
 	.rects-02{
-		top: 53%;
-    	left: 5%;
+		top: 50%;
+    	left: 4%;
+	}
+	
+	.home-title-container{
+		width: 100%;
+		.home-name{
+			letter-spacing: 5px;
+		}
+		.home-title{
+			letter-spacing: 8px;
+		}
 	}
 
 	//about page

@@ -288,6 +288,7 @@ $(function(){
 			console.log("mobile view matched");		
 			$(".reset-right-column").removeClass("col-md-push-8").addClass("col-sm-12");
 			$(".reset-left-column").removeClass("col-md-pull-4").addClass("col-sm-12");
+			$("circle.blue-circle").attr('r', "110" );
 		}
 	},
 	mdView = {
