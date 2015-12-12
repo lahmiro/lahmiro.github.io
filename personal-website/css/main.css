@@ -98,7 +98,7 @@ h1, h2 {
 
 #nav-box {
   position: fixed;
-  z-index: 4;
+  z-index: 400;
   overflow: auto;
   top: 0px;
   left: -20%;
@@ -116,7 +116,7 @@ h1, h2 {
 
 #nav-bg {
   position: fixed;
-  z-index: 3;
+  z-index: 300;
   overflow: hidden;
   top: 0px;
   left: -20%;
@@ -384,16 +384,14 @@ rect.rect {
       stroke: #6dcff6; }
 
 .table-container {
+  z-index: 1;
+  position: relative;
+  margin-top: -6.5em;
+  margin-left: auto;
+  margin-right: auto;
   width: 83%;
   height: 6.25em;
   max-width: 75em;
-  position: absolute;
-  display: block;
-  bottom: 27%;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
   -webkit-perspective: 300px;
   perspective: 300px; }
   .table-container .table {
@@ -451,7 +449,8 @@ rect.rect {
     width: 8.125em;
     height: 11.875em;
     position: relative;
-    margin: 3.5em; }
+    margin: 3.5em;
+    z-index: 10; }
   .bottle-container .circle-drop-container {
     z-index: 7;
     position: relative;

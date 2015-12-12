@@ -9,20 +9,20 @@
   box-sizing: border-box; }
 
 /* Mobile devices less than 768px */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   h1, h2 {
     font-size: 2em; }
 
   .title {
     margin-top: 1.618em; }
 
-  section, #skills, .left-column, .right-column {
+  section, .left-column, .right-column {
     height: auto; }
 
   .middle-offset {
     display: none; }
 
-  #home {
+  #home, #about, #skills {
     height: 100vh; }
 
   .snow-mountain img {

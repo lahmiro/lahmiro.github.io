@@ -7,7 +7,7 @@ $screen-lg-min: 1200px;
 
 
 /* Mobile devices less than 768px */ 
-@media (max-width: 767px){
+@media (max-width: 768px){
 	//general
 	h1, h2{
 		font-size: 2em;
@@ -17,7 +17,7 @@ $screen-lg-min: 1200px;
 		margin-top: $phi * 1em;
 	}
 
-	section, #skills, .left-column, .right-column{
+	section, .left-column, .right-column{
 		height: auto;
 		//overflow: auto;
 	}
@@ -27,7 +27,7 @@ $screen-lg-min: 1200px;
 	}
 
 	//home page
-	#home{
+	#home, #about, #skills{
 		height: 100vh;
 	}
 	.snow-mountain{

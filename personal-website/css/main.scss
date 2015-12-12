@@ -101,7 +101,7 @@ $easing: cubic-bezier(.6, .05, .28, .91);
 
 #nav-box{
 	position: fixed;
-	z-index: 4;
+	z-index: 400;
     overflow: auto;
     top: 0px;
     left: -20%;
@@ -118,7 +118,7 @@ $easing: cubic-bezier(.6, .05, .28, .91);
 
 #nav-bg{
 	position: fixed;
-	z-index: 3;
+	z-index: 300;
     overflow: hidden;
     top: 0px;
     left: -20%;
@@ -380,16 +380,14 @@ rect.rect{
 }
 
 .table-container{
-	width: 83%;
-	height: em(100);
-	max-width: em(1200);
-	position: absolute;
-	display: block;
-	bottom: 27%;
-    left:0;
-    right:0;
+	z-index: 1;
+	position: relative;
+	margin-top: -6.5em;
     margin-left:auto;
     margin-right:auto;
+    width: 83%;
+	height: em(100);
+	max-width: em(1200);
   
 	-webkit-perspective: 300px;
 		   -moz-perspective: 300px;
@@ -421,12 +419,11 @@ rect.rect{
 	  justify-content: center;
 	  
 	.bottle{
-		//display: table-cell;
 		width: em(130);
 		height: em(190);
 		position: relative;
 		margin: 3.5em;
-		
+		z-index: 10;
 	}
 	.circle-drop-container{
 		z-index: 7;
