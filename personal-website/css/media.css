@@ -186,7 +186,10 @@
   .table-container {
     display: block;
     margin-top: -4em;
-    width: 90%; } }
+    width: 90%; }
+
+  .skills-title {
+    margin-top: 4.235801032em; } }
 /* tablet landscape and mobile */
 /* tablet landscpae */
 @media (min-width: 992px) and (max-width: 1199px) {
