@@ -17,7 +17,7 @@ $screen-lg-min: 1200px;
 		margin-top: $phi * 1em;
 	}
 
-	section, .left-column, .right-column{
+	section, #skills, .left-column, .right-column{
 		height: auto;
 		//overflow: auto;
 	}
@@ -27,12 +27,12 @@ $screen-lg-min: 1200px;
 	}
 
 	//home page
-	#home, #about, #skills{
+	#home, #about{
 		height: 100vh;
 	}
 	.snow-mountain{
 		img{
-			max-width: 290px;
+			max-width: 320px;
 		}
 	}
 
@@ -49,13 +49,13 @@ $screen-lg-min: 1200px;
 	}
 	
 	.rects-01{
-	    top: 14%;
-    	right: 8%;
+	    top: 17%;
+    	right: 12%;
 	}
 
 	.rects-02{
 		top: 50%;
-    	left: 4%;
+    	left: 5%;
 	}
 	
 	.home-title-container{
@@ -85,7 +85,9 @@ $screen-lg-min: 1200px;
 	}
 
 	//about page
-
+	.intro-text{
+		overflow: auto;
+	}
 
 	//skills page
 	.skills-title, .portfolio-title{
@@ -130,8 +132,8 @@ $screen-lg-min: 1200px;
 	
 	//portfolio page
 	.portfolio-categories{
-		min-width: em(200);
-		margin-right: 0;
+		min-width: em(190);
+		margin-right: -.5em;
 		margin-bottom: 1.5em;
 		&:nth-child(odd){
 			a{
@@ -220,6 +222,38 @@ $screen-lg-min: 1200px;
 @media (min-width: 768px) and (max-width: 991px) {
 	
 	//home page
+	.snow-mountain{
+		img{
+			max-width: 380px;
+		}
+	}
+
+	.rects-01{
+	   top: 24%;
+       right: 27%;
+	}
+
+	.rects-02{
+		top: 50%;
+    	left: 26%;
+	}
+
+	svg#rects-01{
+		width: 70px;	
+	}
+
+	svg#rects-02{
+		width: 60px;
+	}
+
+	.home-title-container{
+		.home-name{
+			letter-spacing: 9px;
+		}
+		.home-title{
+			letter-spacing: 10px;
+		}
+	}
 
 	//about page
 

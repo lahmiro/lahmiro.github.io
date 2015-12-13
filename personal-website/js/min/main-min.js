@@ -278,7 +278,7 @@ $(function(){
 	*/
 
 	//media mobile/tablet/large screen
-	var smScreen = "screen and (max-width: 767px)",
+	var smScreen = "screen and (max-width: 768px)",
 		mdScreen = "screen and (max-width: 992px)",
 		lgScreen = "screen and (min-width: 1200px)";
 
@@ -292,6 +292,7 @@ $(function(){
 	mdView = {
 		match: function(){
 			console.log("tablet view matched");
+			$("circle.blue-circle").attr('r', "130" );
 			$(".reset-right-column").removeClass("col-md-push-8").addClass("col-sm-12");
 			$(".reset-left-column").removeClass("col-md-pull-4").addClass("col-sm-12");
 		}
