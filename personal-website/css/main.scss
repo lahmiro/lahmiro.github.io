@@ -214,12 +214,16 @@ $easing: cubic-bezier(.6, .05, .28, .91);
 
 rect.rect{
 	fill:none;
-	stroke:$yellow;
 	stroke-width:3;
 	stroke-miterlimit:10;
-	mix-blend-mode: multiply; 
 }
 
+#home{
+	rect.rect{
+		mix-blend-mode: multiply; 
+		stroke:$yellow;
+	}
+}
 	//down arrow
 .arrow,
 .arrow:before{
@@ -303,6 +307,40 @@ rect.rect{
 	}
 }
 
+.floating-rects-container{
+	//@include border;
+	position: absolute;
+	right: 20%;
+	top: 34%;
+	.f-rects{
+		display: inline-block;
+		position: relative;
+		padding: 1em;
+		svg{
+			//position: absolute;
+			width: 50px;
+		}		
+	}
+}
+
+#f-rects-01{
+	top: 3em;	
+}
+
+#f-rects-02{
+	top: -2em;
+}
+
+#f-rects-03{
+	top:-9em;
+	left: -2em;
+}
+
+#f-rects-04{
+	top:-7em;
+	left: -.5em;
+}
+
 .intro{
 	padding: 1.5em;
 	margin-top: 2.5em;
@@ -326,31 +364,11 @@ rect.rect{
 	svg#rects-03{
 		width: em(60);
 	}
-	rect.rect-white{
+	
+}
+rect.rect-white{
 		stroke:white;
-		mix-blend-mode: normal;
-	}
 }
-
-	//flipping-rectangle
-/*
-.flip-front, .flip-back{
-	width: 215px;
-	height:72px;
-}
-
-.flip-front{
-	@include transform(translateZ(50px));
-	border: 3px solid #fff;
-	&.about-me{
-		margin-bottom: .2em;
-	}
-}
-
-.flip-back{
-	@include transform(rotateX(-90deg) translateZ(-50px));
-}
-*/
 
 //skills page
 	//bottles container
@@ -443,6 +461,8 @@ rect.rect{
 	}
 }
 
+
+
 	//bottle styles
 .fu-progress{
   position: absolute;
@@ -469,17 +489,14 @@ rect.rect{
       width: 200%;
       height: 140%;
       //water height, less - higher
-      top: 10%;
+      top: 90%;
       left: -50%;
       border: 1px solid transparent;
       border-radius: 40% !important;
       
       @include transform(translateZ(0));
-      -webkit-transform: translateZ(0);
-      transition: all 1s ease !important;
-      -webkit-transition: all 1s ease !important;
+      @include transition(all 1s ease !important);	
       @include animation(spin 10s linear infinite);
-    
     }
     .glare{
       position: absolute;
@@ -503,17 +520,29 @@ rect.rect{
       height: 100%;
       text-align: center;
       font-size: 1.1em;
-      //font-weight: bold;
     }
   }
 }
 
 //portfolio page
+rect.rect-yellow{
+	stroke: $yellow;
+}
+
 #portfolio{
 	.portfolio-full-container{
 		background-image: url('../img/blue-bg.png');
 		background-color: $blue;
 		height: 100%;
+	}
+	.portfolio-title{
+		position: relative;
+		.rects-05{
+			margin: -8.5em 11.5em;
+		}
+		#rects-05{
+			width: 3.25em;
+		}
 	}
 
 	&:before{
@@ -813,6 +842,7 @@ rect.rect{
 						border-radius: 50%;
 						overflow: hidden;
 						background: url(../img/blue-bg.png);
+						text-align: center;
 						button.md-trigger{
 							background: transparent;
     						border: 0;

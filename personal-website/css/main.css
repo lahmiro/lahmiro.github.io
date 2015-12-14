@@ -212,10 +212,12 @@ h1, h2 {
 
 rect.rect {
   fill: none;
-  stroke: #fff568;
   stroke-width: 3;
-  stroke-miterlimit: 10;
-  mix-blend-mode: multiply; }
+  stroke-miterlimit: 10; }
+
+#home rect.rect {
+  mix-blend-mode: multiply;
+  stroke: #fff568; }
 
 .arrow,
 .arrow:before {
@@ -315,6 +317,31 @@ rect.rect {
   max-height: 43.75em;
   bottom: 0; }
 
+.floating-rects-container {
+  position: absolute;
+  right: 20%;
+  top: 34%; }
+  .floating-rects-container .f-rects {
+    display: inline-block;
+    position: relative;
+    padding: 1em; }
+    .floating-rects-container .f-rects svg {
+      width: 50px; }
+
+#f-rects-01 {
+  top: 3em; }
+
+#f-rects-02 {
+  top: -2em; }
+
+#f-rects-03 {
+  top: -9em;
+  left: -2em; }
+
+#f-rects-04 {
+  top: -7em;
+  left: -.5em; }
+
 .intro {
   padding: 1.5em;
   margin-top: 2.5em;
@@ -333,28 +360,10 @@ rect.rect {
     margin-top: -1em; }
   .intro svg#rects-03 {
     width: 3.75em; }
-  .intro rect.rect-white {
-    stroke: white;
-    mix-blend-mode: normal; }
 
-/*
-.flip-front, .flip-back{
-	width: 215px;
-	height:72px;
-}
+rect.rect-white {
+  stroke: white; }
 
-.flip-front{
-	@include transform(translateZ(50px));
-	border: 3px solid #fff;
-	&.about-me{
-		margin-bottom: .2em;
-	}
-}
-
-.flip-back{
-	@include transform(rotateX(-90deg) translateZ(-50px));
-}
-*/
 #skills {
   height: 95vh; }
 
@@ -493,7 +502,7 @@ rect.rect {
       background: #6dcff6;
       width: 200%;
       height: 140%;
-      top: 10%;
+      top: 90%;
       left: -50%;
       border: 1px solid transparent;
       border-radius: 40% !important;
@@ -502,9 +511,11 @@ rect.rect {
       -moz-transform: translateZ(0);
       -o-transform: translateZ(0);
       -ms-transform: translateZ(0);
-      -webkit-transform: translateZ(0);
       transition: all 1s ease !important;
       -webkit-transition: all 1s ease !important;
+      -moz-transition: all 1s ease !important;
+      -o-transition: all 1s ease !important;
+      -ms-transition: all 1s ease !important;
       animation: spin 10s linear infinite;
       -webkit-animation: spin 10s linear infinite;
       -moz-animation: spin 10s linear infinite;
@@ -540,10 +551,19 @@ rect.rect {
       text-align: center;
       font-size: 1.1em; }
 
+rect.rect-yellow {
+  stroke: #fff568; }
+
 #portfolio .portfolio-full-container {
   background-image: url("../img/blue-bg.png");
   background-color: #6dcff6;
   height: 100%; }
+#portfolio .portfolio-title {
+  position: relative; }
+  #portfolio .portfolio-title .rects-05 {
+    margin: -8.5em 11.5em; }
+  #portfolio .portfolio-title #rects-05 {
+    width: 3.25em; }
 #portfolio:before {
   content: "";
   display: block;
@@ -811,6 +831,7 @@ ul.round-thumbs {
         border-radius: 50%;
         overflow: hidden;
         background: url(../img/blue-bg.png);
+        text-align: center;
         box-shadow: inset 0 0 0 5px rgba(0, 0, 0, 0.05); }
         ul.round-thumbs li .design-item .design-info button.md-trigger {
           background: transparent;

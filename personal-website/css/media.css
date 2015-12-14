@@ -38,8 +38,8 @@
     top: 73%; }
 
   .rects-01 {
-    top: 17%;
-    right: 12%; }
+    top: 15%;
+    right: 5%; }
 
   .rects-02 {
     top: 50%;
@@ -190,7 +190,6 @@
 
   .skills-title {
     margin-top: 4.235801032em; } }
-/* tablet landscape and mobile */
 /* tablet landscpae */
 @media (min-width: 992px) and (max-width: 1199px) {
   .bottle-container .bottle {

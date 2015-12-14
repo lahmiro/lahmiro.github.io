@@ -32,6 +32,11 @@ $(function(){
 			}
 	});
 
+
+
+	//set nav bg as a full-height triangle
+	$('#nav-bg').css({"border-right-width": vw*0.2, "border-top-width": vh});
+
 	//disable scrollmagic for mobile/tablet view
 	/*
 	$(window).on("resize", function(e) {
@@ -45,10 +50,162 @@ $(function(){
 	
 
 	//scrollmagic animation
+	//home page
+	var blueCircle = $('.blue-circle'),
+		blueCircleContainer = $('.blue-circle-container'),
+		snowMountain = $('.snow-mountain'),
+		rects01 = $('#rects-01'),
+		rects02 = $('#rects-02'),
+		rects03 = $('#rects-03'),
+		arrow = $('.arrow'),
+		home = $('#home'),
+		about = $('#about'),
+		skills = $('#skills'),
+		homeTitle = $('.home-title'),
+		homeName = $('.home-name'),
+		body = $('body'),
+		introTitle = $('.intro-title'),
+		introText = $('.intro-text'),
+		loaderLine = $('.loader-line'),
+		tiltMountain = $('.tilt-mountain'),
+		intro = $('.intro-container');
+	
+	//on Leave controller
+	var onLeaveCtrl = new ScrollMagic.Controller({
+        globalSceneOptions: {
+            triggerHook: 'onLeave'
+        }
+    });
+
+	//onEnter controller
+	var onEnterCtrl = new ScrollMagic.Controller({
+		globalSceneOptions: {
+            triggerHook: 'onEnter'
+        }
+	});
+
+	//onCenter controller
+	var onCenterCtrl = new ScrollMagic.Controller({
+		globalSceneOptions: {
+            triggerHook: 'onCenter'
+        }
+	});
+	
+	//home page anim when pinnning
+	var homeAni = new TimelineMax();
+		homeAni.to([snowMountain, blueCircleContainer], 3, {y:380, ease: Power1.easeOut}, 0)
+				.to([homeTitle, homeName], .5, {opacity:0, ease: Power0.easeNone},0)
+				.to(rects02, 2, {y:-40, opacity: 0, ease: Power1.easeOut}, 0)
+				.to(rects01, 1.5, {y:-40, opacity: 0, ease: Power1.easeOut}, 0.3)			
+				.to(snowMountain, 1, {opacity:0, ease: Power1.easeOut}, 0)
+				.to(blueCircle, 1, {fill:"#fff568"}, 0)
+				.to(arrow, 1, {y:-40, opacity:0, ease: Power1.easeOut},0);
 
 
-	//set nav bg as a full-height triangle
-	$('#nav-bg').css({"border-right-width": vw*0.2, "border-top-width": vh});
+	new ScrollMagic.Scene({
+	  		triggerElement: "#home",
+	  		duration: '70%'
+		})
+		.setTween(homeAni)
+		.addTo(onLeaveCtrl)
+		.addIndicators(); 
+
+	//about page title and squears and floating rects
+	var aboutPageText = new TimelineMax();
+		aboutPageText.staggerFrom([introTitle, rects03, introText], 3, {y:-40, autoAlpha:0, clearProps:'all'}, 1);
+
+	var floatingRects = new TimelineMax({repeat: -1, delay: 3, smoothChildTiming: true});
+	floatingRects.set('.f-rects', {opacity:0})
+				 .staggerTo('.f-rects', 2, {y: -50, opacity:1, ease: Expo.easeOut}, .4)
+				 .staggerTo('.f-rects',2,{y: 20, opacity:0},.4);
+
+	var aboutPage = new TimelineMax();
+		aboutPage.add(aboutPageText)
+				 .add(floatingRects, 1);
+
+	new ScrollMagic.Scene({
+	  		triggerElement: "#about",
+	  		duration: '50%',
+	  		reverse: false
+		})
+		.setTween(aboutPageText)
+		.addTo(onCenterCtrl)
+		.addIndicators();
+
+	//about page intro text fades out
+	var introTextFadeOut = new TweenMax([introTitle, introText], 4, {opacity:0, y: -50, delay: 2, ease: Power1.easeOut},0);
+						//.to(tiltMountain, 3, {y: -10},0 );
+
+		
+	new ScrollMagic.Scene({
+		triggerElement: "#skills",
+		duration: 300
+	})
+		.setTween(introTextFadeOut)
+		.addTo(onEnterCtrl)
+		.addIndicators();
+
+	//skills page anim
+	var drops = $('.circle-drop-container');
+	var dropSvg = $('.drop');
+	var water = $('.water');
+	var bottleText = $('.fu-text');
+	var skillsTitle = $('.skills-title');
+	var rects04 = $('#rects-04');
+	//chagne drop shape
+	var changedDropPath = "M201.543,205.535c0,55.229-44.771,100-100,100s-100-44.771-100-100s100-199.229,100-199.229 S201.543,150.306,201.543,205.535z";
+	//TweenMax.to(changedDropShape, 3, {attr: {d: changedDropShape}});
+
+	//skills page drops anim
+	var dropAnim = new TimelineMax();
+		dropAnim.set(drops, {width: 100, height:100, left: "50%", xPercent: "-50%", y: -0.72*vh})
+				.to(drops, 2, {y: 0, width: 30, height:30, left: "70%", xPercent: "-50%", ease: Power1.easeIn}, 0)
+				.to(dropSvg, 1, {fill:"#6dcff6"}, 1)
+				.from(skillsTitle, 1, {y:-50, opacity:0, clearProps:'all'}, 0.5)
+				.to(dropSvg, 0.5, {attr: {d: changedDropPath}}, 1)
+				.to(dropSvg, 1, {opacity:0})
+				.to(water, 0.8, {top: "5%", ease: Power1.easeIn}, 1.4)
+				.from(bottleText, 0.5, {opacity: 0, y: -10, ease: Elastic.easeOut.config(1, 0.3)}, 2);
+				
+	new ScrollMagic.Scene({
+	  		triggerElement: "#skills",
+	  		duration: '60%'
+		})
+		.setTween(dropAnim)
+		.addTo(onCenterCtrl);
+
+	//portfolio page
+	var portfolioTitle = new TimelineMax();
+		portfolioTitle.staggerFrom('.portfolio-title > div', 2, {y: -40, opacity:0, ease: Power1.easeOut, clearProps:'all'}, 0.5);
+
+	var portfolioCat = new TimelineMax();
+		portfolioCat.staggerFrom('.portfolio-categories', 2, {y: 40, opacity:0, ease: Power1.easeOut, clearProps:'all'}, 0.5);
+
+	var portfolioPage =  new TimelineMax();
+		portfolioPage.add(portfolioTitle,0)
+					 .add(portfolioCat,0);
+
+	new ScrollMagic.Scene({
+	  		triggerElement: "#portfolio",
+	  		duration: '50%'
+		})
+		.setTween(portfolioPage)
+		.addTo(onCenterCtrl)
+		.addIndicators();
+
+
+	var designCat = new TimelineMax();
+		designCat.staggerFrom('.design-item', 3, {rotation: 360, xPercent: 500, ease: Power4.easeOut}, .3);
+
+	new ScrollMagic.Scene({
+	  		triggerElement: "#design",
+	  		duration: '50%'
+		})
+		.setTween(designCat)
+		.addTo(onCenterCtrl)
+		.addIndicators();
+    
+
 
 	//portfolio categories changed shape hover effect
 	/**
@@ -252,15 +409,18 @@ $(function(){
       if (target.length) {
         $('html,body').animate({
           scrollTop: target.offset().top
-        }, 1000);
+        }, 1500);
         return false;
       }
     }
   });
 
+	
+
+
 	//vertical center 
 	$('.vcenter').flexVerticalCenter();
-	//$('.contact-title').flexVerticalCenter();
+
 
 	//video resizing and carousel
 	$('#video-carousel').fitVids();
@@ -271,11 +431,6 @@ $(function(){
 
 	});
 
-	/*
-	$('.bxslider').bxSlider({
-		adaptiveHeight: true,
-	});
-	*/
 
 	//media mobile/tablet/large screen
 	var smScreen = "screen and (max-width: 768px)",
