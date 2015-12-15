@@ -47,11 +47,18 @@ $(function(){
 	  }
 	});
 	*/
+
 	
 	//for touch device
 	if (Modernizr.touch){
 		$('.water').css("top", "5%");
+		$('#nav-bg').css({"display": "none"});
+		$('#nav-box').css({"height":"100%", "width": "66.67%", "background": "#fff568"});
+		$('.nav-item').css({"padding": "1em 1.618em"});
+		$('#nav-items').css({"margin-top": "30%"});
+
 	}
+
 
 
 

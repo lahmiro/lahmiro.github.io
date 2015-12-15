@@ -26,6 +26,29 @@ $screen-lg-min: 1200px;
 	.middle-offset{
 	   	display: none;
 	}
+	
+	//nav
+	#nav-icon.active{
+		left: 50%;
+	}
+
+
+	/*
+	div#nav-bg{
+		display: none;
+	}
+	
+	div#nav-items{
+		margin-top: 30%;
+	}
+	div#nav-box{
+		height: 100%;
+    	width: 66.67%;
+    	background: $yellow;
+	}
+	#nav-items .nav-item {
+		padding: 1em 1.618em;
+	}*/
 
 	//home page
 	#home, #about{
@@ -78,13 +101,7 @@ $screen-lg-min: 1200px;
 		}
 	}
 
-	#nav-icon.active{
-		left: 60%;
-	}
-	#nav-box{
-		top: 1.5em;
-	}
-
+	
 	//about page
 	.intro-text{
 		overflow: auto;
@@ -248,6 +265,12 @@ $screen-lg-min: 1200px;
 	#skills{
 		height: 50vh;
 	}
+	
+	//nav
+	#nav-icon.active{
+		left: 50%;
+	}
+
 
 	//home page
 	.snow-mountain{
@@ -321,7 +344,11 @@ $screen-lg-min: 1200px;
 
 	//about page
 
-
+	//nav 
+	#nav-icon.active{
+		left: 50%;
+	}
+	
 	//skills page
 	.bottle-container{
 		.bottle{

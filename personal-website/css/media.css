@@ -22,6 +22,25 @@
   .middle-offset {
     display: none; }
 
+  #nav-icon.active {
+    left: 50%; }
+
+  	/*
+  	div#nav-bg{
+  		display: none;
+  	}
+  	
+  	div#nav-items{
+  		margin-top: 30%;
+  	}
+  	div#nav-box{
+  		height: 100%;
+      	width: 66.67%;
+      	background: $yellow;
+  	}
+  	#nav-items .nav-item {
+  		padding: 1em 1.618em;
+  	}*/
   #home, #about {
     height: 100vh; }
 
@@ -58,12 +77,6 @@
     .arrow:before {
       width: 15px;
       height: 15px; }
-
-  #nav-icon.active {
-    left: 60%; }
-
-  #nav-box {
-    top: 1.5em; }
 
   .intro-text {
     overflow: auto; }
@@ -193,6 +206,9 @@
   #skills {
     height: 50vh; }
 
+  #nav-icon.active {
+    left: 50%; }
+
   .snow-mountain img {
     max-width: 380px; }
 
@@ -227,6 +243,9 @@
     margin-top: 4.235801032em; } }
 /* tablet landscpae */
 @media (min-width: 992px) and (max-width: 1199px) {
+  #nav-icon.active {
+    left: 50%; }
+
   .bottle-container .bottle {
     margin: 2.5em; } }
 /* Large devices (large desktops, 1200px and up) */
