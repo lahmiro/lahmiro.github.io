@@ -107,8 +107,7 @@ $(function(){
 	  		duration: '70%'
 		})
 		.setTween(homeAni)
-		.addTo(onLeaveCtrl)
-		.addIndicators(); 
+		.addTo(onLeaveCtrl);
 
 	//about page title and squears and floating rects
 	var aboutPageText = new TimelineMax();
@@ -125,25 +124,22 @@ $(function(){
 
 	new ScrollMagic.Scene({
 	  		triggerElement: "#about",
-	  		duration: '50%',
-	  		reverse: false
+	  		duration: '50%'
 		})
 		.setTween(aboutPageText)
-		.addTo(onCenterCtrl)
-		.addIndicators();
+		.addTo(onCenterCtrl);
 
 	//about page intro text fades out
 	var introTextFadeOut = new TweenMax([introTitle, introText], 4, {opacity:0, y: -50, delay: 2, ease: Power1.easeOut},0);
-						//.to(tiltMountain, 3, {y: -10},0 );
-
 		
 	new ScrollMagic.Scene({
+		offset: 200,
 		triggerElement: "#skills",
 		duration: 300
 	})
 		.setTween(introTextFadeOut)
-		.addTo(onEnterCtrl)
-		.addIndicators();
+		.addIndicators()
+		.addTo(onEnterCtrl);
 
 	//skills page anim
 	var drops = $('.circle-drop-container');
@@ -154,8 +150,7 @@ $(function(){
 	var rects04 = $('#rects-04');
 	//chagne drop shape
 	var changedDropPath = "M201.543,205.535c0,55.229-44.771,100-100,100s-100-44.771-100-100s100-199.229,100-199.229 S201.543,150.306,201.543,205.535z";
-	//TweenMax.to(changedDropShape, 3, {attr: {d: changedDropShape}});
-
+	
 	//skills page drops anim
 	var dropAnim = new TimelineMax();
 		dropAnim.set(drops, {width: 100, height:100, left: "50%", xPercent: "-50%", y: -0.72*vh})
@@ -175,72 +170,134 @@ $(function(){
 		.addTo(onCenterCtrl);
 
 	//portfolio page
+	//menu hover effect
+    $('.portfolio-cat-hv').on({
+	  mouseenter: function () {
+	    var portfolioCat = TweenMax.to($('.arrow-up', this), 0.3, {borderBottomColor: "#fff", rotation: 90, ease: Power1.easeOut});
+     	return portfolioCat;
+	  },
+	  mouseout: function () {
+	    var portfolioCatRt = TweenMax.to($('.arrow-up', this), 0.3, {borderBottomColor: "#545863", rotation: 0, ease: Power1.easeOut});
+     	return portfolioCatRt;
+	  }
+	});
+	
 	var portfolioTitle = new TimelineMax();
 		portfolioTitle.staggerFrom('.portfolio-title > div', 2, {y: -40, opacity:0, ease: Power1.easeOut, clearProps:'all'}, 0.5);
 
 	var portfolioCat = new TimelineMax();
-		portfolioCat.staggerFrom('.portfolio-categories', 2, {y: 40, opacity:0, ease: Power1.easeOut, clearProps:'all'}, 0.5);
+		portfolioCat.staggerFrom('.portfolio-cat', 2, {y: 40, opacity:0, ease: Power1.easeOut, clearProps:'all'}, 0.5);
 
 	var portfolioPage =  new TimelineMax();
 		portfolioPage.add(portfolioTitle,0)
-					 .add(portfolioCat,0);
+					 .add(portfolioCat,0.5);
 
 	new ScrollMagic.Scene({
 	  		triggerElement: "#portfolio",
-	  		duration: '50%'
+	  		duration: '40%'
 		})
 		.setTween(portfolioPage)
-		.addTo(onCenterCtrl)
-		.addIndicators();
+		.addTo(onCenterCtrl);
 
-
+	//design page left column
 	var designCat = new TimelineMax();
-		designCat.staggerFrom('.design-item', 3, {rotation: 360, xPercent: 500, ease: Power4.easeOut}, .3);
+		designCat.staggerFrom('.design-item', 4, {rotation: 360, xPercent: 500, ease: Power4.easeOut}, .3);
+	
+	var catMenuLf = new TimelineMax();
+		catMenuLf.staggerFrom('.cat-menu-left > ul> li', 3, {xPercent: -20, autoAlpha:0, ease: Power1.easeOut}, 1);
+
+	var designPage = new TimelineMax();
+		designPage.from('#design', 5, {xPercent: -100, ease: Power4.easeOut, clearProps: "all"}, 0)
+				  .from('.design-title', 3,{xPercent: -20, autoAlpha: 0, ease: Power1.easeOut}, 2.5)
+				  .add(designCat, 0)
+				  .add(catMenuLf, 3.5);
 
 	new ScrollMagic.Scene({
 	  		triggerElement: "#design",
+	  		reverse: false,
 	  		duration: '50%'
 		})
-		.setTween(designCat)
-		.addTo(onCenterCtrl)
-		.addIndicators();
+		.setTween(designPage)
+		.addTo(onCenterCtrl);
     
 
+	//photography page right column
+	var photoThumbs = new TimelineMax();
+		photoThumbs.staggerFrom('.photo', 4, {autoAlpha: 0, xPercent: 50, ease: Power1.easeOut}, .3);
 
-	//portfolio categories changed shape hover effect
-	/**
-	 * hovers.js v1.0.0
-	 * http://www.codrops.com
-	 *
-	 * Licensed under the MIT license.
-	 * http://www.opensource.org/licenses/mit-license.php
-	 * 
-	 * Copyright 2014, Codrops
-	 * http://www.codrops.com
-	 */
-	function ChangeCatShape() {
-		var speed = 250,
-			easing = mina.easeinout;
+	var catMenuRt = new TimelineMax();
+		catMenuRt.staggerFrom('.cat-menu-right > ul> li', 3, {xPercent: 20, autoAlpha:0, ease: Power1.easeOut}, 1); 
 
-		[].slice.call ( document.querySelectorAll( '.portfolio-categories > a' ) ).forEach( function( el ) {
-			var s = Snap( el.querySelector( 'svg' ) ), path = s.select( 'path' ),
-				pathConfig = {
-					from : path.attr( 'd' ),
-					to : el.getAttribute( 'data-path-hover' )
-				};
+	var photoPage = new TimelineMax();
+		photoPage.from('#photography', 5, {xPercent: 100, ease: Power4.easeOut, clearProps: "all"}, 0)
+				 .from('.photography-title', 3, {xPercent: 20, autoAlpha:0, ease: Power1.easeOut}, 3)
+				 .add(photoThumbs, 1)
+				 .add(catMenuRt, 4);
 
-			el.addEventListener( 'mouseenter', function() {
-				path.animate( { 'path' : pathConfig.to }, speed, easing );
-			} );
+	new ScrollMagic.Scene({
+	  		triggerElement: "#photography",
+	  		reverse: false,
+	  		duration: '50%'
+		})
+		.setTween(photoPage)
+		.addTo(onCenterCtrl);
 
-			el.addEventListener( 'mouseleave', function() {
-				path.animate( { 'path' : pathConfig.from }, speed, easing );
-			} );
-		} );
-	}
+	//videos page
+	var catMenuLf02 = new TimelineMax();
+		catMenuLf02.staggerFrom('.cat-menu-left-video > ul> li', 3, {xPercent: -20, autoAlpha:0, ease: Power1.easeOut}, 1);
 
-	ChangeCatShape();
+	var videosPage = new TimelineMax();
+		videosPage.from('#videos', 5, {xPercent: -100, ease: Power4.easeOut, clearProps: "all"}, 0)
+				  .from('#video-carousel', 4, {xPercent: 150, ease: Power1.easeOut}, 0)
+				  .from('.videos-title', 3, {xPercent: -20, autoAlpha: 0, ease: Power1.easeOut}, 2.5)
+				  .add(catMenuLf02, 3.5);
 
+	new ScrollMagic.Scene({
+	  		triggerElement: "#videos",
+	  		reverse: false,
+	  		duration: '50%'
+		})
+		.setTween(videosPage)
+		.addTo(onCenterCtrl);
+    
+	//painting page
+	var paintingThumbsUp = new TimelineMax();
+		paintingThumbsUp.staggerFrom('.painting-img-row:nth-child(odd)', 4, {autoAlpha: 0, yPercent: 20, ease: Power1.easeOut}, .3);
+	var paintingThumbsDown = new TimelineMax();
+		paintingThumbsDown.staggerFrom('.painting-img-row:nth-child(even)', 4, {autoAlpha: 0, yPercent: -20, ease: Power1.easeOut}, .3);
+
+	var catMenuRt02 = new TimelineMax();
+		catMenuRt02.staggerFrom('.cat-menu-right-painting > ul> li', 3, {xPercent: 20, autoAlpha:0, ease: Power1.easeOut}, 1); 
+
+	var paintingPage = new TimelineMax();
+	 	paintingPage.from('#painting', 5, {xPercent: 100, ease: Power4.easeOut, clearProps: "all"}, 0)
+				 .from('.painting-title', 3, {xPercent: 20, autoAlpha:0, ease: Power1.easeOut}, 2)
+				 .add(paintingThumbsUp, 2)
+				 .add(paintingThumbsDown, 2)
+				 .add(catMenuRt02, 3);
+
+	new ScrollMagic.Scene({
+	  		triggerElement: "#painting",
+	  		reverse: false,
+	  		duration: '50%'
+		})
+		.setTween(paintingPage)
+		.addTo(onCenterCtrl);
+
+	//contact page
+	var contactPage = new TimelineMax();
+		contactPage.from('.contact-form-container', 3, {autoAlpha:0, xPercent: 100, ease: Power1.easeOutc, learProps: "all"}, 0)
+					.from('.social-media', 3, {autoAlpha:0, xPercent: -100, ease: Power1.easeOut, clearProps: "all"}, 0);
+
+    new ScrollMagic.Scene({
+	  		triggerElement: "#contact",
+	  		reverse: false,
+	  		duration: '100%'
+		})
+		.setTween(contactPage)
+		.addTo(onEnterCtrl);
+
+	
 
 	//imagelightbox js
 	/*

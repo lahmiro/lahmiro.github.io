@@ -42,7 +42,12 @@ p {
 h1, h2{
 	font-weight: normal;
 }
-
+a{
+	&:hover{
+		text-decoration: none;
+	}
+	color: $dark-grey;
+}
 
 //nav
 $easing: cubic-bezier(.6, .05, .28, .91);
@@ -530,6 +535,7 @@ rect.rect-yellow{
 }
 
 #portfolio{
+	height: auto;
 	.portfolio-full-container{
 		background-image: url('../img/blue-bg.png');
 		background-color: $blue;
@@ -537,11 +543,14 @@ rect.rect-yellow{
 	}
 	.portfolio-title{
 		position: relative;
+		text-align: center;
+		width: 100%;
+		margin-top: $phi * 2em;
 		.rects-05{
-			margin: -8.5em 11.5em;
+			margin: -8.5em 5.5em;
 		}
 		#rects-05{
-			width: 3.25em;
+			width: 2.7em;
 		}
 	}
 
@@ -551,128 +560,46 @@ rect.rect-yellow{
 		border-color: $blue;
 		border-image-source: url('../img/blue-wave.svg');
 	}
-}
 
-
-.portfolio-categories-container{
-	//display: table;
-	margin: 0 auto;
-	width: 100%;	
-}
-
-.portfolio-categories{
-	//display: table-cell;
-	min-width: em(270);
-	//min-height: em(500);
-	max-width: em(290);
-	margin-right: 3.5em;
-	&:last-child{
-		margin-right: 0;
-	}
-	&:nth-child(odd){
-		a{
-			margin: em(30) 0 em(30) 0;
-		}
-	}
-
-	a{
+	.portfolio-cat-container{
 		width: 100%;
-		height: 100%;
-		float: left;
-		color: #333;
-		box-shadow: 3px 3px 0px 1px rgba($yellow, 0.6);
-		transition: box-shadow 0.3s ease;
-		&:hover{
-			box-shadow: none;
-			figure {
-				img {
-					opacity: 1;
-				}
-				button{
-					opacity: 1;
-					transform: translateY(-50%) translateX(-50%) scale(1);
-				}
-			}
-			figcaption h2{
-				transform: translateY(0);
-			}
-		}
-	}
-	figure{
-		position: relative;
-		overflow: hidden;
-		background: #333;
-		img{
-			position: relative;
-			display: block;
-			width: 100%;
-			height: 100%;
-			opacity: 0.8;
-			-webkit-transition: opacity 0.3s;
-			transition: opacity 0.3s;
-		}
-		button{
-			position: absolute;
-			padding: 8px;
-			width: 100%;
-			text-transform: uppercase;
-			letter-spacing: 1px;
-			font-weight: bold;
-			-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-			transition: opacity 0.3s, transform 0.3s;
-			top: 50%;
-			left: 50%;
-			border: 3px solid transparent;
-			background: rgba($yellow,0.8);
-			color: darken($pale-sky, 10);
-			opacity: 0;
-			-webkit-transform: translateY(-50%) translateX(-50%) scale(0.25);
-			transform: translateY(-50%) translateX(-50%) scale(0.25);
-		}
-	}
-	figcaption{
-		position: absolute;
-		top: 0;
-		z-index: 11;
-		padding: 10px;
-		width: 100%;
-		height: 100%;
 		text-align: center;
-		h2{
-			margin: 0 0 20px 0;
-			color: darken($pale-sky, 10);
-			//text-transform: uppercase;
-			letter-spacing: 1px;
-			font-weight: 300;
-			font-size: 130%;
-			-webkit-transition: -webkit-transform 0.3s;
-			transition: transform 0.3s;
+		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	  	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	  	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	  	display: -webkit-flex;     /* NEW - Chrome */
+	  	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+	  	justify-content: center;
+	  	margin-bottom: $phi * 2em;
+		.portfolio-cat{
+			position: relative;
+			text-align: center;
+			
+			font-size: 1.5em;
+			.portfolio-cat-hv{
+				padding: $phi * 1em;
+				@include transition(all .3s ease-out);
+				
+				&:hover{
+					color: #fff;
+					@include transition(all .3s ease-out);
+				}
+			}
 		}
-		
 	}
-	svg{
-		position: absolute;
-		top: -1px; /* fixes rendering issue in FF */
-		z-index: 10;
-		width: 100%;
-		height: 80%;
-	}
-	svg path{
-		fill: rgba($yellow, 0.9);
-		mix-blend-mode: multply;
-	}
-	figcaption,figcaption h2, button{
-	    -webkit-backface-visibility: hidden;
-	       -moz-backface-visibility: hidden;
-	            backface-visibility: hidden;
-	}
-	figcaption{
-		h2,p{
-			@include transform(translateY(50px));
-		}
-	} 
-
 }
+
+.arrow-up{
+	@include centerEl;
+	left: 0;
+	width: 0; 
+	height: 0; 
+	border-left: .3em solid transparent;
+	border-right: .3em solid transparent;
+	border-bottom: .9em solid $dark-grey;
+	@include opacity(.8);
+}
+
 
 //photography page
 #photography{

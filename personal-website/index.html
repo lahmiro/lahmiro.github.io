@@ -50,6 +50,7 @@
           <div id="nav-items">
               <div class="nav-item"><a href="#home">Home</a></div>
               <div class="nav-item"><a href="#about">About</a></div>
+              <div class="nav-item"><a href="#skills">Skills</a></div>
               <div class="nav-item"><a href="#portfolio">Portfolio</a></div>
               <div class="nav-item"><a href="#contact">Contact</a></div>
           </div><!-- nav-items -->
@@ -276,12 +277,13 @@
     </div><!-- /vcenter -->
         </div><!-- /container -->
       </section><!-- /skills -->
-
+      
+      <!-- /portfolio page -->
       <section id="portfolio">
        <div class="portfolio-full-container">
         <div class="container">
             <div class="row">
-              <div class="title portfolio-title col-md-3">
+              <div class="title portfolio-title col-md-12">
                 <div>
                   <h1>Portfolio</h1>
                 </div>
@@ -289,66 +291,22 @@
                   <svg id="rects-05" x="0px" y="0px"
                    width="70.617px" height="75.725px" viewBox="0 0 70.617 75.725"
                    xml:space="preserve">
-                    <rect x="18.284" y="22.892" class="rect rect-yellow" width="50" height="50"/>
-                    <rect x="2.284" y="1.892" class="rect rect-yellow" width="27" height="37"/>
+                    <rect x="18.284" y="22.892" class="rect rect-white" width="50" height="50"/>
+                    <rect x="2.284" y="1.892" class="rect rect-white" width="27" height="37"/>
                   </svg>
                 </div><!-- rects-05 -->
               </div><!-- /portfolio-ttile -->
             </div><!-- /row-->
 
             <div class="row">
-            <div class="portfolio-categories-container">
-             <div class="portfolio-categories col-md-3 col-sm-3 col-xs-6">
-               <a href="#design" data-path-hover="M0,0h200v42c0,0-58.002,12.74-100,12.74S0,42,0,42V0z">
-                <figure>
-                  <img src="img/cat-02.jpg" /> 
-                  <svg viewBox="0 0 200 300" preserveAspectRatio="none"><path class="categoriesSVG" d="M200,139.667L0,216.334V0h200V139.667z"/></svg>
-                  <figcaption>
-                    <h2>Web/Graphic Design</h2>
-                    <button>View</button>
-                  </figcaption>
-                </figure>
-              </a>
-             </div><!-- /portfolio-categories -->
-             <div class="portfolio-categories col-md-3 col-sm-3 col-xs-6">
-               <a href="#photography" data-path-hover="M0,0h200v42c0,0-58.002,12.74-100,12.74S0,42,0,42V0z">
-                <figure>
-                  <img src="img/cat-01.jpg" /> 
-                  <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M0,0h200v246L0,170V0z"/></svg>
-                  <figcaption>
-                    <h2>Photography</h2>
-                    <button>View</button>
-                  </figcaption>
-                </figure>
-              </a>
-             </div><!-- /portfolio-categories -->
-            <div class="portfolio-categories col-md-3 col-sm-3 col-xs-6">
-               <a href="#videos-cat" data-path-hover="M0,0h200v42c0,0-58.002,12.74-100,12.74S0,42,0,42V0z">
-                <figure>
-                  <img src="img/cat-03.jpg" /> 
-                  <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M0,0h200v246L0,170V0z"/></svg>
-                  <figcaption>
-                    <h2>Videos</h2>
-                    <button>View</button>
-                  </figcaption>
-                </figure>
-              </a>
-             </div> <!-- /portfolio-categories -->
-             <div class="portfolio-categories col-md-3 col-sm-3 col-xs-6">
-               <a href="#painting" data-path-hover="M0,0h200v42c0,0-58.002,12.74-100,12.74S0,42,0,42V0z">
-                <figure>
-                  <img src="img/cat-04.jpg" /> 
-                  <svg viewBox="0 0 200 300" preserveAspectRatio="none"><path class="categoriesSVG" d="M200,139.667L0,216.334V0h200V139.667z"/></svg>
-                  <figcaption>
-                    <h2>Painting</h2>
-                    <button>View</button>
-                  </figcaption>
-                </figure>
-              </a>
-             </div><!-- /portfolio-categories -->
-
-            </div><!-- /portfolio-categories-container -->
-          </div><!-- /row -->
+              <div class="portfolio-cat-container col-md-12">
+                <div class="portfolio-cat"><a class="portfolio-cat-hv" href="#design"><span class="arrow-up"></span>Web/Graphic Design</a>
+                </div>
+                <div class="portfolio-cat"><a class="portfolio-cat-hv" href="#photography"><span class="arrow-up"></span>Photography</a></div>
+                <div class="portfolio-cat"><a class="portfolio-cat-hv" href="#videos"><span class="arrow-up"></span>Videos</a></div>
+                <div class="portfolio-cat"><a class="portfolio-cat-hv" href="#painting"><span class="arrow-up"></span>Painting</a></div>
+              </div>
+            </div><!-- /row -->
           </div><!-- container -->
         </div><!-- /portfolio-full-container -->
       </section><!-- /portfolio -->
@@ -363,10 +321,10 @@
               <div class="title design-title">
                 <h2>Web/Graphic Design</h2>
               </div>
-              <div class="categories-menu">
+              <div class="categories-menu cat-menu-left">
                 <ul>
                   <li><a href="#photography">Photography</a></li>
-                  <li><a href="#videos-cat">Videos</a></li>
+                  <li><a href="#videos">Videos</a></li>
                   <li><a href="#painting">Painting</a></li>
                 </ul>
               </div>
@@ -539,13 +497,13 @@
           <div class="row">
             <div class="col-md-1 col-md-push-8 middle-offset"></div>
             <div class="col-md-3 col-md-push-8 right-column reset-right-column">
-              <div class="title">
+              <div class="title photography-title">
                 <h2>Photography</h2>
               </div><!-- /title -->
-               <div class="categories-menu ">
+               <div class="categories-menu cat-menu-right">
                 <ul>
                   <li><a href="#design">Web/Graphic Design</a></li>
-                  <li><a href="#videos-cat">Videos</a></li>
+                  <li><a href="#videos">Videos</a></li>
                   <li><a href="#painting">Painting</a></li>
                 </ul>
               </div><!-- /cateogires-menu -->
@@ -638,14 +596,14 @@
        
 
       <!-- /videos page -->
-       <section id="videos-cat" class="float-left">
+       <section id="videos" class="float-left">
         <div class="container">
           <div class="row">
             <div class="col-md-3 left-column">
               <div class="title videos-title">
                 <h2>Videos</h2>
               </div>
-              <div class="categories-menu">
+              <div class="categories-menu cat-menu-left-video">
                 <ul>
                   <li><a href="#design">Web/Graphic Design</a></li>
                   <li><a href="#photography">Photography</a></li>
@@ -686,11 +644,11 @@
                 <div class="title painting-title">
                   <h2>Painting</h2>
                 </div>
-                <div class="categories-menu">
+                <div class="categories-menu cat-menu-right-painting">
                 <ul>
                   <li><a href="#design">Web/Graphic Design</a></li>
                   <li><a href="#photography">Photography</a></li>
-                  <li><a href="#videos-cat">Videos</a></li>
+                  <li><a href="#videos">Videos</a></li>
                 </ul>
               </div><!-- /categories-menu -->
               </div><!-- /right-column -->
@@ -789,7 +747,7 @@
                   <h2>Find me on</h2>
                 </div>
     
-                <ul>
+                <ul class="social-media-icons">
                   <li><a href="https://www.facebook.com/lahmiro" target="_blank"><i class="fa fa-facebook-square fa-4x"></i></a></li>
                   <li><a href="https://www.flickr.com/photos/lahmiro16/" target="_blank"><i class="fa fa-flickr fa-4x"></i></a></li>
                   <li><a href="https://www.linkedin.com/in/philina-xinyi-chen-107688108" target="_blank"><i class="fa fa-linkedin-square fa-4x"></i></a></li>
@@ -840,15 +798,14 @@
     <script src="js/vendor/bootstrap.min.js"></script>
     <script src="js/vendor/TweenMax.min.js"></script>
     <script src="js/vendor/CSSPlugin.min.js"></script>
-    <script src="js/vendor/ScrollToPlugin.min.js"></script>
     <script src="js/vendor/ScrollMagic.js"></script>
     <script src="js/vendor/animation.gsap.js"></script>
     <script src="js/vendor/debug.addIndicators.js"></script>
+
     <script src="js/plugins.js"></script>
-    <script src="js/vendor/snap.svg-min.js"></script>
+
     <script src="js/vendor/imagelightbox.min.js"></script>
     <script src="js/vendor/jquery.hoverdir.js"></script>
-
     <script src="js/vendor/jquery.flexverticalcenter.js"></script>
     <script src="js/vendor/remodal.min.js"></script>
     <script src="js/vendor/jquery.fitvids.js"></script>

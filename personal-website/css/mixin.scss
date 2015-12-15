@@ -45,6 +45,15 @@ $browser-context: 16; // Default
 	-o-transform:$in;
 	-ms-transform:$in;
 }
+
+@mixin transform-origin($in) {
+	-webkit-transform-origin: $in;
+	   -moz-transform-origin: $in;
+	    -ms-transform-origin: $in;
+	     -o-transform-origin: $in;
+	        transform-origin: $in;
+}
+
 @mixin animation($in) {
 	animation:$in;
 	-webkit-animation:$in;
