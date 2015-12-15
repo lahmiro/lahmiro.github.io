@@ -14,9 +14,7 @@ $screen-lg-min: 1200px;
 		font-size: 2em;
 	}
 	
-	.title{
-		margin-top: $phi * 1em;
-	}
+	
 
 	section, #skills, .left-column, .right-column{
 		height: auto;
@@ -49,6 +47,37 @@ $screen-lg-min: 1200px;
 	#nav-items .nav-item {
 		padding: 1em 1.618em;
 	}*/
+
+	//work page categories
+	.float-left .categories-menu{
+		ul{
+			a{
+				&:hover, &:active{
+					margin-right: 0;
+					font-weight: bold;
+				}
+				
+			}
+		}
+		li{
+			font-size: 1.2em;
+		}
+	}
+
+	.float-right .categories-menu{
+		ul{
+			a{
+				&:hover, &:active{
+					margin-left: 0;
+					font-weight: bold;
+				}
+				
+			}
+		}
+		li{
+			font-size: 1.2em;
+		}
+	}
 
 	//home page
 	#home, #about{
@@ -213,8 +242,8 @@ $screen-lg-min: 1200px;
 		li{
 			padding-bottom: 0;
 			.design-item{
-				width: em(170);
-				height: em(170);
+				width: em(150);
+				height: em(150);
 				.design-info{
 					h3{
 						margin: 1em em(30) em(5) em(30);
@@ -266,13 +295,23 @@ $screen-lg-min: 1200px;
 		height: 50vh;
 	}
 	
+	#about {
+		height: 50vh;
+	}
+
 	//nav
 	#nav-icon.active{
 		left: 50%;
 	}
-
+	
+	.title.design-title{
+		margin-top: 2.618em;
+	}
 
 	//home page
+	.blue-circle-container {
+    	top: 43%;
+	}
 	.snow-mountain{
 		img{
 			max-width: 380px;
@@ -280,8 +319,8 @@ $screen-lg-min: 1200px;
 	}
 
 	.rects-01{
-	   top: 24%;
-       right: 27%;
+	    top: 28%;
+    	right: 27%;
 	}
 
 	.rects-02{
@@ -317,16 +356,31 @@ $screen-lg-min: 1200px;
 	}
 	.table-container{
 		display: block;
-		margin-top: -7em;
+		margin-top: -5em;
 		width: 90%;
 	}
 	.skills-title{
 		margin-top: $phi * $phi * $phi * 1em;
 	}
 	
+	
 	//portfolio page
 	
 	//design page
+	ul.round-thumbs{
+		margin-left: 1.618em;
+		li{
+			.design-item{
+				width: em(180);
+				height: em(180);
+				.design-info{
+					h3{
+						margin: 1em em(20) em(5) em(20);
+					}
+				}
+			}
+		}
+	}
 	
 	//photography page
 
@@ -348,7 +402,7 @@ $screen-lg-min: 1200px;
 	#nav-icon.active{
 		left: 50%;
 	}
-	
+
 	//skills page
 	.bottle-container{
 		.bottle{

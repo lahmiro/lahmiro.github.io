@@ -13,9 +13,6 @@
   h1, h2 {
     font-size: 2em; }
 
-  .title {
-    margin-top: 1.618em; }
-
   section, #skills, .left-column, .right-column {
     height: auto; }
 
@@ -41,6 +38,18 @@
   	#nav-items .nav-item {
   		padding: 1em 1.618em;
   	}*/
+  .float-left .categories-menu ul a:hover, .float-left .categories-menu ul a:active {
+    margin-right: 0;
+    font-weight: bold; }
+  .float-left .categories-menu li {
+    font-size: 1.2em; }
+
+  .float-right .categories-menu ul a:hover, .float-right .categories-menu ul a:active {
+    margin-left: 0;
+    font-weight: bold; }
+  .float-right .categories-menu li {
+    font-size: 1.2em; }
+
   #home, #about {
     height: 100vh; }
 
@@ -176,8 +185,8 @@
   ul.round-thumbs li {
     padding-bottom: 0; }
     ul.round-thumbs li .design-item {
-      width: 10.625em;
-      height: 10.625em; }
+      width: 9.375em;
+      height: 9.375em; }
       ul.round-thumbs li .design-item .design-info h3 {
         margin: 1em 1.875em 0.3125em 1.875em; }
 
@@ -206,14 +215,23 @@
   #skills {
     height: 50vh; }
 
+  #about {
+    height: 50vh; }
+
   #nav-icon.active {
     left: 50%; }
+
+  .title.design-title {
+    margin-top: 2.618em; }
+
+  .blue-circle-container {
+    top: 43%; }
 
   .snow-mountain img {
     max-width: 380px; }
 
   .rects-01 {
-    top: 24%;
+    top: 28%;
     right: 27%; }
 
   .rects-02 {
@@ -236,11 +254,19 @@
 
   .table-container {
     display: block;
-    margin-top: -7em;
+    margin-top: -5em;
     width: 90%; }
 
   .skills-title {
-    margin-top: 4.235801032em; } }
+    margin-top: 4.235801032em; }
+
+  ul.round-thumbs {
+    margin-left: 1.618em; }
+    ul.round-thumbs li .design-item {
+      width: 11.25em;
+      height: 11.25em; }
+      ul.round-thumbs li .design-item .design-info h3 {
+        margin: 1em 1.25em 0.3125em 1.25em; } }
 /* tablet landscpae */
 @media (min-width: 992px) and (max-width: 1199px) {
   #nav-icon.active {

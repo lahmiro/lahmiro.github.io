@@ -45,7 +45,7 @@ h1, h2{
 	font-weight: normal;
 }
 a{
-	&:hover{
+	&:hover, &:active{
 		text-decoration: none;
 	}
 	color: $dark-grey;
@@ -78,7 +78,7 @@ $easing: cubic-bezier(.6, .05, .28, .91);
        		margin-top: 7px;
        	}
 	}
-	&:hover{
+	&:hover, &:active{
 		div{
 			background-color: $dark-grey;	
 			@include transition(all 500ms $easing);
@@ -168,7 +168,7 @@ $easing: cubic-bezier(.6, .05, .28, .91);
 			top: 75%;
 		}
 
-		&:hover{
+		&:hover, &:active{
 			@include transition(all 0.3s ease-in-out);
 		    &:after {
 				width: 70%;
@@ -583,7 +583,7 @@ rect.rect-yellow{
 				padding: $phi * 1em;
 				@include transition(all .3s ease-out);
 				
-				&:hover{
+				&:hover, &:active{
 					color: #fff;
 					@include transition(all .3s ease-out);
 				}
@@ -668,7 +668,7 @@ rect.rect-yellow{
 						border: 3px solid rgba(#fff, .5);		
 					}
 				}
-				&:hover{
+				&:hover, &:active{
 					img{
 						@include opacity(1);
 					}
@@ -694,7 +694,7 @@ rect.rect-yellow{
 *:first-child+html .clearfix { zoom: 1; } /* IE7 */
 
 //design page
-//inspired by http://tympanus.net/Tutorials/CircleHoverEffects/index3.html
+//inspired by http://tympanus.net/Tutorials/CircleHover, &:activeEffects/index3.html
 	ul.round-thumbs{
 		//padding:$phi * 1em;
 		//padding-top: 0;
@@ -777,7 +777,7 @@ rect.rect-yellow{
 							background: transparent;
     						border: 0;
     						@include transition(all .3s ease);
-    						&:hover{
+    						&:hover, &:active{
     							@include transform(scale(1.1));
     							@include transition(all .3s ease);
     						}
@@ -829,7 +829,7 @@ rect.rect-yellow{
 						z-index: 12;
 					}
 					
-					&:hover{
+					&:hover, &:active{
 						.design-thumb{
 							@include box-shadow(inset 0 0 0 15px rgba(#fff, 0.5) 0 1px 3px rgba(#000,0.2));
 							@include transform(rotate(-130deg));
@@ -1012,7 +1012,7 @@ rect.rect-yellow{
 				  	@include transition(all .3s ease-in);
 				  }
 			}
-			&:hover{
+			&:hover, &:active{
 				.painting-img-overlay{
 					@include transition(all .3s ease-in);
 					background: none;
@@ -1061,7 +1061,7 @@ rect.rect-yellow{
 		ul{
 			text-align: right;
 			a{
-				&:hover{
+				&:hover, &:active{
 					margin-right: .5em;
 				}
 				
@@ -1085,7 +1085,7 @@ rect.rect-yellow{
 			padding-left:0;
 		}
 		a{
-			&:hover{
+			&:hover, &:active{
 				margin-left: .5em;
 			}
 			
@@ -1110,7 +1110,7 @@ rect.rect-yellow{
 				color: $dark-grey;
 				@include opacity(.6);
 				@include transition(.3s all ease-in);
-				&:hover{
+				&:hover, &:active{
 					@include transition(.3s all ease-in);
 					@include opacity(1);
 				}
@@ -1151,7 +1151,7 @@ rect.rect-yellow{
 					i{
 						@include transition(all .2s ease-in);
 					}
-					&:hover{
+					&:hover, &:active{
 						i{
 							margin-top: -.2em;
 							@include transition(all .2s ease-in);
@@ -1170,9 +1170,6 @@ rect.rect-yellow{
 	button#form-submit {
 		background: $blue;
 		color: #fff;
-		&:hover{
-			
-		}
 	}
 }
 //contact form
