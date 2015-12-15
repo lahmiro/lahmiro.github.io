@@ -25,6 +25,9 @@ body {
   /* Background pattern from subtlepatterns.com */
   background-image: url("../img/lightpaperfibers.png"); }
 
+.wrapper {
+  width: 100vw; }
+
 section {
   height: 100vh;
   overflow: hidden;
