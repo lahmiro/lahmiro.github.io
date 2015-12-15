@@ -29,9 +29,7 @@ $screen-lg-min: 1200px;
 	#nav-icon.active{
 		left: 50%;
 	}
-
-
-	/*
+	
 	div#nav-bg{
 		display: none;
 	}
@@ -46,7 +44,14 @@ $screen-lg-min: 1200px;
 	}
 	#nav-items .nav-item {
 		padding: 1em 1.618em;
-	}*/
+	}
+	#nav-items .nav-item:hover:after, #nav-items .nav-item:active:after {
+    	width: 40%;
+    	left: 12%;
+    }
+	#nav-items .nav-item:after {
+		left: 20%;
+	}
 
 	//work page categories
 	.float-left .categories-menu{
@@ -246,7 +251,12 @@ $screen-lg-min: 1200px;
 				height: em(150);
 				.design-info{
 					h3{
-						margin: 1em em(30) em(5) em(30);
+						margin: 1em 0.5em 0.2em 0.5em;
+    					padding-top: 0.5em;
+					}
+					p{
+						font-size: .8em;
+						margin: -0.5em 1.875em;
 					}
 				}
 			}
@@ -300,13 +310,24 @@ $screen-lg-min: 1200px;
 	}
 
 	//nav
-	#nav-icon.active{
-		left: 50%;
+	div#nav-box {
+		width: 33.33%;
 	}
-	
-	.title.design-title{
-		margin-top: 2.618em;
+
+	#nav-icon.active {
+    	left: 25%;
 	}
+	div#nav-items{
+		margin-top: 0;
+	}
+	#nav-items .nav-item:hover:after, #nav-items .nav-item:active:after {
+    	width: 35%;
+    	left: 6%;
+    }
+	#nav-items .nav-item:after {
+		left: 20%;
+	}
+
 
 	//home page
 	.blue-circle-container {
@@ -375,12 +396,19 @@ $screen-lg-min: 1200px;
 				height: em(180);
 				.design-info{
 					h3{
-						margin: 1em em(20) em(5) em(20);
+						margin: 1em 1.25em 0.3125em 1.25em;
+    					padding: 1em 0 0 0;
+					}
+					p{
+						font-size: 1em;
+						margin: 0 em(30);
 					}
 				}
 			}
 		}
 	}
+
+
 	
 	//photography page
 

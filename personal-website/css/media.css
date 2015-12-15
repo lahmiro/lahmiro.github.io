@@ -22,22 +22,27 @@
   #nav-icon.active {
     left: 50%; }
 
-  	/*
-  	div#nav-bg{
-  		display: none;
-  	}
-  	
-  	div#nav-items{
-  		margin-top: 30%;
-  	}
-  	div#nav-box{
-  		height: 100%;
-      	width: 66.67%;
-      	background: $yellow;
-  	}
-  	#nav-items .nav-item {
-  		padding: 1em 1.618em;
-  	}*/
+  div#nav-bg {
+    display: none; }
+
+  div#nav-items {
+    margin-top: 30%; }
+
+  div#nav-box {
+    height: 100%;
+    width: 66.67%;
+    background: #fff568; }
+
+  #nav-items .nav-item {
+    padding: 1em 1.618em; }
+
+  #nav-items .nav-item:hover:after, #nav-items .nav-item:active:after {
+    width: 40%;
+    left: 12%; }
+
+  #nav-items .nav-item:after {
+    left: 20%; }
+
   .float-left .categories-menu ul a:hover, .float-left .categories-menu ul a:active {
     margin-right: 0;
     font-weight: bold; }
@@ -188,7 +193,11 @@
       width: 9.375em;
       height: 9.375em; }
       ul.round-thumbs li .design-item .design-info h3 {
-        margin: 1em 1.875em 0.3125em 1.875em; }
+        margin: 1em 0.5em 0.2em 0.5em;
+        padding-top: 0.5em; }
+      ul.round-thumbs li .design-item .design-info p {
+        font-size: .8em;
+        margin: -0.5em 1.875em; }
 
   .remodal {
     margin: 0; }
@@ -218,11 +227,21 @@
   #about {
     height: 50vh; }
 
-  #nav-icon.active {
-    left: 50%; }
+  div#nav-box {
+    width: 33.33%; }
 
-  .title.design-title {
-    margin-top: 2.618em; }
+  #nav-icon.active {
+    left: 25%; }
+
+  div#nav-items {
+    margin-top: 0; }
+
+  #nav-items .nav-item:hover:after, #nav-items .nav-item:active:after {
+    width: 35%;
+    left: 6%; }
+
+  #nav-items .nav-item:after {
+    left: 20%; }
 
   .blue-circle-container {
     top: 43%; }
@@ -266,7 +285,11 @@
       width: 11.25em;
       height: 11.25em; }
       ul.round-thumbs li .design-item .design-info h3 {
-        margin: 1em 1.25em 0.3125em 1.25em; } }
+        margin: 1em 1.25em 0.3125em 1.25em;
+        padding: 1em 0 0 0; }
+      ul.round-thumbs li .design-item .design-info p {
+        font-size: 1em;
+        margin: 0 1.875em; } }
 /* tablet landscpae */
 @media (min-width: 992px) and (max-width: 1199px) {
   #nav-icon.active {
