@@ -89,7 +89,17 @@ $screen-lg-min: 1200px;
 	.intro-text{
 		overflow: auto;
 	}
+	.floating-rects-container{
+		display: none;
+	}
+	.intro .rects-03{
+		margin-left: 8.5em;
+    	margin-top: -1em;
+	}
 
+	.intro svg#rects-03{
+		width: 2.75em;
+	}
 	//skills page
 	.skills-title, .portfolio-title{
 		margin-top: $phi * $phi * 1em;
@@ -120,7 +130,7 @@ $screen-lg-min: 1200px;
 	}
 
 	.water{
-		top: 5%;	
+		top: 5%;
 	}
 
 	svg.circle-drop{
@@ -156,6 +166,12 @@ $screen-lg-min: 1200px;
 		width: 2.5em;
 	}
 	
+	.arrow-up{
+		display:none;
+	}
+	#portfolio .portfolio-cat-container {
+		margin-bottom: 0;
+	}
 	//design page
 	#design{
 		.title{

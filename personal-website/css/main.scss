@@ -7,13 +7,6 @@
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display);
 @import 'mixin.scss';
 
-.resized-mobile{
-    opacity: 1 !important;
-    -webkit-transform: translate3d(0,0,0) !important;
-    transform: translate3d(0,0,0) !important;
-}
-
-
 body {
 	@include serif-font;
 	color: $dark-grey;
