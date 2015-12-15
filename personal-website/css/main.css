@@ -14,6 +14,11 @@
   -ms-box-sizing: border-box;
   box-sizing: border-box; }
 
+.resized-mobile {
+  opacity: 1 !important;
+  -webkit-transform: translate3d(0, 0, 0) !important;
+  transform: translate3d(0, 0, 0) !important; }
+
 body {
   font-family: 'Playfair Display', serif;
   color: #545863;

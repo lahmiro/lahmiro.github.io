@@ -5,11 +5,7 @@ $screen-sm-min: 768px;
 $screen-md-min: 992px;
 $screen-lg-min: 1200px;
 
-body.resized-mobile{
-    opacity: 1 !important;
-    -webkit-transform: translate3d(0,0,0) !important;
-    transform: translate3d(0,0,0) !important;
-}
+
 
 /* Mobile devices less than 768px */ 
 @media (max-width: 768px){
@@ -121,6 +117,14 @@ body.resized-mobile{
 			height: em(30);
 			top: em(120);
 		}
+	}
+
+	.water{
+		top: 5%;	
+	}
+
+	svg.circle-drop{
+		display: none;
 	}
 
 	.fu-progress{

@@ -8,11 +8,6 @@
   -ms-box-sizing: border-box;
   box-sizing: border-box; }
 
-body.resized-mobile {
-  opacity: 1 !important;
-  -webkit-transform: translate3d(0, 0, 0) !important;
-  transform: translate3d(0, 0, 0) !important; }
-
 /* Mobile devices less than 768px */
 @media (max-width: 768px) {
   h1, h2 {
@@ -98,6 +93,12 @@ body.resized-mobile {
       width: 1.875em;
       height: 1.875em;
       top: 7.5em; }
+
+  .water {
+    top: 5%; }
+
+  svg.circle-drop {
+    display: none; }
 
   .fu-progress {
     border: 5px solid #6dcff6; }
