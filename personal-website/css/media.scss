@@ -13,8 +13,6 @@ $screen-lg-min: 1200px;
 	h1, h2{
 		font-size: 2em;
 	}
-	
-	
 
 	section, #skills, .left-column, .right-column{
 		height: auto;
@@ -139,6 +137,7 @@ $screen-lg-min: 1200px;
 	//about page
 	.intro-text{
 		overflow: auto;
+		height: 60vh;
 	}
 	.floating-rects-container{
 		display: none;
@@ -151,6 +150,10 @@ $screen-lg-min: 1200px;
 	.intro svg#rects-03{
 		width: 2.75em;
 	}
+	.intro{
+		margin-top: 1.618em;
+	}
+
 	//skills page
 	.skills-title, .portfolio-title{
 		margin-top: $phi * $phi * 1em;

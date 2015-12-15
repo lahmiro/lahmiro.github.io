@@ -93,7 +93,8 @@
       height: 15px; }
 
   .intro-text {
-    overflow: auto; }
+    overflow: auto;
+    height: 60vh; }
 
   .floating-rects-container {
     display: none; }
@@ -104,6 +105,9 @@
 
   .intro svg#rects-03 {
     width: 2.75em; }
+
+  .intro {
+    margin-top: 1.618em; }
 
   .skills-title, .portfolio-title {
     margin-top: 2.617924em; }
