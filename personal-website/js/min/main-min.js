@@ -561,7 +561,15 @@ $(function(){
 				);
 		
 		// overwrite scroll position calculation to use child's offset instead of container's scrollTop();
-		controller.scrollPos(function () {
+		onCenterCtrl.scrollPos(function () {
+			return -myScroll.y;
+		});
+
+		onEnterCtrl.scrollPos(function () {
+			return -myScroll.y;
+		});
+
+		onLeaveCtrl.scrollPos(function () {
 			return -myScroll.y;
 		});
 
