@@ -571,6 +571,7 @@ rect.rect-yellow{
 	  	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
 	  	justify-content: center;
 	  	margin-bottom: $phi * 2em;
+	  	flex-direction: row;
 		.portfolio-cat{
 			position: relative;
 			text-align: center;
@@ -1057,8 +1058,11 @@ rect.rect-yellow{
 	.categories-menu{
 		ul{
 			text-align: right;
-			a:hover{
-				margin-right: .5em;
+			a{
+				&:hover{
+					margin-right: .5em;
+				}
+				
 			}
 		}
 	}
@@ -1078,8 +1082,11 @@ rect.rect-yellow{
 			text-align: left;
 			padding-left:0;
 		}
-		a:hover{
-			margin-left: .5em;	
+		a{
+			&:hover{
+				margin-left: .5em;
+			}
+			
 		}
 	}
 }

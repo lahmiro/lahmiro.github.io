@@ -201,20 +201,20 @@ $(function(){
 
 	//design page left column
 	var designCat = new TimelineMax();
-		designCat.staggerFrom('.design-item', 4, {rotation: 360, xPercent: 500, ease: Power4.easeOut}, .3);
+		designCat.staggerFrom('.design-item', 6, {rotation: 360, xPercent: 500, ease: Power4.easeOut}, .3);
 	
 	var catMenuLf = new TimelineMax();
-		catMenuLf.staggerFrom('.cat-menu-left > ul> li', 3, {xPercent: -20, autoAlpha:0, ease: Power1.easeOut}, 1);
+		catMenuLf.staggerFrom('.cat-menu-left > ul> li', 4, {xPercent: -20, autoAlpha:0, ease: Power1.easeOut}, 1);
 
 	var designPage = new TimelineMax();
-		designPage.from('#design', 5, {xPercent: -100, ease: Power4.easeOut, clearProps: "all"}, 0)
-				  .from('.design-title', 3,{xPercent: -20, autoAlpha: 0, ease: Power1.easeOut}, 2.5)
-				  .add(designCat, 0)
-				  .add(catMenuLf, 3.5);
+		designPage.from('#design', 7, {xPercent: -100, ease: Sine.easeOut, clearProps: "all"}, 0)
+				  .from('.design-title', 3,{xPercent: -20, autoAlpha: 0, ease: Power1.easeOut}, 4.5)
+				  .add(designCat, 1)
+				  .add(catMenuLf, 5.5);
 
 	new ScrollMagic.Scene({
 	  		triggerElement: "#design",
-	  		reverse: false,
+	  		//reverse: false,
 	  		duration: '50%'
 		})
 		.setTween(designPage)
@@ -223,20 +223,20 @@ $(function(){
 
 	//photography page right column
 	var photoThumbs = new TimelineMax();
-		photoThumbs.staggerFrom('.photo', 4, {autoAlpha: 0, xPercent: 50, ease: Power1.easeOut}, .3);
+		photoThumbs.staggerFrom('.photo', 6, {autoAlpha: 0, xPercent: 50, ease: Power1.easeOut}, .3);
 
 	var catMenuRt = new TimelineMax();
-		catMenuRt.staggerFrom('.cat-menu-right > ul> li', 3, {xPercent: 20, autoAlpha:0, ease: Power1.easeOut}, 1); 
+		catMenuRt.staggerFrom('.cat-menu-right > ul> li', 4, {xPercent: 20, autoAlpha:0, ease: Power1.easeOut}, 1); 
 
 	var photoPage = new TimelineMax();
-		photoPage.from('#photography', 5, {xPercent: 100, ease: Power4.easeOut, clearProps: "all"}, 0)
-				 .from('.photography-title', 3, {xPercent: 20, autoAlpha:0, ease: Power1.easeOut}, 3)
-				 .add(photoThumbs, 1)
-				 .add(catMenuRt, 4);
+		photoPage.from('#photography', 6, {xPercent: 100, ease: Sine.easeOut, clearProps: "all"}, 0)
+				 .from('.photography-title', 3, {xPercent: 20, autoAlpha:0, ease: Power1.easeOut}, 4)
+				 .add(photoThumbs, 2)
+				 .add(catMenuRt, 5);
 
 	new ScrollMagic.Scene({
 	  		triggerElement: "#photography",
-	  		reverse: false,
+	  		//reverse: false,
 	  		duration: '50%'
 		})
 		.setTween(photoPage)
@@ -247,14 +247,14 @@ $(function(){
 		catMenuLf02.staggerFrom('.cat-menu-left-video > ul> li', 3, {xPercent: -20, autoAlpha:0, ease: Power1.easeOut}, 1);
 
 	var videosPage = new TimelineMax();
-		videosPage.from('#videos', 5, {xPercent: -100, ease: Power4.easeOut, clearProps: "all"}, 0)
-				  .from('#video-carousel', 4, {xPercent: 150, ease: Power1.easeOut}, 0)
-				  .from('.videos-title', 3, {xPercent: -20, autoAlpha: 0, ease: Power1.easeOut}, 2.5)
-				  .add(catMenuLf02, 3.5);
+		videosPage.from('#videos', 7, {xPercent: -100, ease: Sine.easeOut, clearProps: "all"}, 0)
+				  .from('#video-carousel', 7, {xPercent: 150, ease: Power1.easeOut}, 1.5)
+				  .from('.videos-title', 3, {xPercent: -20, autoAlpha: 0, ease: Power1.easeOut}, 4)
+				  .add(catMenuLf02, 5);
 
 	new ScrollMagic.Scene({
 	  		triggerElement: "#videos",
-	  		reverse: false,
+	  		//reverse: false,
 	  		duration: '50%'
 		})
 		.setTween(videosPage)
@@ -262,23 +262,23 @@ $(function(){
     
 	//painting page
 	var paintingThumbsUp = new TimelineMax();
-		paintingThumbsUp.staggerFrom('.painting-img-row:nth-child(odd)', 4, {autoAlpha: 0, yPercent: 20, ease: Power1.easeOut}, .3);
+		paintingThumbsUp.staggerFrom('.painting-img-row:nth-child(odd)', 6, {autoAlpha: 0, yPercent: 15, ease: Power1.easeOut}, .3);
 	var paintingThumbsDown = new TimelineMax();
-		paintingThumbsDown.staggerFrom('.painting-img-row:nth-child(even)', 4, {autoAlpha: 0, yPercent: -20, ease: Power1.easeOut}, .3);
+		paintingThumbsDown.staggerFrom('.painting-img-row:nth-child(even)', 6, {autoAlpha: 0, yPercent: -15, ease: Power1.easeOut}, .3);
 
 	var catMenuRt02 = new TimelineMax();
 		catMenuRt02.staggerFrom('.cat-menu-right-painting > ul> li', 3, {xPercent: 20, autoAlpha:0, ease: Power1.easeOut}, 1); 
 
 	var paintingPage = new TimelineMax();
-	 	paintingPage.from('#painting', 5, {xPercent: 100, ease: Power4.easeOut, clearProps: "all"}, 0)
-				 .from('.painting-title', 3, {xPercent: 20, autoAlpha:0, ease: Power1.easeOut}, 2)
-				 .add(paintingThumbsUp, 2)
-				 .add(paintingThumbsDown, 2)
-				 .add(catMenuRt02, 3);
+	 	paintingPage.from('#painting', 7, {xPercent: 100, ease: Sine.easeOut, clearProps: "all"}, 0)
+				 .from('.painting-title', 3, {xPercent: 20, autoAlpha:0, ease: Power1.easeOut}, 4)
+				 .add(paintingThumbsUp, 3)
+				 .add(paintingThumbsDown, 3)
+				 .add(catMenuRt02, 5);
 
 	new ScrollMagic.Scene({
 	  		triggerElement: "#painting",
-	  		reverse: false,
+	  		//reverse: false,
 	  		duration: '50%'
 		})
 		.setTween(paintingPage)
@@ -486,6 +486,23 @@ $(function(){
 		paginationSpeed : 400,
       	singleItem:true
 
+	});
+
+	//disable controller for mobile and tablet view
+	var body = $("body"); 
+
+	$(window).on('resize', function(e) {
+	    clearTimeout(resizeTimer);
+	    resizeTimer = setTimeout(function() {
+	        if ($(window).width() < 769 && controller.enabled()) {
+	            controller.enabled(false);
+	            body.addClass("resized-mobile");
+	        } else if (!controller.enabled()) {
+	            controller.enabled(true);
+	            body.removeClass("resized-mobile");
+	        }
+	        controller.update(true);
+	    }, 250);
 	});
 
 

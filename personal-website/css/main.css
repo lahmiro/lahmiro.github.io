@@ -604,7 +604,12 @@ rect.rect-yellow {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-bottom: 3.236em; }
+    margin-bottom: 3.236em;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row; }
     #portfolio .portfolio-cat-container .portfolio-cat {
       position: relative;
       text-align: center;
