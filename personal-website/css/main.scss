@@ -103,9 +103,6 @@ $easing: cubic-bezier(.6, .05, .28, .91);
 	}
 }
 
-
-
-
 #nav-box{
 	position: fixed;
 	z-index: 400;
@@ -144,7 +141,7 @@ $easing: cubic-bezier(.6, .05, .28, .91);
 
 #nav-items{
 	position: relative;
-	top: 21%;
+	top: 26%;
 	@include transform(translateY(-50%));
 	font-size: 1.3em;
 	@include serif-font;

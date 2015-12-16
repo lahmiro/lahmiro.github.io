@@ -110,7 +110,7 @@ $(function(){
 		homeAni.to([snowMountain, blueCircleContainer], 3, {y:380, ease: Power1.easeOut}, 0)
 				.to([homeTitle, homeName], .5, {opacity:0, ease: Power0.easeNone},0)
 				.to(rects02, 2, {y:-40, opacity: 0, ease: Power1.easeOut}, 0)
-				.to(rects01, 1.5, {y:-40, opacity: 0, ease: Power1.easeOut}, 0.3)			
+				.to(rects01, 1, {y:-30, opacity: 0, ease: Power1.easeOut}, 0)			
 				.to(snowMountain, 1, {opacity:0, ease: Power1.easeOut}, 0)
 				.to(blueCircle, 1, {fill:"#fff568"}, 0)
 				.to(arrow, 1, {y:-40, opacity:0, ease: Power1.easeOut},0);
@@ -152,7 +152,6 @@ $(function(){
 		duration: 300
 	})
 		.setTween(introTextFadeOut)
-		.addIndicators()
 		.addTo(onEnterCtrl);
 
 	//skills page anim
