@@ -51,6 +51,13 @@
 .remodal img {
   width: 70%; }
 
+.remodal p {
+  width: 70%;
+  display: block;
+  margin: 1.618em auto;
+  font-size: 1.2em;
+  text-align: justify; }
+
 .remodal.remodal-is-opening,
 .remodal.remodal-is-closing {
   -webkit-animation-duration: 0.3s;
