@@ -12,6 +12,7 @@ body {
 	color: $dark-grey;
 	/* Background pattern from subtlepatterns.com */
 	background-image: url('../img/lightpaperfibers.png');
+	overflow-x: hidden;
 }
 
 .wrapper{

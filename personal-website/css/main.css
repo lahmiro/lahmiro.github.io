@@ -18,7 +18,8 @@ body {
   font-family: 'Playfair Display', serif;
   color: #545863;
   /* Background pattern from subtlepatterns.com */
-  background-image: url("../img/lightpaperfibers.png"); }
+  background-image: url("../img/lightpaperfibers.png");
+  overflow-x: hidden; }
 
 .wrapper {
   width: 100vw; }

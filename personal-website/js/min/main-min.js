@@ -214,7 +214,7 @@ $(function(){
 
 	//design page left column
 	var designCat = new TimelineMax();
-		designCat.staggerFrom('.design-item', 6, {rotation: 360, xPercent: 500, ease: Power4.easeOut}, .3);
+		designCat.staggerFrom('.design-item', 11, {rotation: 360, xPercent: 500, ease: Power4.easeOut}, .3);
 	
 	var catMenuLf = new TimelineMax();
 		catMenuLf.staggerFrom('.cat-menu-left > ul> li', 4, {xPercent: -20, autoAlpha:0, ease: Power1.easeOut}, 1);
