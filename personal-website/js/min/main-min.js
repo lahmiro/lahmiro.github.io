@@ -207,6 +207,7 @@ $(function(){
 
 	new ScrollMagic.Scene({
 	  		triggerElement: "#portfolio",
+	  		reverse: false,
 	  		duration: '40%'
 		})
 		.setTween(portfolioPage)
@@ -227,7 +228,7 @@ $(function(){
 
 	new ScrollMagic.Scene({
 	  		triggerElement: "#design",
-	  		//reverse: false,
+	  		reverse: false,
 	  		duration: '50%'
 		})
 		.setTween(designPage)
@@ -249,7 +250,7 @@ $(function(){
 
 	new ScrollMagic.Scene({
 	  		triggerElement: "#photography",
-	  		//reverse: false,
+	  		reverse: false,
 	  		duration: '50%'
 		})
 		.setTween(photoPage)
@@ -267,7 +268,7 @@ $(function(){
 
 	new ScrollMagic.Scene({
 	  		triggerElement: "#videos",
-	  		//reverse: false,
+	  		reverse: false,
 	  		duration: '50%'
 		})
 		.setTween(videosPage)
@@ -291,7 +292,7 @@ $(function(){
 
 	new ScrollMagic.Scene({
 	  		triggerElement: "#painting",
-	  		//reverse: false,
+	  		reverse: false,
 	  		duration: '50%'
 		})
 		.setTween(paintingPage)
