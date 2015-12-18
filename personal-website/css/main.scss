@@ -841,116 +841,18 @@ rect.rect-yellow{
 			}
 	}
 
-//popup modals
-.md-modal{
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	@include transform(translate(-50%, -50%));
-	width: 90%;
-	height: 90vh;
-	max-width: 1126px;
-	margin: 0 auto;
-	box-shadow: 0 0 3.125em rgba( 0, 0, 0, .75);
-	border-radius: 3px;
-	background-image: url('../img/lightpaperfibers.png');
-	overflow: scroll;
-	z-index: 2000;
-	visibility: hidden;
-	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
-	backface-visibility: hidden;
-	
-	.container.md-content{
-		width: 90%;
-		margin: 0 auto;
-		.md-close{
-
-			float: right;
-			cursor: pointer;
-			&:before, &:after{
-			  position: absolute;
-			  content: ' ';
-			  height: 33px;
-			  width: 2px;
-			  background-color: $dark-grey;
-			}
-			&:before{
-				@include transform(rotate(45deg));
-			}
-			&:after{
-				@include transform(rotate(-45deg));
-			}
-		}
-
-			.design-full-img{
-				a{	
-					img{
-						width: 100%;
-						margin-bottom: 1em;
-					}
-				}
-				
-			}
-			.design-intro{
-				.tool-used{
-					@include clearUl;
-				}
-				.design-text{
-					font-size: 1.2em;
-				}
-			}
-		}
+//modals
+.remodal{
+  .tempaltes-credit{
+    font-size: 1em;
+    @include transition(.3s all ease);
+    a:hover {
+      color: $blue;
+       @include transition(.3s all ease);
+    }
+  }  
 }
 
-.md-show{
-	visibility: visible;
-}
-
-.md-overlay {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	visibility: hidden;
-	top: 0;
-	left: 0;
-	z-index: 1000;
-	opacity: 0;
-	background: rgba($blue,0.8);
-	@include transition(all .3s ease);
-}
-
-.md-show ~ .md-overlay {
-	opacity: 1;
-	visibility: visible;
-}
-
-/* Effect 9: 3D flip vertical */
-.md-effect-9.md-modal {
-	-webkit-perspective: 1300px;
-	-moz-perspective: 1300px;
-	perspective: 1300px;
-}
-
-.md-effect-9 .md-content {
-	-webkit-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-	-webkit-transform: rotateX(-70deg);
-	-moz-transform: rotateX(-70deg);
-	-ms-transform: rotateX(-70deg);
-	transform: rotateX(-70deg);
-	@include transition(all .3s ease-in);
-	opacity: 0;
-}
-
-.md-show.md-effect-9 .md-content {
-	-webkit-transform: rotateX(0deg);
-	-moz-transform: rotateX(0deg);
-	-ms-transform: rotateX(0deg);
-	transform: rotateX(0deg);
-	opacity: 1;
-}
 
 
 //videos page

@@ -873,107 +873,20 @@ ul.round-thumbs {
           -o-transform: rotate(-130deg);
           -ms-transform: rotate(-130deg); }
 
-.md-modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  width: 90%;
-  height: 90vh;
-  max-width: 1126px;
-  margin: 0 auto;
-  box-shadow: 0 0 3.125em rgba(0, 0, 0, 0.75);
-  border-radius: 3px;
-  background-image: url("../img/lightpaperfibers.png");
-  overflow: scroll;
-  z-index: 2000;
-  visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden; }
-  .md-modal .container.md-content {
-    width: 90%;
-    margin: 0 auto; }
-    .md-modal .container.md-content .md-close {
-      float: right;
-      cursor: pointer; }
-      .md-modal .container.md-content .md-close:before, .md-modal .container.md-content .md-close:after {
-        position: absolute;
-        content: ' ';
-        height: 33px;
-        width: 2px;
-        background-color: #545863; }
-      .md-modal .container.md-content .md-close:before {
-        transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        -o-transform: rotate(45deg);
-        -ms-transform: rotate(45deg); }
-      .md-modal .container.md-content .md-close:after {
-        transform: rotate(-45deg);
-        -webkit-transform: rotate(-45deg);
-        -moz-transform: rotate(-45deg);
-        -o-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg); }
-    .md-modal .container.md-content .design-full-img a img {
-      width: 100%;
-      margin-bottom: 1em; }
-    .md-modal .container.md-content .design-intro .tool-used ul {
-      padding-left: 0; }
-      .md-modal .container.md-content .design-intro .tool-used ul li {
-        list-style: none; }
-    .md-modal .container.md-content .design-intro .design-text {
-      font-size: 1.2em; }
-
-.md-show {
-  visibility: visible; }
-
-.md-overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  visibility: hidden;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  opacity: 0;
-  background: rgba(109, 207, 246, 0.8);
-  transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease; }
-
-.md-show ~ .md-overlay {
-  opacity: 1;
-  visibility: visible; }
-
-/* Effect 9: 3D flip vertical */
-.md-effect-9.md-modal {
-  -webkit-perspective: 1300px;
-  perspective: 1300px; }
-
-.md-effect-9 .md-content {
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-transform: rotateX(-70deg);
-  -ms-transform: rotateX(-70deg);
-  transform: rotateX(-70deg);
-  transition: all 0.3s ease-in;
-  -webkit-transition: all 0.3s ease-in;
-  -moz-transition: all 0.3s ease-in;
-  -o-transition: all 0.3s ease-in;
-  -ms-transition: all 0.3s ease-in;
-  opacity: 0; }
-
-.md-show.md-effect-9 .md-content {
-  -webkit-transform: rotateX(0deg);
-  -ms-transform: rotateX(0deg);
-  transform: rotateX(0deg);
-  opacity: 1; }
+.remodal .tempaltes-credit {
+  font-size: 1em;
+  transition: 0.3s all ease;
+  -webkit-transition: 0.3s all ease;
+  -moz-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  -ms-transition: 0.3s all ease; }
+  .remodal .tempaltes-credit a:hover {
+    color: #6dcff6;
+    transition: 0.3s all ease;
+    -webkit-transition: 0.3s all ease;
+    -moz-transition: 0.3s all ease;
+    -o-transition: 0.3s all ease;
+    -ms-transition: 0.3s all ease; }
 
 .video-container iframe {
   max-width: 100%; }
