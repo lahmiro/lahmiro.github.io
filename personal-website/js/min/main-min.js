@@ -50,20 +50,10 @@ $(function(){
 	if(isFirefox){
 		console.log('firefox');
 		blueCircle.attr("class", "no-mix-blend-mode");
-		$('#loader-wrapper').css("display", "none");
 	}
 
 	//only fire scrollmagic on deskotop
 	if (!Modernizr.touch) {
-
-	//loader
-   
-        setTimeout(function(){
-			body.addClass('loaded');
-		}, 1500);
-    
-
-
 	//scrollmagic animation
 	//home page
 	var blueCircleContainer = $('.blue-circle-container'),

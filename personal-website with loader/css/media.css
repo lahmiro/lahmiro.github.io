@@ -1,0 +1,304 @@
+@charset "UTF-8";
+/* general */
+*, *:after, *:before {
+  box-sizing: border-box; }
+
+* {
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* Mobile devices less than 768px */
+@media (max-width: 768px) {
+  h1, h2 {
+    font-size: 2em; }
+
+  section, #skills, .left-column, .right-column {
+    height: auto; }
+
+  .middle-offset {
+    display: none; }
+
+  #nav-icon.active {
+    left: 50%; }
+
+  div#nav-bg {
+    display: none; }
+
+  div#nav-items {
+    margin-top: 30%; }
+
+  div#nav-box {
+    height: 100%;
+    width: 66.67%;
+    background: #fff568; }
+
+  #nav-items .nav-item {
+    padding: 1em 1.618em; }
+
+  #nav-items .nav-item:hover:after, #nav-items .nav-item:active:after {
+    width: 40%;
+    left: 12%; }
+
+  #nav-items .nav-item:after {
+    left: 20%; }
+
+  .float-left .categories-menu ul a:hover, .float-left .categories-menu ul a:active {
+    margin-right: 0;
+    font-weight: bold; }
+  .float-left .categories-menu li {
+    font-size: 1.2em; }
+
+  .float-right .categories-menu ul a:hover, .float-right .categories-menu ul a:active {
+    margin-left: 0;
+    font-weight: bold; }
+  .float-right .categories-menu li {
+    font-size: 1.2em; }
+
+  #home, #about {
+    height: 100vh; }
+
+  .snow-mountain img {
+    max-width: 320px; }
+
+  svg#rects-01 {
+    width: 60px; }
+
+  svg#rects-02 {
+    width: 50px; }
+
+  .home-title-container {
+    top: 73%; }
+
+  .rects-01 {
+    top: 15%;
+    right: 5%; }
+
+  .rects-02 {
+    top: 50%;
+    left: 5%; }
+
+  .home-title-container {
+    width: 100%; }
+    .home-title-container .home-name {
+      letter-spacing: 5px; }
+    .home-title-container .home-title {
+      letter-spacing: 8px; }
+
+  .arrow {
+    width: 30px;
+    height: 30px; }
+    .arrow:before {
+      width: 15px;
+      height: 15px; }
+
+  .intro-text {
+    overflow: auto;
+    height: 60vh; }
+
+  .floating-rects-container {
+    display: none; }
+
+  .intro .rects-03 {
+    margin-left: 8.5em;
+    margin-top: -1em; }
+
+  .intro svg#rects-03 {
+    width: 2.75em; }
+
+  .intro {
+    margin-top: 1.618em; }
+
+  .skills-title, .portfolio-title {
+    margin-top: 2.617924em; }
+
+  .skills-title svg#rects-04 {
+    width: 2.75em;
+    margin: -6em 0 0 4.8em; }
+
+  .table-container {
+    display: none; }
+
+  .bottle-container {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; }
+    .bottle-container .bottle {
+      margin: 2em;
+      width: 6.875em;
+      height: 10.625em; }
+    .bottle-container .circle-drop-container {
+      width: 1.875em;
+      height: 1.875em;
+      top: 7.5em; }
+
+  .water {
+    top: 5%; }
+
+  svg.circle-drop {
+    display: none; }
+
+  .fu-progress {
+    border: 5px solid #6dcff6; }
+    .fu-progress .fu-inner {
+      width: 6.25em;
+      height: 10em;
+      border: 0.3125em solid #ffffff; }
+    .fu-progress .fu-text {
+      font-size: 1em; }
+
+  .portfolio-cat-container {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .portfolio-cat-container .portfolio-cat {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1 100%;
+          -ms-flex: 1 100%;
+              flex: 1 100%;
+      padding: 1em; }
+
+  #portfolio .portfolio-title .rects-05 {
+    margin: -7em 3.5em; }
+
+  #portfolio .portfolio-title #rects-05 {
+    width: 2.5em; }
+
+  .arrow-up {
+    display: none; }
+
+  #portfolio .portfolio-cat-container {
+    margin-bottom: 0; }
+
+  #design .title {
+    margin-top: 1.618em; }
+
+  .float-left .left-column, .float-right .right-column {
+    background-image: none; }
+
+  .categories-menu {
+    margin-top: -1.618em;
+    margin-bottom: 1.618em; }
+    .categories-menu li {
+      display: inline-block;
+      padding: .5em; }
+
+  ul.round-thumbs li {
+    padding-bottom: 0; }
+    ul.round-thumbs li .design-item {
+      width: 9.375em;
+      height: 9.375em; }
+      ul.round-thumbs li .design-item .design-info h3 {
+        margin: 1em 0.5em 0.2em 0.5em;
+        padding-top: 0.5em; }
+      ul.round-thumbs li .design-item .design-info p {
+        font-size: .8em;
+        margin: -0.5em 1.875em; }
+
+  .remodal {
+    margin: 0; }
+
+  #photography ul.photo-thumbs {
+    width: 100%;
+    padding: 0 15px; }
+
+  div#video-carousel {
+    padding: 1.618em 15px; }
+
+  .title.videos-title {
+    margin-top: 1.618em; }
+
+  #painting .painting-title {
+    margin-top: 1.618em; }
+  #painting .painting-img-row {
+    margin-bottom: 1.618em; }
+
+  #contact .container {
+    margin: 1.618em auto; } }
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+  #skills {
+    height: 50vh; }
+
+  #about {
+    height: 50vh; }
+
+  div#nav-box {
+    width: 33.33%; }
+
+  #nav-icon.active {
+    left: 25%; }
+
+  div#nav-items {
+    margin-top: 0; }
+
+  #nav-items .nav-item:hover:after, #nav-items .nav-item:active:after {
+    width: 35%;
+    left: 6%; }
+
+  #nav-items .nav-item:after {
+    left: 20%; }
+
+  .blue-circle-container {
+    top: 43%; }
+
+  .snow-mountain img {
+    max-width: 380px; }
+
+  .rects-01 {
+    top: 28%;
+    right: 27%; }
+
+  .rects-02 {
+    top: 50%;
+    left: 26%; }
+
+  svg#rects-01 {
+    width: 70px; }
+
+  svg#rects-02 {
+    width: 60px; }
+
+  .home-title-container .home-name {
+    letter-spacing: 9px; }
+  .home-title-container .home-title {
+    letter-spacing: 10px; }
+
+  .bottle-container .bottle {
+    margin: 1em; }
+
+  .table-container {
+    display: block;
+    margin-top: -5em;
+    width: 90%; }
+
+  .skills-title {
+    margin-top: 4.235801032em; }
+
+  ul.round-thumbs {
+    margin-left: 1.618em; }
+    ul.round-thumbs li .design-item {
+      width: 11.25em;
+      height: 11.25em; }
+      ul.round-thumbs li .design-item .design-info h3 {
+        margin: 1em 1.25em 0.3125em 1.25em;
+        padding: 1em 0 0 0; }
+      ul.round-thumbs li .design-item .design-info p {
+        font-size: 1em;
+        margin: 0 1.875em; } }
+/* tablet landscpae */
+@media (min-width: 992px) and (max-width: 1199px) {
+  #nav-icon.active {
+    left: 50%; }
+
+  .bottle-container .bottle {
+    margin: 2.5em; } }
+/* Large devices (large desktops, 1200px and up) */
