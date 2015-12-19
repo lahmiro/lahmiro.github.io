@@ -44,9 +44,15 @@
         <link rel="stylesheet" href="css/owl.carousel.css">         
         <link rel="stylesheet" href="css/owl.theme.css">
 
+        <!-- contact Form -->
+<link type="text/css" rel="stylesheet" href="http://104.131.113.72/helloform/css/jquerytheme.css" />
+<link href="http://fonts.googleapis.com/css?family=Lato%7C'Playfair+Display'" rel="stylesheet" type="text/css" />
+<link type="text/css" rel="stylesheet" href="http://104.131.113.72/helloform/forms/1/main.css" />
+
         <link rel="stylesheet" href="css/main.css">
          <link rel="stylesheet" href="css/media.css">
-        
+         
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     	
 </head>
@@ -75,9 +81,15 @@
           </div><!-- nav-items -->
     </div><!-- nav-box -->
     <div id="nav-bg"></div>
-
-    <div class="wrapper remodal-bg">
-      
+    
+    <!-- /loader -->
+    <div id="loader-wrapper">
+      <div class="loader"></div><!-- loader -->
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div><!-- /loader-wrapper -->
+    
+    <div class="wrapper remodal-bg">  
       <section id="home">
         <div class="conatiner">  
           <div class="snow-mountain">
@@ -86,7 +98,7 @@
 
           <div class="blue-circle-container">
              <svg id="blue-circle">
-              <circle x="0" y="0" cx="148" cy="148" r="148" class="blue-circle mix-blend-mode"/>
+              <circle x="0" y="0" cx="148" cy="148" r="148" class="blue-circle"/>
              </svg>
           </div><!-- /blue-circle -->
 
@@ -646,11 +658,11 @@
                 <div id="video-carousel" class="owl-carousel">
                   <div>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/PR-XWALgN4I" frameborder="0" allowfullscreen></iframe>
-                    <div class="video-info">This video is about</div>
+                    <div class="video-info">This music video depicts a nightmare of a survivor of the atomic bombing of Hiroshima. Special thanks to my friend Cecilia to be the protagonist of this video. </div>
                   </div>
                   <div>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/vsW1MV6eZ8c" frameborder="0" allowfullscreen></iframe>
-                    <div class="video-info">This video is about</div>
+                    <div class="video-info">The stickman Sherlock Solmes’ detective story.  </div>
                   </div>
                 </div><!-- /video-carousel -->
               </div><!-- /row -->
@@ -787,30 +799,10 @@
                   <div class="title contact-form-title">
                      <h2>Send me a message</h2>
                   </div>
-                 
-                  <form role="form" id="contactForm" data-toggle="validator" class="shake">
-                        <div class="row">
-                            <div class="form-group col-sm-6">
-                                
-                                <input type="text" class="form-control" id="name" placeholder="Name" required>
-                                
-                            </div>
-                            <div class="form-group col-sm-6">
-                    
-                                <input type="email" class="form-control" id="email" placeholder="Email" required>
-                               
-                            </div>
-                        </div>
-                        <br>
-                        <div class="form-group">
-                            
-                            <textarea id="message" class="form-control" rows="5" placeholder="What do you want to say to me? :)" required></textarea>
-                            
-                        </div>
-                        <button type="submit" id="form-submit" class="btn btn-lg">Submit</button>
-                        <div id="msgSubmit" class="h3 text-center hidden"></div>
-                        <div class="clearfix"></div>
-                  </form><!-- /contactForm -->
+
+                 <!-- /contactForm -->
+                  <script id="hfbscript_1" src="http://104.131.113.72/helloform/forms/1/formjs.js"></script>
+                  
               </div><!-- /contact-form-container -->
             </div><!-- /row -->
 
@@ -826,9 +818,8 @@
     <script src="js/vendor/bootstrap.min.js"></script>
     <script src="js/vendor/TweenMax.min.js"></script>
     <script src="js/vendor/CSSPlugin.min.js"></script>
-    <script src="js/vendor/ScrollMagic.js"></script>
-    <script src="js/vendor/animation.gsap.js"></script>
-    <script src="js/vendor/debug.addIndicators.js"></script>
+    <script src="js/vendor/ScrollMagic.min.js"></script>
+    <script src="js/vendor/animation.gsap.min.js"></script>
     <script src="js/vendor/iscroll-probe.js"></script>
     
     <script src="js/plugins.js"></script>
@@ -840,29 +831,35 @@
     <script src="js/vendor/jquery.fitvids.js"></script>
     <script src="js/vendor/owl.carousel.min.js"></script>
 
-    <script src="js/vendor/validator.min.js"></script>
-    <script src="js/vendor/form-scripts.js"></script>
-    <script src="js/vendor/enquire.js"></script>
+    
+    <script src="js/vendor/enquire.min.js"></script>
     <script src="js/main.js"></script>
     
-    
-    <!-- 
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-     <script src="js/vendor/focuspoint.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+    <!-- Hello Form Builder - ASSET -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/i18n/jquery-ui-i18n.min.js"></script>
+<script type="text/javascript" src="http://104.131.113.72/helloform/js/placeholders.min.js"></script>
+<script type="text/javascript" src="http://104.131.113.72/helloform/js/jquery.form.js"></script>
 
-       Google Analytics: change UA-XXXXX-X to be your site's ID.
-        <script>
+<!-- Hello Form 1 - ASSET -->
+<script type="text/javascript" src="http://104.131.113.72/helloform/forms/1/main.js"></script>
+
+
+     <!-- 
+     <script src="js/vendor/validator.min.js"></script>
+    <script src="js/vendor/form-scripts.js"></script>
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+      <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        </script>
-     -->
+            ga('create','104.131.113.72','auto');ga('send','pageview');
+      </script> 
+   -->
+    
 
 
     </body>
