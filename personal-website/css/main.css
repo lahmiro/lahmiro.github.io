@@ -209,8 +209,13 @@ a {
   height: 21.875em; }
 
 .blue-circle {
-  fill: rgba(109, 207, 246, 0.8);
+  fill: rgba(109, 207, 246, 0.8); }
+
+.mix-blend-mode {
   mix-blend-mode: multiply; }
+
+.no-mix-blend-mode {
+  mix-blend-mode: none; }
 
 .rects {
   position: absolute;

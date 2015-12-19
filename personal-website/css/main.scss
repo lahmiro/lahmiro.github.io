@@ -200,7 +200,14 @@ $easing: cubic-bezier(.6, .05, .28, .91);
 
 .blue-circle{
 	fill: rgba($blue, .8);
-    mix-blend-mode: multiply; 
+}
+
+.mix-blend-mode{
+	mix-blend-mode: multiply; 
+}
+
+.no-mix-blend-mode{
+	mix-blend-mode: none;	
 }
 
 	//rects

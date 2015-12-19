@@ -37,27 +37,16 @@ $(function(){
 	//set nav bg as a full-height triangle
 	$('#nav-bg').css({"border-right-width": vw*0.2, "border-top-width": vh});
 
-	//disable scrollmagic for mobile/tablet view
-	/*
-	$(window).on("resize", function(e) {
-	  if (vw < 991 && controller.enabled()) {
-	    controller.enabled(false);
-	  } else if (!controller.enabled()) {
-	    controller.enabled(true);
-	  }
-	});
-	*/
-
-	
 	//for touch device
 	if (Modernizr.touch){
 		$('.water').css("top", "5%");
-		/*
-		$('#nav-bg').css({"display": "none"});
-		$('#nav-box').css({"height":"100%", "width": "66.67%", "background": "#fff568"});
-		$('.nav-item').css({"padding": "1em 1.618em"});
-		$('#nav-items').css({"margin-top": "1em"});*/
-		//if($('#nav-box').)
+	}
+	
+	//detect firefox
+	var isFirefox = typeof InstallTrigger !== 'undefined';   // Firefox 1.0+
+	if(isFirefox){
+		console.log('firefox');
+		$('.blue-circle').removeClass("mix-blend-mode");
 	}
 
 	//only fire scrollmagic on deskotop
