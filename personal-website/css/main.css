@@ -662,6 +662,9 @@ rect.rect-yellow {
   filter: alpha(opacity=80);
   zoom: 1; }
 
+.photography-title {
+  margin-top: 5rem; }
+
 #photography ul.photo-thumbs {
   padding: 0;
   max-height: 40em;
@@ -742,7 +745,11 @@ rect.rect-yellow {
   zoom: 1; }
 
 /* IE7 */
+.design-title {
+  margin-top: 3rem; }
+
 ul.round-thumbs {
+  overflow-y: scroll;
   padding-left: 0;
   position: relative;
   display: block;
@@ -756,8 +763,7 @@ ul.round-thumbs {
     list-style: none;
     display: inline-block;
     position: relative;
-    margin: 1.618em auto;
-    padding-bottom: 2.617924em; }
+    margin: 1.618em auto; }
     ul.round-thumbs li .design-item {
       width: 12.5em;
       height: 12.5em;
@@ -867,6 +873,15 @@ ul.round-thumbs {
       ul.round-thumbs li .design-item .design-img-6 {
         background: url(../img/thumb/design-06.jpg) center no-repeat;
         z-index: 12; }
+      ul.round-thumbs li .design-item .design-img-7 {
+        background: url(../img/thumb/design-07.jpg) center no-repeat;
+        z-index: 12; }
+      ul.round-thumbs li .design-item .design-img-8 {
+        background: url(../img/thumb/design-08.jpg) center no-repeat;
+        z-index: 12; }
+      ul.round-thumbs li .design-item .design-img-9 {
+        background: url(../img/thumb/design-09.jpg) center no-repeat;
+        z-index: 12; }
       ul.round-thumbs li .design-item:hover, ul.round-thumbs li .design-item:active {
         box-shadow: 0 0 0 rgba(109, 207, 246, 0.6); }
         ul.round-thumbs li .design-item:hover .design-thumb, ul.round-thumbs li .design-item:active .design-thumb {
@@ -952,11 +967,8 @@ ul.round-thumbs {
       #painting .painting-img-container .painting-img-row:hover .painting-img-overlay .painting-img-overlay-content, #painting .painting-img-container .painting-img-row:active .painting-img-overlay .painting-img-overlay-content {
         opacity: 1; }
 
-#design .title {
-  margin-top: 7rem; }
-
 #painting .painting-title {
-  margin-top: 17rem; }
+  margin-top: 19.5rem; }
 
 .left-column, .right-column, .middle-offset {
   height: 100vh; }

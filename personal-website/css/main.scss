@@ -610,11 +610,10 @@ rect.rect-yellow{
 
 
 //photography page
+.photography-title{
+	margin-top: 5rem;
+}
 #photography{
-	//add to mobile view
-	//overflow: scroll;
-	//height: auto;
-
 	ul.photo-thumbs{
 		padding:0;
 		//position: relative;
@@ -699,11 +698,13 @@ rect.rect-yellow{
 *:first-child+html .clearfix { zoom: 1; } /* IE7 */
 
 //design page
+.design-title{
+	margin-top:3rem;
+}
 //inspired by http://tympanus.net/Tutorials/CircleHover, &:activeEffects/index3.html
 	ul.round-thumbs{
-		//padding:$phi * 1em;
-		//padding-top: 0;
 		//modify for mobile view
+		overflow-y: scroll;
 		padding-left: 0;
 		position: relative;
 		display: block;
@@ -719,7 +720,7 @@ rect.rect-yellow{
 			display: inline-block;
 			position: relative;
 			margin: $phi * 1em auto;
-			padding-bottom: $phi * $phi * 1em;
+			//padding-bottom: $phi * $phi * 1em;
 
 			.design-item{
 				//modify for mobiel view
@@ -833,6 +834,18 @@ rect.rect-yellow{
 						background: url(../img/thumb/design-06.jpg) center no-repeat;
 						z-index: 12;
 					}
+					.design-img-7{
+						background: url(../img/thumb/design-07.jpg) center no-repeat;
+						z-index: 12;
+					}
+					.design-img-8{
+						background: url(../img/thumb/design-08.jpg) center no-repeat;
+						z-index: 12;
+					}
+					.design-img-9{
+						background: url(../img/thumb/design-09.jpg) center no-repeat;
+						z-index: 12;
+					}
 					
 					&:hover, &:active{
 						.design-thumb{
@@ -938,15 +951,11 @@ rect.rect-yellow{
 
 
 //work pages
-#design{
-	.title{
-		margin-top: 7rem;
-	}
-}
+
 
 #painting{
 	.painting-title{
-		margin-top: 17rem;
+		margin-top: 19.5rem;
 	}
 }
 

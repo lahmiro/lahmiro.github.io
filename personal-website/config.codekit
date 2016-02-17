@@ -493,50 +493,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/cat-01.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 45727,
-		"inputAbbreviatedPath": "\/img\/cat-01.jpg",
-		"outputAbbreviatedPath": "\/img\/cat-01.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/cat-02.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 23794,
-		"inputAbbreviatedPath": "\/img\/cat-02.jpg",
-		"outputAbbreviatedPath": "\/img\/cat-02.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/cat-03.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 9439,
-		"inputAbbreviatedPath": "\/img\/cat-03.jpg",
-		"outputAbbreviatedPath": "\/img\/cat-03.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/cat-04.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 27014,
-		"inputAbbreviatedPath": "\/img\/cat-04.jpg",
-		"outputAbbreviatedPath": "\/img\/cat-04.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img\/controls.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -676,6 +632,39 @@
 		"initialSize": 82103,
 		"inputAbbreviatedPath": "\/img\/full\/design-06-2.jpg",
 		"outputAbbreviatedPath": "\/img\/full\/design-06-2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/full\/design-07.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 237732,
+		"inputAbbreviatedPath": "\/img\/full\/design-07.jpg",
+		"outputAbbreviatedPath": "\/img\/full\/design-07.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/full\/design-08.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 80238,
+		"inputAbbreviatedPath": "\/img\/full\/design-08.jpg",
+		"outputAbbreviatedPath": "\/img\/full\/design-08.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/full\/design-09.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 223741,
+		"inputAbbreviatedPath": "\/img\/full\/design-09.jpg",
+		"outputAbbreviatedPath": "\/img\/full\/design-09.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1010,17 +999,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/photo-01.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 66961,
-		"inputAbbreviatedPath": "\/img\/photo-01.jpg",
-		"outputAbbreviatedPath": "\/img\/photo-01.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img\/snow-mountain.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1094,6 +1072,39 @@
 		"initialSize": 42446,
 		"inputAbbreviatedPath": "\/img\/thumb\/design-06.jpg",
 		"outputAbbreviatedPath": "\/img\/thumb\/design-06.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/thumb\/design-07.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 40545,
+		"inputAbbreviatedPath": "\/img\/thumb\/design-07.jpg",
+		"outputAbbreviatedPath": "\/img\/thumb\/design-07.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/thumb\/design-08.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4546,
+		"inputAbbreviatedPath": "\/img\/thumb\/design-08.jpg",
+		"outputAbbreviatedPath": "\/img\/thumb\/design-08.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/thumb\/design-09.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 10987,
+		"inputAbbreviatedPath": "\/img\/thumb\/design-09.jpg",
+		"outputAbbreviatedPath": "\/img\/thumb\/design-09.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
