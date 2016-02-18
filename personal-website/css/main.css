@@ -486,7 +486,6 @@ rect.rect-white {
     top: 8.75em;
     left: 50%;
     -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
             transform: translateX(-50%); }
     .bottle-container .circle-drop-container .drop {
       fill: #fff568; }
@@ -499,7 +498,6 @@ rect.rect-white {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   margin-bottom: 1em;
   width: 100%;
@@ -750,6 +748,7 @@ rect.rect-yellow {
 
 ul.round-thumbs {
   overflow-y: scroll;
+  overflow-x: hidden;
   padding-left: 0;
   position: relative;
   display: block;
@@ -788,7 +787,6 @@ ul.round-thumbs {
         position: absolute;
         box-shadow: inset 0 0 0 15px rgba(255, 255, 255, 0.5);
         -webkit-transform-origin: 95% 40%;
-        -ms-transform-origin: 95% 40%;
         transform-origin: 95% 40%;
         transition: all 0.3s ease-in-out;
         -webkit-transition: all 0.3s ease-in-out;
@@ -882,6 +880,9 @@ ul.round-thumbs {
       ul.round-thumbs li .design-item .design-img-9 {
         background: url(../img/thumb/design-09.jpg) center no-repeat;
         z-index: 12; }
+      ul.round-thumbs li .design-item .design-img-10 {
+        background: url(../img/thumb/design-10.jpg) center no-repeat;
+        z-index: 12; }
       ul.round-thumbs li .design-item:hover, ul.round-thumbs li .design-item:active {
         box-shadow: 0 0 0 rgba(109, 207, 246, 0.6); }
         ul.round-thumbs li .design-item:hover .design-thumb, ul.round-thumbs li .design-item:active .design-thumb {
@@ -892,6 +893,16 @@ ul.round-thumbs {
           -o-transform: rotate(-130deg);
           -ms-transform: rotate(-130deg); }
 
+.round-thumbs::-webkit-scrollbar {
+  width: 12px; }
+
+.round-thumbs::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.5); }
+
+.round-thumbs::-webkit-scrollbar-thumb {
+  background: rgba(109, 207, 246, 0.5); }
+
+​
 .remodal .tempaltes-credit {
   font-size: 1em;
   transition: 0.3s all ease;
@@ -899,6 +910,7 @@ ul.round-thumbs {
   -moz-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
   -ms-transition: 0.3s all ease; }
+  ​
   .remodal .tempaltes-credit a:hover {
     color: #6dcff6;
     transition: 0.3s all ease;

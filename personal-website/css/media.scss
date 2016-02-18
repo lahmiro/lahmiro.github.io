@@ -458,5 +458,17 @@ $screen-lg-min: 1200px;
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px){
-	
+	#skills{
+		.container{
+			@include centerEl;
+		}
+	}
+	#deisgn{
+		.container{
+		@include centerEl;
+		}
+	}
+	ul.round-thumbs{
+		height: 95vh;	
+	}
 }

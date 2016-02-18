@@ -488,6 +488,7 @@ $(function(){
 
 	});
 
+
 	//disable controller for mobile and tablet view
 
 	//media mobile/tablet/large screen

@@ -705,11 +705,13 @@ rect.rect-yellow{
 	ul.round-thumbs{
 		//modify for mobile view
 		overflow-y: scroll;
+		overflow-x: hidden;
 		padding-left: 0;
 		position: relative;
 		display: block;
 		text-align: center;
-		width: 100%;		
+		width: 100%;	
+		
 		&:after{
 			content: '';
 			display: table;
@@ -846,6 +848,10 @@ rect.rect-yellow{
 						background: url(../img/thumb/design-09.jpg) center no-repeat;
 						z-index: 12;
 					}
+					.design-img-10{
+						background: url(../img/thumb/design-10.jpg) center no-repeat;
+						z-index: 12;
+					}
 					
 					&:hover, &:active{
 						.design-thumb{
@@ -858,6 +864,20 @@ rect.rect-yellow{
 				
 			}
 	}
+
+//round thumbs scrollbar
+.round-thumbs::-webkit-scrollbar {
+    width: 12px;
+}
+
+.round-thumbs::-webkit-scrollbar-track {
+	background: rgba(#fff, .5);
+}
+
+.round-thumbs::-webkit-scrollbar-thumb {
+	background: rgba($blue, .5);
+}
+​
 
 //modals
 .remodal{
