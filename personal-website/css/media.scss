@@ -476,7 +476,7 @@ $screen-lg-min: 1200px;
 	}
 }
 
-    
+//for xlg devices (1600px and up)
 @media (min-width: 1600px) {
   .rects-02 {
     top: 50%;
@@ -508,7 +508,7 @@ $screen-lg-min: 1200px;
   .round-thumbs::-webkit-scrollbar {
     width: 0; }
 	
-	ul.round-thumbs{
+	ul.round-thumbs.vcenter{
 		margin-top: 4em;
 	}
 	.design-title{
