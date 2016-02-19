@@ -507,7 +507,13 @@ $screen-lg-min: 1200px;
 
   .round-thumbs::-webkit-scrollbar {
     width: 0; }
-
+	
+	ul.round-thumbs{
+		margin-top: 4em;
+	}
+	.design-title{
+		margin-top: 8rem;
+	}
   .photography-title {
     margin-top: 19.5rem; }
 
