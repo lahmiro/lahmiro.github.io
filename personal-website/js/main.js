@@ -96,7 +96,7 @@ $(function(){
 	
 	//home page anim when pinnning
 	var homeAni = new TimelineMax();
-		homeAni.to([snowMountain, blueCircleContainer], 3, {y:380, ease: Power1.easeOut}, 0)
+		homeAni.to([snowMountain, blueCircleContainer], 3, {y:452, ease: Power1.easeOut}, 0)
 				.to([homeTitle, homeName], .5, {opacity:0, ease: Power0.easeNone},0)
 				.to(rects02, 2, {y:-40, opacity: 0, ease: Power1.easeOut}, 0)
 				.to(rects01, 1, {y:-30, opacity: 0, ease: Power1.easeOut}, 0)			
@@ -494,28 +494,36 @@ $(function(){
 	//media mobile/tablet/large screen
 	var smScreen = "screen and (max-width: 768px)",
 		mdScreen = "screen and (max-width: 992px)",
-		lgScreen = "screen and (min-width: 1200px)";
+		lgScreen = "screen and (min-width: 1200px)",
+		xlgScreen = "screen and (min-width: 1600px)";
 	
 
 	smView = {
 		match: function(){
-			console.log("mobile view matched");		
+				
 			$("circle.blue-circle").attr('r', "110" );
 			$('#nav-bg').css({"border-right-width": vw});
 		}
 	},
 	mdView = {
 		match: function(){
-			console.log("tablet view matched");
+
 			$("circle.blue-circle").attr('r', "130" );
 			$(".reset-right-column").removeClass("col-md-push-8").addClass("col-sm-12");
 			$(".reset-left-column").removeClass("col-md-pull-4").addClass("col-sm-12");
 
 		}
 	},
+	xlgView = {
+		match: function(){
+			$(".contact-form-container").removeClass("col-md-offset-1");
+			$('#nav-bg').css({"border-right-width": vw*0.1618, "border-top-width": vh});
+		}
+	},
 
 	enquire.register(smScreen, smView);
 	enquire.register(mdScreen, mdView);
+	enquire.register(xlgScreen, xlgView);
 
 	
 });

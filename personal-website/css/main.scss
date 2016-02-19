@@ -611,14 +611,13 @@ rect.rect-yellow{
 
 //photography page
 .photography-title{
-	margin-top: 5rem;
+	margin-top: 7rem;
 }
 #photography{
 	ul.photo-thumbs{
 		padding:0;
-		//position: relative;
 		max-height: em(150)*4+2.5em;
-		overflow: auto;
+		//overflow: auto;
 		li{	
 			//min-height: em(150);
 			list-style: none;
@@ -975,7 +974,7 @@ rect.rect-yellow{
 
 #painting{
 	.painting-title{
-		margin-top: 19.5rem;
+		margin-top: 20.5rem;
 	}
 }
 
@@ -1031,7 +1030,7 @@ rect.rect-yellow{
 }
 
 .title.videos-title {
-    margin-top: $phi * 4rem;
+   margin-top: 8.4rem;
 }
 
 //categories menu

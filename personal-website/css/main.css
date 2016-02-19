@@ -661,12 +661,11 @@ rect.rect-yellow {
   zoom: 1; }
 
 .photography-title {
-  margin-top: 5rem; }
+  margin-top: 7rem; }
 
 #photography ul.photo-thumbs {
   padding: 0;
-  max-height: 40em;
-  overflow: auto; }
+  max-height: 40em; }
   #photography ul.photo-thumbs li {
     list-style: none;
     padding: .1em;
@@ -980,7 +979,7 @@ ul.round-thumbs {
         opacity: 1; }
 
 #painting .painting-title {
-  margin-top: 19.5rem; }
+  margin-top: 20.5rem; }
 
 .left-column, .right-column, .middle-offset {
   height: 100vh; }
@@ -1009,7 +1008,7 @@ ul.round-thumbs {
     margin-left: .5em; }
 
 .title.videos-title {
-  margin-top: 6.472rem; }
+  margin-top: 8.4rem; }
 
 .categories-menu ul {
   list-style: none; }
