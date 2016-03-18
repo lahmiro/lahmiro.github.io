@@ -1,0 +1,84 @@
+
+<svg id="mountain-group" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="900px"
+	 height="279.587px" viewBox="0 0 900 279.587" enable-background="new 0 0 900 279.587" xml:space="preserve">
+<g id="m-line-right-2" class="m-line">
+	<path fill="none" stroke="#BCC9D8" stroke-width="3" stroke-miterlimit="10" d="M580.636,228.897L665.32,113.48l113.339,154.077"/>
+</g>
+<g id="m-line-right-1" class="m-line">
+	<path fill="none" stroke="#CFDCE8" stroke-width="3" stroke-miterlimit="10" d="M526.882,144.798l52.288-78.045l57.484,85.798"/>
+</g>
+<g id="m-line-left-2" class="m-line">
+	<path fill="none" stroke="#CFDCE8" stroke-width="3" stroke-miterlimit="10" d="M264.587,152.551l57.483-85.798l52.289,78.045"/>
+</g>
+<g id="m-line-left-1" class="m-line">
+	<path fill="none" stroke="#BCC9D8" stroke-width="3" stroke-miterlimit="10" d="M122.583,267.557L235.919,113.48l84.684,115.417"/>
+</g>
+<g id="m-line-middle">
+	<path fill="none" stroke="#AAB6C1" stroke-width="3" stroke-miterlimit="10" d="M297.389,268.466L450.711,22.122L604.03,268.466"/>
+</g>
+<g id="text-line-left-1" class="m-text-line">
+	<line fill="none" stroke="#BCC9D8" stroke-miterlimit="10" x1="236" y1="114.5" x2="1" y2="114.5"/>
+</g>
+<g id="text-line-left-2" class="m-text-line">
+	<line fill="none" stroke="#CFDCE8" stroke-miterlimit="10" x1="322" y1="67.5" x2="89" y2="67.5"/>
+</g>
+<g id="text-line-middle" class="m-text-line">
+	<line fill="none" stroke="#AAB6C1" stroke-miterlimit="10" x1="450" y1="22.5" x2="696" y2="22.5"/>
+</g>
+<g id="text-line-right-1" class="m-text-line">
+	<line fill="none" stroke="#CFDCE8" stroke-miterlimit="10" x1="580" y1="67.5" x2="813" y2="67.5"/>
+</g>
+<g id="text-line-right-2" class="m-text-line">
+	<line fill="none" stroke="#BCC9D8" stroke-miterlimit="10" x1="665" y1="114.5" x2="900" y2="114.5"/>
+</g>
+<g id="triangle-left-1" class="m-triangle">
+	<g>
+		<polygon fill="#FFF568" points="256.968,137 237.352,176.77 217.737,137 		"/>
+		<polygon fill="#6DCFF6" points="237.132,137 221.865,167.956 206.597,137 		"/>
+		<polygon fill="#6DCFF6" points="267.788,137 252.52,167.956 237.251,137 		"/>
+	</g>
+</g>
+<g id="triangle-left-2" class="m-triangle">
+	<g>
+		<polygon fill="#FFF568" points="338.922,93 321.346,128.637 303.77,93 		"/>
+		<polygon fill="#6DCFF6" points="321.149,93 307.468,120.736 293.789,93 		"/>
+		<polygon fill="#6DCFF6" points="348.617,93 334.936,120.736 321.256,93 		"/>
+	</g>
+</g>
+<g id="triangle-middle" class="m-triangle">
+	<g>
+		<polygon fill="#FFF568" points="486.511,69 451.01,140.982 415.507,69 		"/>
+		<polygon fill="#6DCFF6" points="450.613,69 422.978,125.026 395.345,69 		"/>
+		<polygon fill="#6DCFF6" points="506.094,69 478.459,125.026 450.828,69 		"/>
+	</g>
+</g>
+<g id="triangle-right-1" class="m-triangle">
+	<g>
+		<polygon fill="#FFF568" points="562.318,93 579.895,128.637 597.47,93 		"/>
+		<polygon fill="#6DCFF6" points="580.09,93 593.771,120.736 607.451,93 		"/>
+		<polygon fill="#6DCFF6" points="552.623,93 566.304,120.736 579.984,93 		"/>
+	</g>
+</g>
+<g id="triangle-right-2" class="m-triangle">
+	<g>
+		<polygon fill="#FFF568" points="644.272,137 663.888,176.77 683.504,137 		"/>
+		<polygon fill="#6DCFF6" points="664.108,137 679.375,167.956 694.643,137 		"/>
+		<polygon fill="#6DCFF6" points="633.453,137 648.721,167.956 663.988,137 		"/>
+	</g>
+</g>
+<g id="text-left-1" class="m-text">
+	<text transform="matrix(1 0 0 1 3.0815 106.6587)" fill="#AAB6C1" font-family="'Roboto-Light'" font-size="14.5572">jQuery</text>
+</g>
+<g id="text-left-2" class="m-text">
+	<text transform="matrix(1 0 0 1 89.3848 60.5161)" fill="#AAB6C1" font-family="'Roboto-Light'" font-size="14.5572">SCSS/CSS3/HTML</text>
+</g>
+<g id="text-middle" class="m-text">
+	<text transform="matrix(1 0 0 1 507.7227 15.8032)" fill="#AAB6C1" font-family="'Roboto-Light'" font-size="14.5572">Illustrator/Photoshop/Sketch</text>
+</g>
+<g id="text-right-1" class="m-text">
+	<text transform="matrix(1 0 0 1 755.7607 60.5884)" fill="#AAB6C1" font-family="'Roboto-Light'" font-size="14.5572">InDesign</text>
+</g>
+<g id="text-right-2" class="m-text">
+	<text transform="matrix(1 0 0 1 819.0176 107.6997)" fill="#AAB6C1" font-family="'Roboto-Light'" font-size="14.5572">After Effects</text>
+</g>
+</svg>

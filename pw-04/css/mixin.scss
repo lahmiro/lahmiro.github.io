@@ -5,8 +5,9 @@ $pale-sky: #6b717f;
 $dark-grey: darken($pale-sky, 10);
 $phi: 1.618;
 @mixin serif-font{font-family: 'Playfair Display', serif;}
+@mixin roboto{font-family: 'Roboto', sans-serif;}
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
-@mixin border{border: 1px solid red;}
+
 //convert px to em
 $browser-context: 16; // Default
 
