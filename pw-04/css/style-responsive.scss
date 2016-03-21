@@ -147,6 +147,13 @@ textarea{
 
 }
 
+@media (max-width: 830px) {
+  .remodal{
+    img{
+      width: 85%;
+    }
+  }
+}
 
 /* iPad (portrait) */
 @media (min-width: 580px) and (max-width: 767px) {
