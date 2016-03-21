@@ -105,11 +105,6 @@ else
 
 }
 
-//stikcy menu for mobile
-if(vw < 767){
-   $(".menu-media").sticky({topSpacing:0});
-   $(".menu-click").sticky({topSpacing:90});
-}
 
   //Menu mobile click
   $( ".icon" ).click(function() {
@@ -133,14 +128,30 @@ $(".preloader").delay(1000).fadeOut("slow");
     $(".parallax-background").parallax();
   }
   
-  // Parallax
-  //if ($('.parallax-background-partners').length) {
-  //  $(".parallax-background-partners").parallax();
-  //}  
 
 });
 
+//stikcy menu for mobile
+var smScreen = "screen and (max-width: 768px)";
+var smView = {
+    match: function(){
+     $(".menu-media").sticky({topSpacing:0});
+     $(".menu-click").sticky({topSpacing:90});
+    }
+  };
 
+enquire.register(smScreen, smView);
+
+//video resizing and carousel
+  $('#video-carousel').fitVids();
+  $("#video-carousel").owlCarousel({
+    slideSpeed: 400,
+    paginationSpeed : 400,
+        singleItem:true
+
+  });
+
+  //scrollmagic animation
 
 });
 

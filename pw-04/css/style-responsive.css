@@ -8,8 +8,10 @@
 */
 /* iPad (portrait) */
 @media (min-width: 320px) and (max-width: 579px) {
-  .start-page .content .snow-mountain img {
+  .start-page .content .snow-mountain div img, .start-page .content .snow-mountain div svg {
     max-width: 300px; }
+  .start-page .content .snow-mountain div svg {
+    margin-top: -3.2em; }
 
   .start-page .content .text h1 {
     letter-spacing: 5px;
@@ -104,12 +106,14 @@
   .footer {
     position: relative; } }
 @media (max-width: 830px) {
-  .remodal img {
+  .remodal img, .remodal p {
     width: 85%; } }
 /* iPad (portrait) */
 @media (min-width: 580px) and (max-width: 767px) {
-  .start-page .content .snow-mountain img {
+  .start-page .content .snow-mountain div img, .start-page .content .snow-mountain div svg {
     max-width: 340px; }
+  .start-page .content .snow-mountain div svg {
+    margin-top: -2em; }
 
   .start-page .content .text h1 {
     letter-spacing: 5px; }

@@ -261,6 +261,61 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/img\/6C3BEB9CB1BB3D98.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/img\/6C3BEB9CB1BB3D98.png",
+		"outputAbbreviatedPath": "\/img\/6C3BEB9CB1BB3D98.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/6C3BEB9CB1BB3D99.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/img\/6C3BEB9CB1BB3D99.png",
+		"outputAbbreviatedPath": "\/img\/6C3BEB9CB1BB3D99.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/7519DFAC956DD839.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/img\/7519DFAC956DD839.png",
+		"outputAbbreviatedPath": "\/img\/7519DFAC956DD839.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/7519DFAC956DD83A.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/img\/7519DFAC956DD83A.png",
+		"outputAbbreviatedPath": "\/img\/7519DFAC956DD83A.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/7519DFAC956DD83B.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/img\/7519DFAC956DD83B.png",
+		"outputAbbreviatedPath": "\/img\/7519DFAC956DD83B.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/background\/partners.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -1746,50 +1801,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/portfolio\/full\/painting-green-sky.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 0,
-		"inputAbbreviatedPath": "\/img\/portfolio\/full\/painting-green-sky.jpg",
-		"outputAbbreviatedPath": "\/img\/portfolio\/full\/painting-green-sky.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/portfolio\/full\/painting-milky-way.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 57946,
-		"inputAbbreviatedPath": "\/img\/portfolio\/full\/painting-milky-way.jpg",
-		"outputAbbreviatedPath": "\/img\/portfolio\/full\/painting-milky-way.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/portfolio\/full\/painting-rain.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 82225,
-		"inputAbbreviatedPath": "\/img\/portfolio\/full\/painting-rain.jpg",
-		"outputAbbreviatedPath": "\/img\/portfolio\/full\/painting-rain.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/portfolio\/full\/painting-stargazer.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 139553,
-		"inputAbbreviatedPath": "\/img\/portfolio\/full\/painting-stargazer.jpg",
-		"outputAbbreviatedPath": "\/img\/portfolio\/full\/painting-stargazer.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img\/portfolio\/full\/personal-website-03.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -2028,6 +2039,17 @@
 		"initialSize": 88853,
 		"inputAbbreviatedPath": "\/img\/portfolio\/thumb\/street-performer.jpg",
 		"outputAbbreviatedPath": "\/img\/portfolio\/thumb\/street-performer.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/transparent-snow-mountain.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 116477,
+		"inputAbbreviatedPath": "\/img\/transparent-snow-mountain.png",
+		"outputAbbreviatedPath": "\/img\/transparent-snow-mountain.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

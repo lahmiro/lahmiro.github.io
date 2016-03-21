@@ -13,8 +13,13 @@
 
 //start page
 .start-page .content .snow-mountain{
-  img{
-     max-width: 300px;    
+  div{
+    img,svg{
+     max-width: 300px;  
+    }  
+    svg{
+       margin-top: -3.2em;
+     }
   }
 }
 
@@ -149,7 +154,7 @@ textarea{
 
 @media (max-width: 830px) {
   .remodal{
-    img{
+    img, p{
       width: 85%;
     }
   }
@@ -160,8 +165,13 @@ textarea{
 
 //start page
 .start-page .content .snow-mountain{
-  img{
-     max-width: 340px;    
+  div{
+     img,svg{
+        max-width: 340px;  
+     }  
+     svg{
+       margin-top: -2em;
+     }
   }
 }
 

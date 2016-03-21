@@ -48,8 +48,11 @@
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
 
+.remodal img {
+  width: 68%; }
+
 .remodal p {
-  width: 70%;
+  width: 68%;
   display: block;
   margin: 1.618em auto;
   font-size: 1.2em;

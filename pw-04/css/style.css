@@ -75,7 +75,8 @@ p {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   letter-spacing: 1px;
-  margin-top: 1em; }
+  margin-top: 1em;
+  line-height: 1.6em; }
 
 h1 span {
   color: #2fa68e; }
@@ -120,9 +121,14 @@ h1 span {
   height: 100%; }
 
 .start-page .content .snow-mountain {
-  margin: 0 auto; }
-  .start-page .content .snow-mountain img {
-    width: 400px; }
+  margin: 0 auto;
+  display: block; }
+  .start-page .content .snow-mountain div:last-child {
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .start-page .content .snow-mountain svg#blue-circle-yellow-rect g {
+    mix-blend-mode: multiply; }
 
 .start-page .content .text {
   text-align: center;

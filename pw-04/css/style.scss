@@ -79,6 +79,7 @@ p{
   font-weight:300;
   letter-spacing:1px;
   margin-top:1em;
+  line-height: 1.6em;
 }
 
 
@@ -139,8 +140,16 @@ h1 span{
 
 .start-page .content .snow-mountain{
   margin: 0 auto;
-  img{
-    width: 400px;
+  display: block;
+  div:last-child{
+    position: absolute;
+    top:0;
+    left:0;
+  }
+  svg#blue-circle-yellow-rect{
+    g{
+      mix-blend-mode: multiply;
+    }
   }
 }
 
