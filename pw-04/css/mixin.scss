@@ -2,7 +2,8 @@
 $blue: #6dcff6;
 $yellow: #fff568;
 $pale-sky: #6b717f;
-$dark-grey: darken($pale-sky, 10);
+$dark-grey: darken($pale-sky, 10); 
+/*#545863 */
 $phi: 1.618;
 @mixin serif-font{font-family: 'Playfair Display', serif;}
 @mixin roboto{font-family: 'Roboto', sans-serif;}

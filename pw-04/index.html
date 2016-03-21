@@ -1,31 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-
-    <title>Onepage - clean responsive HTML5 themes - thomsoon.com</title>
-
-		<meta name="description" content="Free download theme onepage, clean and modern responsive for all"/>
-		<meta name="keywords" content="responsive, html5, onepage, themes, template, clean layout, free web"/>
-		<meta name="author" content="Thomsoon.com"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Philina Chen</title>
+    <meta name="description" content="Philina Chen">
+    <meta name="keywords" content="design, web design, css3, photography, video, animation, painting, art, front-end developer, web designer, graphic design" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 		
 		<link rel="shortcut icon" href="img/favicon.png"> 
-		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="css/imagelightbox.css"> 
+    <link rel="stylesheet" href="css/remodal.css">
+    <link rel="stylesheet" href="css/remodal-default-theme.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">         
+    <link rel="stylesheet" href="css/owl.theme.css">
+
 		<link rel="stylesheet" type="text/css" href="css/reset.css" />
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<link rel="stylesheet" type="text/css" href="css/style-responsive.css" />				
-
+    
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
+  <script src="js/vendor/jquery-2.1.4.min.js"></script>
+  <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 		
 </head>
 
 <body>
+  <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
 
-
+        <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+   
 <div class="preloader" id="preloader">
     <div class="item">
       <img src="img/loading.gif">
@@ -43,7 +61,7 @@
       <div class="content">
         <div class="text">
         
-          <div class="logo"><img src="img/logo.png"></div>
+          <div class="snow-mountain"><img src="img/logo.png"></div>
         
           <h1>Philina Chen</h1>
           <p>Graphic/Web Design</p>
@@ -72,8 +90,15 @@
     <ul class="menu-click">
         <a href="#home"><li href="#home">HOME</li></a>
         <a href="#about-us"><li href="#about-us">ABOUT ME</li></a>
-        <a href="#portfolio"><li href="#portfolio">PORTFOLIO</li></a>
-        <a href="#contact"><li href="#contact">CONTACT</li></a>
+        <a href="#contact" class="move-contact"><li href="#contact">CONTACT</li></a>
+        <a href="#portfolio" class="mobile-dropdown"><li href="#portfolio">PORTFOLIO<i class="fa fa-caret-down"></i>
+          <ul class="mobile-dropdown-content">
+            <li><a href="#design">Graphic/Web Design</a></li>
+            <li><a href="#photography">Photography</a></li>
+            <li><a href="#painting">Painting</a></li>
+            <li><a href="#animation">Animaton/Videos</a></li>
+          </ul>
+        </li></a>
         
     </ul>
    
@@ -88,7 +113,14 @@
       <ul id="menu">
         <li><a href="#home">HOME</a></li>
         <li><a href="#about-us">ABOUT ME</a></li>
-        <li><a href="#portfolio">PORTFOLIO</a></li>
+        <li class="dropdown"><a href="#portfolio">PORTFOLIO<i class="fa fa-caret-down"></i>
+          <ul class="dropdown-content">
+            <li><a href="#design">Graphic/Web Design</a></li>
+            <li><a href="#photography">Photography</a></li>
+            <li><a href="#painting">Painting</a></li>
+            <li><a href="#animation">Animaton/Videos</a></li>
+          </ul>
+        </a></li>
         <li><a href="#contact">CONTACT</a></li>
       </ul>
     </div>
@@ -210,15 +242,18 @@
     
       <h1>PORTFOLIO</h1>
       <hr/> 
+
+      <h2 id="design">& Graphic/Web/UX/UI Design &</h2>
     
     <!-- 1 item portoflio-->
     
-        <ul class="grid">
+        <ul class="grid design">
         
           <li>
-            <a href="#">
-              <img src="img/portfolio/spring-golf-web.jpg" alt="Portfolio item" />
+            <a href="#" data-remodal-target="modal-spring-golf">
+              <img src="img/portfolio/thumb/spring-golf.jpg" alt="Spring Golf Outing" />
                 <div class="text-overlay">
+                <div class="circle-triangle"><img src="img/circle-triangle.svg" alt=""></div>
                   <div class="text">
                     <p>Spring Golf Outing</p>
                     <hr>
@@ -231,10 +266,11 @@
           <!-- 2 item portoflio-->
           
           <li>
-            <a href="#">
-              <img src="img/portfolio/diamond-award.jpg" alt="Portfolio item" /> 
+            <a href="#" data-remodal-target="modal-diamond-award">
+              <img src="img/portfolio/thumb/diamond-award.jpg" alt="Diamond Awards" /> 
                   <div class="text-overlay">
-                  <div class="text">
+                  <div class="circle-triangle"><img src="img/circle-triangle-horizental.svg" alt=""></div>
+                  <div class="text short">
                     <p>Diamond Awards</p>
                     <hr>
                     <p class="description">Graphic Design</p>   
@@ -245,12 +281,15 @@
           <!-- 3 item portoflio-->
           
           <li>
-            <a href="#">
-              <img src="img/portfolio/3.png" alt="Portfolio item" />
-                <div class="no-text">
-                  <p></p> 
-                  <p class="description"></p>           
-              </div>
+            <a href="#" data-remodal-target="modal-orgpro">
+              <img src="img/portfolio/thumb/orgpro.jpg" alt="ORGPRO 2016" /> 
+                  <div class="text-overlay">
+                  <div class="circle-triangle"><img src="img/circle-triangle-horizental.svg" alt=""></div>
+                  <div class="text short">
+                    <p>ORGPRO 2016</p>
+                    <hr>
+                    <p class="description">Graphic Design</p>   
+                  </div>         
             </a>
           </li>      
 
@@ -258,24 +297,30 @@
           <!-- 4 item portoflio-->
           
           <li>
-            <a href="#">
-              <img src="img/portfolio/4.png" alt="Portfolio item" />
-                <div class="no-text">
-                  <p></p> 
-                  <p class="description"></p>         
-              </div>
+           <a href="#" data-remodal-target="modal-spring-golf-leaf">
+              <img src="img/portfolio/thumb/spring-golf-leaf.jpg" alt="Spring Golf Leaf" /> 
+                  <div class="text-overlay">
+                  <div class="circle-triangle"><img src="img/circle-triangle.svg" alt=""></div>
+                  <div class="text">
+                    <p>Spring Golf Leaf</p>
+                    <hr>
+                    <p class="description">Graphic Design</p>   
+                  </div>         
             </a>
           </li>    
 
           <!-- 5 item portoflio-->
           
           <li>
-            <a href="#">
-              <img src="img/portfolio/5.png" alt="Portfolio item" />
-                <div class="no-text">
-                  <p></p> 
-                  <p class="description"></p>            
-              </div>
+            <a href="#" data-remodal-target="modal-amp-up">
+              <img src="img/portfolio/thumb/amp-up.jpg" alt="Amp Up" /> 
+                  <div class="text-overlay">
+                  <div class="circle-triangle"><img src="img/circle-triangle-horizental.svg" alt=""></div>
+                  <div class="text short">
+                    <p>Amp Up</p>
+                    <hr>
+                    <p class="description">Graphic Design</p>   
+                  </div>         
             </a>
           </li>    
           
@@ -283,136 +328,402 @@
           <!-- 6 item portoflio-->
           
           <li>
-            <a href="#">
-              <img src="img/portfolio/6.png" alt="Portfolio item" />
-                <div class="text">
-                  <p>PORTFOLIO 6</p> 
-                  <p class="description">Your text here...</p>           
-              </div>
+            <a href="#" data-remodal-target="modal-infographic">
+              <img src="img/portfolio/thumb/infographic.jpg" alt="Infographic" /> 
+                  <div class="text-overlay">
+                  <div class="circle-triangle"><img src="img/circle-triangle.svg" alt=""></div>
+                  <div class="text">
+                    <p>Online Dating Infographic</p>
+                    <hr>
+                    <p class="description">Graphic Design</p>   
+                  </div>         
             </a>
           </li>         
            
          <!-- 7 item portoflio-->
           
           <li>
-            <a href="#">
-              <img src="img/portfolio/7.png" alt="Portfolio item" />
-                <div class="text">
-                  <p>PORTFOLIO 7</p> 
-                  <p class="description">Your text here...</p>           
-              </div>
+            <a href="#" data-remodal-target="modal-portfolio-cover">
+              <img src="img/portfolio/thumb/portfolio-cover.jpg" alt="Portfolio Cover" /> 
+                  <div class="text-overlay">
+                  <div class="circle-triangle"><img src="img/circle-triangle.svg" alt=""></div>
+                  <div class="text">
+                    <p>Portfolio Cover</p>
+                    <hr>
+                    <p class="description">Graphic Design</p>   
+                  </div>         
             </a>
           </li>    
           
           <!-- 8 item portoflio-->
           
           <li>
-            <a href="#">
-              <img src="img/portfolio/8.png" alt="Portfolio item" />
-                <div class="text">
-                  <p>PORTFOLIO 8</p> 
-                  <p class="description">Your text here...</p>           
-              </div>
+            <a href="#" data-remodal-target="modal-notepad">
+              <img src="img/portfolio/thumb/notepad.jpg" alt="Notepad" /> 
+                  <div class="text-overlay">
+                  <div class="circle-triangle"><img src="img/circle-triangle-horizental.svg" alt=""></div>
+                  <div class="text short">
+                    <p>Notepad</p>
+                    <hr>
+                    <p class="description">Web Design</p>   
+                  </div>         
             </a>
           </li>          
           
           <!-- 9 item portoflio-->
           
           <li>
-            <a href="#">
-              <img src="img/portfolio/9.png" alt="Portfolio item" />
-                <div class="text">
-                  <p>PORTFOLIO 9</p> 
-                  <p class="description">Your text here...</p>           
-              </div>
+             <a href="#" data-remodal-target="modal-carpool-app">
+              <img src="img/portfolio/thumb/spring-golf-leaf.jpg" alt="Jakaa Carpool App" /> 
+                  <div class="text-overlay">
+                  <div class="circle-triangle"><img src="img/circle-triangle.svg" alt=""></div>
+                  <div class="text">
+                    <p>Jakaa Carpool App</p>
+                    <hr>
+                    <p class="description">UX/UI Design</p>   
+                  </div>         
             </a>
           </li>          
 
           <!-- 10 item portoflio-->
           
           <li>
-            <a href="#">
-              <img src="img/portfolio/10.png" alt="Portfolio item" />
-                <div class="text">
-                  <p>PORTFOLIO 11</p> 
-                  <p class="description">Your text here...</p>           
-              </div>
+            <a href="#" data-remodal-target="modal-melody-freedom">
+              <img src="img/portfolio/thumb/melody-freedom.jpg" alt="Melody Freedom" /> 
+                  <div class="text-overlay">
+                  <div class="circle-triangle"><img src="img/circle-triangle.svg" alt=""></div>
+                  <div class="text">
+                    <p>Melody & Freedom</p>
+                    <hr>
+                    <p class="description">Graphic Design</p>   
+                  </div>         
             </a>
           </li>         
 
           <!-- 11 item portoflio-->
           
           <li>
-            <a href="#">
-              <img src="img/portfolio/11.png" alt="Portfolio item" />
-                <div class="text">
-                  <p>PORTFOLIO 11</p> 
-                  <p class="description">Your text here...</p>           
-              </div>
+            <a href="#" data-remodal-target="modal-billy-elliot">
+              <img src="img/portfolio/thumb/billy-elliot.jpg" alt="Billy Elliot" /> 
+                  <div class="text-overlay">
+                  <div class="circle-triangle"><img src="img/circle-triangle.svg" alt=""></div>
+                  <div class="text">
+                    <p>Billy Elliot</p>
+                    <hr>
+                    <p class="description">Graphic Design</p>   
+                  </div>         
             </a>
           </li>          
           
+          <!-- 12 item portoflio-->
 
           <li>
-            <a href="#">
-              <img src="img/portfolio/11.png" alt="Portfolio item" />
-                <div class="text">
-                  <p>PORTFOLIO 11</p> 
-                  <p class="description">Your text here...</p>           
-              </div>
+            <a href="#" data-remodal-target="modal-avenue-q">
+              <img src="img/portfolio/thumb/avenue-q.jpg" alt="Avenue Q" /> 
+                  <div class="text-overlay">
+                  <div class="circle-triangle"><img src="img/circle-triangle.svg" alt=""></div>
+                  <div class="text">
+                    <p>Avenue Q</p>
+                    <hr>
+                    <p class="description">Graphic Design</p>   
+                  </div>         
             </a>
           </li>   
 
+          <!-- 13 item portoflio-->
+
           <li>
-            <a href="#">
-              <img src="img/portfolio/7.png" alt="Portfolio item" />
-                <div class="text">
-                  <p>PORTFOLIO 7</p> 
-                  <p class="description">Your text here...</p>           
-              </div>
+            <a href="#" data-remodal-target="modal-street-performer">
+              <img src="img/portfolio/thumb/street-performer.jpg" alt="Barcelona Street Performer" /> 
+                  <div class="text-overlay">
+                  <div class="circle-triangle"><img src="img/circle-triangle-horizental.svg" alt=""></div>
+                  <div class="text short">
+                    <p>Barcelona Street Performer</p>
+                    <hr>
+                    <p class="description">Graphic Design</p>   
+                  </div>         
             </a>
-          </li>    
+          </li>   
           
         </ul>  
+
+        <h2 id="photography">& Photography - Landscape &</h2>
+        <ul class="grid pure-img"> 
+          <!-- shortcut li*28>a[href="img/photography/landscape/full/photo-$$.jpg"][data-imagelightbox="f"]>img[src="img/photography/landscape/thumb/photo-$$.jpg"][alt=""] -->
+          <li><a href="img/photography/landscape/full/photo-01.jpg" data-imagelightbox="f"><img src="img/photography/landscape/thumb/photo-01.jpg" alt=""></a></li>
+          <li><a href="img/photography/landscape/full/photo-02.jpg" data-imagelightbox="f"><img src="img/photography/landscape/thumb/photo-02.jpg" alt=""></a></li>
+          <li><a href="img/photography/landscape/full/photo-03.jpg" data-imagelightbox="f"><img src="img/photography/landscape/thumb/photo-03.jpg" alt=""></a></li>
+          <li><a href="img/photography/landscape/full/photo-04.jpg" data-imagelightbox="f"><img src="img/photography/landscape/thumb/photo-04.jpg" alt=""></a></li>
+          <li><a href="img/photography/landscape/full/photo-05.jpg" data-imagelightbox="f"><img src="img/photography/landscape/thumb/photo-05.jpg" alt=""></a></li>
+          <li><a href="img/photography/landscape/full/photo-06.jpg" data-imagelightbox="f"><img src="img/photography/landscape/thumb/photo-06.jpg" alt=""></a></li>
+          <li><a href="img/photography/landscape/full/photo-07.jpg" data-imagelightbox="f"><img src="img/photography/landscape/thumb/photo-07.jpg" alt=""></a></li>
+          <li><a href="img/photography/landscape/full/photo-08.jpg" data-imagelightbox="f"><img src="img/photography/landscape/thumb/photo-08.jpg" alt=""></a></li>
+          <li><a href="img/photography/landscape/full/photo-09.jpg" data-imagelightbox="f"><img src="img/photography/landscape/thumb/photo-09.jpg" alt=""></a></li>
+          <li><a href="img/photography/landscape/full/photo-10.jpg" data-imagelightbox="f"><img src="img/photography/landscape/thumb/photo-10.jpg" alt=""></a></li>
+          <li><a href="img/photography/landscape/full/photo-11.jpg" data-imagelightbox="f"><img src="img/photography/landscape/thumb/photo-11.jpg" alt=""></a></li>
+          <li><a href="img/photography/landscape/full/photo-12.jpg" data-imagelightbox="f"><img src="img/photography/landscape/thumb/photo-12.jpg" alt=""></a></li>
+          <li><a href="img/photography/landscape/full/photo-13.jpg" data-imagelightbox="f"><img src="img/photography/landscape/thumb/photo-13.jpg" alt=""></a></li>
+          <li><a href="img/photography/landscape/full/photo-14.jpg" data-imagelightbox="f"><img src="img/photography/landscape/thumb/photo-14.jpg" alt=""></a></li>
+          <li><a href="img/photography/landscape/full/photo-15.jpg" data-imagelightbox="f"><img src="img/photography/landscape/thumb/photo-15.jpg" alt=""></a></li>
+          <li><a href="img/photography/landscape/full/photo-16.jpg" data-imagelightbox="f"><img src="img/photography/landscape/thumb/photo-16.jpg" alt=""></a></li>
+          <li><a href="img/photography/landscape/full/photo-17.jpg" data-imagelightbox="f"><img src="img/photography/landscape/thumb/photo-17.jpg" alt=""></a></li>
+          <li><a href="img/photography/landscape/full/photo-18.jpg" data-imagelightbox="f"><img src="img/photography/landscape/thumb/photo-18.jpg" alt=""></a></li>
+          <li><a href="img/photography/landscape/full/photo-19.jpg" data-imagelightbox="f"><img src="img/photography/landscape/thumb/photo-19.jpg" alt=""></a></li>
+          <li><a href="img/photography/landscape/full/photo-20.jpg" data-imagelightbox="f"><img src="img/photography/landscape/thumb/photo-20.jpg" alt=""></a></li>
+          <li><a href="img/photography/landscape/full/photo-21.jpg" data-imagelightbox="f"><img src="img/photography/landscape/thumb/photo-21.jpg" alt=""></a></li>
+          <li><a href="img/photography/landscape/full/photo-22.jpg" data-imagelightbox="f"><img src="img/photography/landscape/thumb/photo-22.jpg" alt=""></a></li>
+          <li><a href="img/photography/landscape/full/photo-23.jpg" data-imagelightbox="f"><img src="img/photography/landscape/thumb/photo-23.jpg" alt=""></a></li>
+          <li><a href="img/photography/landscape/full/photo-24.jpg" data-imagelightbox="f"><img src="img/photography/landscape/thumb/photo-24.jpg" alt=""></a></li>
+          <li><a href="img/photography/landscape/full/photo-25.jpg" data-imagelightbox="f"><img src="img/photography/landscape/thumb/photo-25.jpg" alt=""></a></li>
+          <li><a href="img/photography/landscape/full/photo-26.jpg" data-imagelightbox="f"><img src="img/photography/landscape/thumb/photo-26.jpg" alt=""></a></li>
+          <li><a href="img/photography/landscape/full/photo-27.jpg" data-imagelightbox="f"><img src="img/photography/landscape/thumb/photo-27.jpg" alt=""></a></li>
+          <li><a href="img/photography/landscape/full/photo-28.jpg" data-imagelightbox="f"><img src="img/photography/landscape/thumb/photo-28.jpg" alt=""></a></li>
+    
+        </ul><!-- photography-landscape grid -->
+
+        <h2>& Photography - Human &</h2>
+        <ul class="grid pure-img">
+           <li><a href="img/photography/human/full/photo-01.jpg" data-imagelightbox="f"><img src="img/photography/human/thumb/photo-01.jpg" alt=""></a></li>
+           <li><a href="img/photography/human/full/photo-02.jpg" data-imagelightbox="f"><img src="img/photography/human/thumb/photo-02.jpg" alt=""></a></li>
+           <li><a href="img/photography/human/full/photo-03.jpg" data-imagelightbox="f"><img src="img/photography/human/thumb/photo-03.jpg" alt=""></a></li>
+           <li><a href="img/photography/human/full/photo-04.jpg" data-imagelightbox="f"><img src="img/photography/human/thumb/photo-04.jpg" alt=""></a></li>
+           <li><a href="img/photography/human/full/photo-05.jpg" data-imagelightbox="f"><img src="img/photography/human/thumb/photo-05.jpg" alt=""></a></li>
+           <li><a href="img/photography/human/full/photo-06.jpg" data-imagelightbox="f"><img src="img/photography/human/thumb/photo-06.jpg" alt=""></a></li>
+           <li><a href="img/photography/human/full/photo-07.jpg" data-imagelightbox="f"><img src="img/photography/human/thumb/photo-07.jpg" alt=""></a></li>
+           <li><a href="img/photography/human/full/photo-08.jpg" data-imagelightbox="f"><img src="img/photography/human/thumb/photo-08.jpg" alt=""></a></li>
+           <li><a href="img/photography/human/full/photo-09.jpg" data-imagelightbox="f"><img src="img/photography/human/thumb/photo-09.jpg" alt=""></a></li>
+           <li><a href="img/photography/human/full/photo-10.jpg" data-imagelightbox="f"><img src="img/photography/human/thumb/photo-10.jpg" alt=""></a></li>
+           <li><a href="img/photography/human/full/photo-11.jpg" data-imagelightbox="f"><img src="img/photography/human/thumb/photo-11.jpg" alt=""></a></li>
+           <li><a href="img/photography/human/full/photo-12.jpg" data-imagelightbox="f"><img src="img/photography/human/thumb/photo-12.jpg" alt=""></a></li>
+           <li><a href="img/photography/human/full/photo-13.jpg" data-imagelightbox="f"><img src="img/photography/human/thumb/photo-13.jpg" alt=""></a></li>
+        </ul>
+        <a href="https://www.flickr.com/photos/lahmiro16/" target="_blank"><div class="read-more">View more</div></a>
+
+        <h2 id="painting">& Painting &</h2>
+        <ul class="grid pure-img">
+          <li><a href="img/painting/full/painting-01.jpg" data-imagelightbox="f"><img src="img/painting/thumb/painting-01.jpg" alt=""></a></li>
+          <li><a href="img/painting/full/painting-02.jpg" data-imagelightbox="f"><img src="img/painting/thumb/painting-02.jpg" alt=""></a></li>
+          <li><a href="img/painting/full/painting-03.jpg" data-imagelightbox="f"><img src="img/painting/thumb/painting-03.jpg" alt=""></a></li>
+          <li><a href="img/painting/full/painting-04.jpg" data-imagelightbox="f"><img src="img/painting/thumb/painting-04.jpg" alt=""></a></li>
+          <li><a href="img/painting/full/painting-05.jpg" data-imagelightbox="f"><img src="img/painting/thumb/painting-05.jpg" alt=""></a></li>
+          <li><a href="img/painting/full/painting-06.jpg" data-imagelightbox="f"><img src="img/painting/thumb/painting-06.jpg" alt=""></a></li>
+          <li><a href="img/painting/full/painting-07.jpg" data-imagelightbox="f"><img src="img/painting/thumb/painting-07.jpg" alt=""></a></li>
+          <li><a href="img/painting/full/painting-08.jpg" data-imagelightbox="f"><img src="img/painting/thumb/painting-08.jpg" alt=""></a></li>
+          <li><a href="img/painting/full/painting-09.jpg" data-imagelightbox="f"><img src="img/painting/thumb/painting-09.jpg" alt=""></a></li>
+          <li><a href="img/painting/full/painting-10.jpg" data-imagelightbox="f"><img src="img/painting/thumb/painting-10.jpg" alt=""></a></li>
+        </ul>
+        
+
+        <h2 id="animation">& Animation/Videos &</h2>
+        <div class="video-container">
+           <div id="video-carousel" class="owl-carousel">
+                  <div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/vsW1MV6eZ8c" frameborder="0" allowfullscreen></iframe>
+                    <p class="video-info">The stickman Sherlock Solmes’ detective story.</p>
+                  </div>
+                  <div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/PR-XWALgN4I" frameborder="0" allowfullscreen></iframe>
+                    <p class="video-info">A nightmare of a survivor of the atomic bombing of Hiroshima. 
+                      <br>* Special thanks to my friend Cecilia to be the protagonist of this video. </p>
+                  </div>
+                  <div>
+                   <iframe width="560" height="315" src="https://www.youtube.com/embed/BVySQ_fdCSo" frameborder="0" allowfullscreen></iframe>
+                    <p class="video-info">A Time Lapse of the Spartan Tree </p>
+                  </div>
+  
+
+          </div><!-- /video-carousel -->
+        </div><!-- video-container -->
+       
    
-   <a href="#"><div class="read-more">Read more</div></a>
+   
    
    </div>   
-         
+
+   <!-- modals -->
+   <!-- modal-spring-golf -->
+   <div class="remodal" data-remodal-id="modal-spring-golf">
+        <button data-remodal-action="close" class="remodal-close"></button>
+        <h1>MSAE Spring Golf Outing</h1>
+        <hr>
+        <img src="img/portfolio/full/spring-golf.jpg" alt="Spring Golf Outing">
+        <p>
+          Spring Golf Outing
+        </p>
+        <h4></h4>
+        <button data-remodal-action="cancel" class="remodal-cancel">Close</button>
+    </div><!-- modal-spring-golf -->
+
+    <!-- modal-diamond-award -->
+    <div class="remodal" data-remodal-id="modal-diamond-award">
+        <button data-remodal-action="close" class="remodal-close"></button>
+        <h1>MSAE 15th Annual Diamond Awards</h1>
+        <hr>
+        <img src="img/portfolio/full/diamond-award.jpg" alt="Diamond Awards">
+        <p>
+          Diamond Awards
+        </p>
+        <h4></h4>
+        <button data-remodal-action="cancel" class="remodal-cancel">Close</button>
+    </div><!-- modal-diamond-award -->
+
+    <!-- modal-orgpro -->
+    <div class="remodal" data-remodal-id="modal-orgpro">
+        <button data-remodal-action="close" class="remodal-close"></button>
+        <h1>MSAE ORGPRO 2016</h1>
+        <hr>
+        <img src="img/portfolio/full/orgpro.jpg" alt="ORGPRO 2016">
+        <p>
+          ORGPRO 2016
+        </p>
+        <h4></h4>
+        <button data-remodal-action="cancel" class="remodal-cancel">Close</button>
+    </div><!-- modal-orgpro -->
+
+    <!-- modal-golf-leaf -->
+    <div class="remodal" data-remodal-id="modal-spring-golf-leaf">
+        <button data-remodal-action="close" class="remodal-close"></button>
+        <h1>Spring Golf Outing v2.0</h1>
+        <hr>
+        <img src="img/portfolio/full/spring-golf-leaf.jpg" alt="Spring Golf Outing">
+        <p>
+          
+        </p>
+        <h4></h4>
+        <button data-remodal-action="cancel" class="remodal-cancel">Close</button>
+    </div>
+
+    <!-- modal-amp-up -->
+    <div class="remodal" data-remodal-id="modal-amp-up">
+        <button data-remodal-action="close" class="remodal-close"></button>
+        <h1>Amp Up Your Strategic Meettings Management</h1>
+        <hr>
+        <img src="img/portfolio/full/amp-up.jpg" alt="Amp Up Your Strategic Meetings Management">
+        <img src="img/portfolio/full/amp-up-02.jpg" alt="Amp Up Your Strategic Meetings Management">
+        <p>
+          
+        </p>
+        <h4></h4>
+        <button data-remodal-action="cancel" class="remodal-cancel">Close</button>
+    </div>
+
+    <!-- modal-infographic -->
+    <div class="remodal" data-remodal-id="modal-infographic">
+        <button data-remodal-action="close" class="remodal-close"></button>
+        <h1>Online Dating Infographic</h1>
+        <hr>
+        <img src="img/portfolio/full/infographic.jpg" alt="Online Dating Infographic">
+        <p>
+          
+        </p>
+        <h4></h4>
+        <button data-remodal-action="cancel" class="remodal-cancel">Close</button>
+    </div>
+
+    <!-- modal-portfolio-cover -->
+    <div class="remodal" data-remodal-id="modal-portfolio-cover">
+        <button data-remodal-action="close" class="remodal-close"></button>
+        <h1>Portfolio Cover</h1>
+        <hr>
+        <img src="img/portfolio/full/portfolio-cover.jpg" alt="Portfolio Cover">
+        <img src="img/portfolio/full/portfolio-cover-02.jpg" alt="Portfolio Cover">
+        <img src="img/portfolio/full/portfolio-cover-03.jpg" alt="Portfolio Cover">
+        <p>
+          
+        </p>
+        <h4></h4>
+        <button data-remodal-action="cancel" class="remodal-cancel">Close</button>
+    </div>
+    
+    <!-- modal-notepad -->
+    <div class="remodal" data-remodal-id="modal-notepad">
+        <button data-remodal-action="close" class="remodal-close"></button>
+        <h1>Notepad</h1>
+        <hr>
+        <img src="img/portfolio/full/notepad.jpg" alt="Notepad">
+        <img src="img/portfolio/full/notepad-02.jpg" alt="Notepad">
+        <p>
+          
+        </p>
+        <h4></h4>
+        <button data-remodal-action="cancel" class="remodal-cancel">Close</button>
+    </div>
+
+    <!-- modal-carpool-app -->
+    <div class="remodal" data-remodal-id="modal-carpool-app">
+        <button data-remodal-action="close" class="remodal-close"></button>
+        <h1>Jakaa Carpool App</h1>
+        <hr>
+        <img src="img/portfolio/full/portfolio-cover.jpg" alt="Jakaa Carpool App">
+        <p>
+          
+        </p>
+        <h4></h4>
+        <button data-remodal-action="cancel" class="remodal-cancel">Close</button>
+    </div>
+    
+    <!-- modal-melody-freedom -->
+    <div class="remodal" data-remodal-id="modal-melody-freedom">
+        <button data-remodal-action="close" class="remodal-close"></button>
+        <h1>Meloday & Freedom</h1>
+        <hr>
+        <img src="img/portfolio/full/melody-freedom.jpg" alt="Meloday Freedom">
+        <p>
+          
+        </p>
+        <h4></h4>
+        <button data-remodal-action="cancel" class="remodal-cancel">Close</button>
+    </div>
+
+    <!-- modal-billy-elliot -->
+    <div class="remodal" data-remodal-id="modal-billy-elliot">
+        <button data-remodal-action="close" class="remodal-close"></button>
+        <h1>Billy Elliot Poster</h1>
+        <hr>
+        <img src="img/portfolio/full/billy-elliot.jpg" alt="Billy Elliot Poster">
+        <p>
+          
+        </p>
+        <h4></h4>
+        <button data-remodal-action="cancel" class="remodal-cancel">Close</button>
+    </div>
+
+    <!-- modal-avenue-q -->
+    <div class="remodal" data-remodal-id="modal-avenue-q">
+        <button data-remodal-action="close" class="remodal-close"></button>
+        <h1>Avenue Q Poster</h1>
+        <hr>
+        <img src="img/portfolio/full/avenue-q.jpg" alt="Avenue Q Poster">
+        <p>
+          
+        </p>
+        <h4></h4>
+        <button data-remodal-action="cancel" class="remodal-cancel">Close</button>
+    </div>
+
+    <!-- modal-street-performer -->
+    <div class="remodal" data-remodal-id="modal-street-performer">
+        <button data-remodal-action="close" class="remodal-close"></button>
+        <h1>Barcelona Street Performer</h1>
+        <hr>
+        <img src="img/portfolio/full/street-performer.jpg" alt="Barcelona Street Performer">
+        <img src="img/portfolio/full/street-performer-02.jpg" alt="Barcelona Street Performer">
+        <img src="img/portfolio/full/street-performer-03.jpg" alt="Barcelona Street Performer">
+        <p>
+          
+        </p>
+        <h4></h4>
+        <button data-remodal-action="cancel" class="remodal-cancel">Close</button>
+    </div>
+
    </section>
 
   
    <div class="clear"></div>  
   
-  
-  
-  
-    <!-- partners-->
-
-    <section class="partners parallax-background-partners" id="partners">
-    
-    <div class="opacity"></div>
-    
-      <div class="content">
-      
-        <h2>Thanks for partners</h2>
-        
-            <div class="logo">
-          
-                <a href="#"><img src="img/logos/alex1.png"></a>
-                <a href="#"><img src="img/logos/archiq.png"></a>
-                <a href="#"><img src="img/logos/thomsoon.png"></a>
-                <a href="#"><img src="img/logos/alex2.png"></a>
-              
-            </div>
-      
-      </div>
-
-    </section>
-
-
+   
     <!-- Contact-->
-
+    
     <section class="contact" id="contact">
         <h1>Contact</h1>
         <hr/>       
@@ -449,15 +760,13 @@
           
           
           <div class="contact-text">
-          
-          To contact us please use the contact form visible<br/><br/>
-
-          When sending files, please use<br/>
-          the following e-mail<br/><br/>
-
-          <strong>Tomasz Mazurczak</strong><br/><br/>
-
-          e-mail: <strong>contact@thomsoon.com</strong>
+          <div>FIND ME ON</div>
+          <ul class="social-media-icons">
+            <li><a href="https://www.facebook.com/lahmiro" target="_blank"><i class="fa fa-facebook-square fa-4x"></i></a></li>
+            <li><a href="https://www.flickr.com/photos/lahmiro16/" target="_blank"><i class="fa fa-flickr fa-4x"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/philinachenxinyi" target="_blank"><i class="fa fa-linkedin-square fa-4x"></i></a></li>
+            <li><a href="https://www.instagram.com/lahmiro/" target="_blank"><i class="fa fa-instagram fa-4x"></i></a></li>
+          </ul>
           
           </div>
         
@@ -468,20 +777,8 @@
 
 
     <section class="footer">
-      
-        <div class="menu-footer">
         
-          <a href="#home">Home</a>
-          <a href="#">Privacy policy</a>
-          <a href="#">RSS</a>
-          <a href="#">Facebook</a>
-          <a href="#">Dribble</a>
-          <a href="#">Twitter</a>
-          <a href="#">Contact</a>
-        
-        </div>
-        
-        <div class="copyright">© 2014. All Rights Reserved Thomsoon.com</div>        
+        <div class="copyright">Copyright © 2016 Philina Chen</div>        
     
     
     </section>    
@@ -493,12 +790,14 @@
 
 	<!-- Scripts -->
 	
-	<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
-	<script src="js/jquery-ui-1.10.4.min.js" type="text/javascript"></script> <!-- jQuery -->
-	<script src="js/jquery.nicescroll.js"></script> <!-- jQuery NiceScroll -->
-	<script src="js/jquery.sticky.js"></script> <!-- jQuery Stick Menu -->
-	<script src="js/masonry.pkgd.min.js"></script> <!-- All script -->
-	<script src="js/imagesloaded.pkgd.min.js"></script> <!-- All script -->	
+	<script src="js/vendor/jquery-2.1.4.min.js"></script>
+
+	<script src="js/vendor/jquery-ui-1.10.4.min.js" type="text/javascript"></script> <!-- jQuery -->
+	<script src="js/vendor/bootstrap.min.js"></script> <!-- Bootstrap -->
+  <script src="js/vendor/jquery.nicescroll.js"></script> <!-- jQuery NiceScroll -->
+	<script src="js/vendor/jquery.sticky.js"></script> <!-- jQuery Stick Menu -->
+	<script src="js/vendor/masonry.pkgd.min.js"></script> <!-- All script -->
+	<script src="js/vendor/imagesloaded.pkgd.min.js"></script> <!-- All script -->	
 
    <script>
      $(function(){
@@ -513,7 +812,21 @@
      
      });
    </script>
-	<script src="js/jquery.parallax.js"></script> <!-- jQuery Parallax -->	
+	<script src="js/vendor/jquery.parallax.js"></script> <!-- jQuery Parallax -->	
+  
+  <script src="js/vendor/TweenMax.min.js"></script>
+  <script src="js/vendor/CSSPlugin.min.js"></script>
+  <script src="js/vendor/ScrollMagic.min.js"></script>
+  <script src="js/vendor/animation.gsap.min.js"></script>
+  
+  <script src="js/vendor/jquery.hoverdir.js"></script>
+  <script src="js/vendor/imagelightbox.min.js"></script>
+  <script src="js/vendor/imagelightboxstyle.js"></script>
+  <script src="js/vendor/remodal.min.js"></script>    
+  <script src="js/vendor/jquery.fitvids.js"></script>
+  <script src="js/vendor/owl.carousel.min.js"></script>
+  <script src="js/vendor/enquire.min.js"></script>
+
 	<script src="js/script.js"></script> <!-- All script -->	
 
 

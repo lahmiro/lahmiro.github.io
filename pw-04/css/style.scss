@@ -69,6 +69,11 @@ h1{
   line-height:1.2;
 }
 
+hr{
+  color: $dark-grey;
+  background-color: $dark-grey;
+}
+
 p{
   @include roboto;
   font-weight:300;
@@ -132,6 +137,13 @@ h1 span{
   height:100%;
 }
 
+.start-page .content .snow-mountain{
+  margin: 0 auto;
+  img{
+    width: 400px;
+  }
+}
+
 .start-page .content .text{
   text-align:center;
   @include centerEl;
@@ -147,12 +159,6 @@ h1 span{
   }
 }
 
-.start-page .content .text .logo{
-  margin: 0 auto;
-  img{
-    width: 400px;
-  }
-}
 
 
 
@@ -261,6 +267,9 @@ h1 span{
 
 .menu-click{
   display:none;
+  width: 100vw;
+  z-index: 99;
+  background: #FFF;
 }
 
 .menu-click li {
@@ -339,13 +348,103 @@ h1 span{
 	transition: all 0.2s ease-in;
 }
 
-.menu-content li.active a{
-  color: $blue;
-}
 
 .menu-content li a:hover{
   color: $blue;
 }
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    i{
+      padding-left: 3px;
+      color: $dark-grey;
+      -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+    }
+}
+
+//Dropdown Content (Hidden by Default) 
+ul.dropdown-content {
+    display: none;
+    position: absolute;
+    @include box-shadow(0px 1px 1px 0px rgba($dark-grey,0.2));
+    text-align: left;
+    width: 200px;
+    left: 0;
+    float: none;
+    text-align: left;
+    background: #FFF;
+     -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    li{
+      text-decoration: none;
+      display: block;
+    }
+}
+
+a.mobile-dropdown{
+  color: $dark-grey;
+  font-size: 18px;
+  -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+  i{
+    padding-left: 3px;
+    color: $dark-grey;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    &:hover{
+      color: $blue;
+    }
+  }
+  &:hover{
+    color: $blue;
+  }
+
+}
+
+ul.mobile-dropdown-content{
+     display: none;
+     background: #FFF;
+     a{
+       width: 100%;
+       color: $dark-grey;
+        -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+       &:hover{
+         color: $blue;
+       }
+     }
+
+}
+
+
+//Show the dropdown menu on hover
+.dropdown:hover ul.dropdown-content{
+    display: block;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
 
 
 /* About us */
@@ -376,9 +475,7 @@ h1 span{
 }
 
 .about-us hr{
-  color: black;
   margin-top:30px;
-  background-color: black;
   height: 1px;
   width:106px;
   border:0;
@@ -423,7 +520,7 @@ h1 span{
 .about-us{
    .mountain-group{
      display: block;
-     margin: 72px auto 120px auto;
+     margin: 74px auto 120px auto;
      svg{
         width: 100%;
         .m-triangle{
@@ -435,6 +532,9 @@ h1 span{
    }
 }
 
+.no-mix-blend-mode{
+  mix-blend-mode: none; 
+}
 
 
 
@@ -447,7 +547,12 @@ h1 span{
   width:100%;
   background: url("../img/background/start-page.png") repeat;
   z-index:10;
-
+  h2{
+    letter-spacing: 4px;
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 74px;
+  }
 }
 
 .portfolio .portfolio-margin{
@@ -495,10 +600,8 @@ h1 span{
   line-height:1.2;
 }
 
-.portfolio .portfolio-margin hr{
-  color: black;
+.portfolio .portfolio-margin hr{ 
   margin-top:30px;
-  background-color: black;
   height: 1px;
   width:106px;
   border:0;
@@ -536,27 +639,34 @@ h1 span{
   position: absolute;
   width: 285px;
   height:100%;
-  background: rgba($blue, .8);
+  background: rgba($blue, .9);
   z-index: 2;
   opacity:0;
-    -webkit-transition: all 0.6s ease-in;
-	-moz-transition: all 0.6s ease-in;
-	-ms-transition: all 0.6s ease-in;
-	-o-transition: all 0.6s ease-in;
-	transition: all 0.6s ease-in;
+}
+
+.grid hr{
+  color: #fff;
+  background-color: #fff;
 }
 
 .grid li:nth-child(even){
   .text-overlay{
-     background: rgba($yellow, .8);
+     background: rgba($yellow, .9);
   }
   .text{
     p{color: $dark-grey;}
-    hr{
-       color: $dark-grey;
-       background-color: $dark-grey;
-    }
   }
+  hr{
+     color: $dark-grey;
+     background-color: $dark-grey;
+  }
+}
+
+.grid .circle-triangle{
+  position: absolute;
+  width: 285px;
+  height:100%;
+  z-index: 2;
 }
 
 .grid .text-overlay:hover {
@@ -565,7 +675,11 @@ h1 span{
 
 
 .grid .text{
-  @include centerEl;
+  margin: 50% auto;
+}
+
+.grid .short{
+  margin: 25% auto;
 }
 
 .grid p {
@@ -578,8 +692,6 @@ h1 span{
 }
 
 .grid .text hr{
-    color: #fff;
-    background-color: #fff;
     height: 1px;
     width: 120px;
     border: 0;
@@ -595,9 +707,56 @@ h1 span{
   position:relative;
 }
 
+
 .clear { 
     clear:both; 
 }
+
+.pure-img{
+  li a img{
+      -webkit-transition: all 0.4s ease-in;
+      -moz-transition: all 0.4s ease-in;
+      -ms-transition: all 0.4s ease-in;
+      -o-transition: all 0.4s ease-in;
+      transition: all 0.4s ease-in;
+      
+    &:hover{
+      opacity: 1;
+      -webkit-transition: all 0.4s ease-in;
+      -moz-transition: all 0.4s ease-in;
+      -ms-transition: all 0.4s ease-in;
+      -o-transition: all 0.4s ease-in;
+      transition: all 0.4s ease-in;
+      -webkit-transform: scale(1.05);
+         -moz-transform: scale(1.05);
+          -ms-transform: scale(1.05);
+           -o-transform: scale(1.05);
+              transform: scale(1.05);
+    }
+    
+  }
+}
+
+//video
+.video-info {
+  text-align: center;
+  margin-top: 1.618em;
+  line-height: 26px;
+}
+
+.video-container{
+  margin: 70px auto;
+}
+
+.owl-theme .owl-controls .owl-page span{
+  background: rgba($blue, .8);
+    -webkit-transition: all 0.4s ease-in;
+      -moz-transition: all 0.4s ease-in;
+      -ms-transition: all 0.4s ease-in;
+      -o-transition: all 0.4s ease-in;
+      transition: all 0.4s ease-in;
+}
+
 
 /* Partners */
 
@@ -691,9 +850,7 @@ h1 span{
 }
 
 .contact hr{
-  color: black;
   margin-top:30px;
-  background-color: black;
   height: 1px;
   width:106px;
   border:0;
@@ -740,14 +897,46 @@ h1 span{
   font-weight:300;
   float:left;
   padding-left:40px;
-
-  font-size:14px;
-  line-height:26px;
+  div{
+    margin-bottom: 1em;
+    width: 100%;
+  }
 }
 
 strong{
   font-weight:700;
 
+}
+
+.contact ul.social-media-icons{
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  li{
+        -webkit-flex-grow: 1;
+                flex-grow: 1;
+        a{
+          text-decoration: none;
+          color: $dark-grey;
+          i{
+            @include transition(all .2s ease-in);
+          }
+          &:hover, &:active{
+            i{
+              margin-top: -.2em;
+              @include transition(all .2s ease-in);
+              &:nth-child(odd){
+               color: $blue;
+              }
+              &:nth-child(even){
+                color: $yellow;
+              }
+            }
+             
+          }
+        }
+      
+      }
 }
 
 input{

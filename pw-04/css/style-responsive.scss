@@ -11,6 +11,26 @@
 /* iPad (portrait) */
 @media (min-width: 320px) and (max-width: 579px) {
 
+//start page
+.start-page .content .snow-mountain{
+  img{
+     max-width: 300px;    
+  }
+}
+
+.start-page .content{
+  .text{
+    h1{
+      letter-spacing: 5px;
+      font-size: 1.3em;
+    }
+    p{
+      letter-spacing: 8px;
+      font-size: 1.1em;
+    }
+  }
+}
+
 .menu{
   display:none;
 }
@@ -31,6 +51,12 @@
   width:300px;
 }
 
+//portfolio page
+.portfolio{
+  h2{
+    letter-spacing: 1px;
+  }
+}
 
 h1 {
   font-size:36px;
@@ -95,7 +121,7 @@ textarea{
 }
 
 .contact .content .contact-text {
-  width:275px;
+  width:300px;
 }
 
 .contact .content .form .column, .contact .content .form .column-3{
@@ -122,9 +148,27 @@ textarea{
 }
 
 
-
 /* iPad (portrait) */
 @media (min-width: 580px) and (max-width: 767px) {
+
+//start page
+.start-page .content .snow-mountain{
+  img{
+     max-width: 340px;    
+  }
+}
+
+.start-page .content{
+  .text{
+    h1{
+      letter-spacing: 5px;
+    }
+    p{
+      letter-spacing: 8px;
+    }
+  }
+}
+
 
 .menu{
   display:none;

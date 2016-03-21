@@ -1,12 +1,40 @@
-
+$(function(){
   // niceScroll
   $("html").niceScroll();
-    
+  
+  //devise width
+  var vw = $(window).width();
     
   // Stick menu
   $(".menu").sticky({topSpacing:0});
 
+ //dropdown icon hover effect
+ $('.menu-content li:nth-child(3) a').mouseenter(function(){
+    $('.fa-caret-down').css("color", "#6dcff6");
+ })
+ .mouseleave(function(){
+    $('.fa-caret-down').css("color", "#545863");
+ });
+ 
+$('a.mobile-dropdown').mouseenter(function(){
+    $('.fa-caret-down').css("color", "#6dcff6");
+ })
+ .mouseleave(function(){
+    $('.fa-caret-down').css("color", "#545863");
+ });
 
+
+ //portfolio-thumbs hover 
+  $(' .design > li ').each( function() { $(this).hoverdir(); } );
+
+  //video resizing and carousel
+  $('#video-carousel').fitVids();
+  $("#video-carousel").owlCarousel({
+    slideSpeed: 400,
+    paginationSpeed : 400,
+        singleItem:true
+
+  });
 
 
   // Menu Scroll to content and Active menu
@@ -35,8 +63,8 @@
   $(window).scroll(function(){
    var fromTop = $(this).scrollTop()+topMenuHeight;
    var cur = scrollItems.map(function(){
-     if ($(this).offset().top < fromTop)
-       return this;
+     if ($(this).offset().top < fromTop){
+       return this;}
    });
 
    cur = cur[cur.length-1];
@@ -61,15 +89,15 @@ else
 {
 
   // FadeTo elements
-  if ( $(window).width() > 1023) {  
+  if ( vw > 1023) {  
 
-    tiles = $("h2, h3, .column-one, .column-two, .column-three, .grid li, .contact .content .form, .contact .content .contact-text ").fadeTo(0, 0);
+    var tiles = $("h1, h2, h3, .grid li, .contact .content .form, .contact .content .contact-text, .video-container ").fadeTo(0, 0);
 
-    $(window).scroll(function(d,h) {
-      tiles.each(function(i) {
+    $(window).scroll(function(a,b) {
+      tiles.each(function() {
           a = $(this).offset().top + $(this).height();
           b = $(window).scrollTop() + $(window).height();
-          if (a < b) $(this).fadeTo(1000,1);
+          if (a < b) {$(this).fadeTo(1000,1);}
       });
     });
 
@@ -77,19 +105,28 @@ else
 
 }
 
-
+//stikcy menu for mobile
+if(vw < 767){
+   $(".menu-media").sticky({topSpacing:0});
+   $(".menu-click").sticky({topSpacing:90});
+}
 
   //Menu mobile click
   $( ".icon" ).click(function() {
-    $( " ul.menu-click" ).slideToggle( "slow", function() {
+    $( "ul.menu-click" ).slideToggle( "slow", function() {
     // Animation complete.
     });
   });
 
+$(".mobile-dropdown").click(function() {
+    $( "ul.mobile-dropdown-content" ).slideToggle( "slow", function() {
+    });
+    $( ".move-contact" ).css("margin-top", "90px");
+});
 
 $(window).load(function(){
 
-$(".preloader").delay(1000).fadeOut("slow")
+$(".preloader").delay(1000).fadeOut("slow");
 
   // Parallax
   if ($('.parallax-background').length) {
@@ -97,8 +134,13 @@ $(".preloader").delay(1000).fadeOut("slow")
   }
   
   // Parallax
-  if ($('.parallax-background-partners').length) {
-    $(".parallax-background-partners").parallax();
-  }  
+  //if ($('.parallax-background-partners').length) {
+  //  $(".parallax-background-partners").parallax();
+  //}  
 
 });
+
+
+
+});
+
