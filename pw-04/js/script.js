@@ -24,7 +24,7 @@ $('a.mobile-dropdown').mouseenter(function(){
  });
 
 
- //portfolio-thumbs hover 
+ //portfolio-thumbs hover effect
   $(' .design > li ').each( function() { $(this).hoverdir(); } );
 
   //video resizing and carousel
@@ -142,16 +142,49 @@ var smView = {
 
 enquire.register(smScreen, smView);
 
-//video resizing and carousel
-  $('#video-carousel').fitVids();
-  $("#video-carousel").owlCarousel({
-    slideSpeed: 400,
-    paginationSpeed : 400,
-        singleItem:true
 
-  });
 
   //scrollmagic animation
+  //only enable animation on desktop: if (!Modernizr.touch)
+  if (!Modernizr.touch){
+    //controllers
+    //on Leave controller
+    var onLeaveCtrl = new ScrollMagic.Controller({
+          globalSceneOptions: {
+              triggerHook: 'onLeave'
+          }
+      });
+
+    //onEnter controller
+    var onEnterCtrl = new ScrollMagic.Controller({
+      globalSceneOptions: {
+              triggerHook: 'onEnter'
+          }
+    });
+
+    //onCenter controller
+    var onCenterCtrl = new ScrollMagic.Controller({
+      globalSceneOptions: {
+              triggerHook: 'onCenter'
+          }
+    });
+    //start page
+    var startAni = new TimelineMax();
+        startAni.to('.start-page .content', 2, {y:-100, autoAlpha:0, ease: Power1.easeOut},0)
+        .to('.blue-circle', 1, {fill:"#fff568"}, 0)
+        .to(['#m-rect-left>path', '#m-rect-right>path'], 1, {stroke:"#6dcff6", ease: Power1.easeOut},0);
+        
+
+    new ScrollMagic.Scene({
+          triggerElement: "#home",
+          duration: '80%'
+      })
+      .setTween(startAni)
+      .addTo(onLeaveCtrl);
+
+
+  }//if (!Modernizr.touch)
+  
 
 });
 
