@@ -703,8 +703,8 @@ rect.rect-yellow{
 //inspired by http://tympanus.net/Tutorials/CircleHover, &:activeEffects/index3.html
 	ul.round-thumbs{
 		//modify for mobile view
-		overflow-y: scroll;
-		overflow-x: hidden;
+		//overflow-y: scroll;
+		//overflow-x: hidden;
 		padding-left: 0;
 		position: relative;
 		display: block;

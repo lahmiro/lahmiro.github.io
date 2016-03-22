@@ -746,8 +746,6 @@ rect.rect-yellow {
   margin-top: 3rem; }
 
 ul.round-thumbs {
-  overflow-y: scroll;
-  overflow-x: hidden;
   padding-left: 0;
   position: relative;
   display: block;
