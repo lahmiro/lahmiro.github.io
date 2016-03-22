@@ -534,7 +534,7 @@ ul.mobile-dropdown-content{
      svg{
         width: 100%;
         .m-triangle{
-          polygon{
+          polygon, path{
             mix-blend-mode: multiply;
           }
         }

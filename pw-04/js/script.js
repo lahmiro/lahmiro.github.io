@@ -91,7 +91,7 @@ else
   // FadeTo elements
   if ( vw > 1023) {  
 
-    var tiles = $("h1, h2, h3, .grid li, .contact .content .form, .contact .content .contact-text, .video-container ").fadeTo(0, 0);
+    var tiles = $(".read-more, .portfolio-subtitle, .grid li, .contact .content .form, .contact .content .contact-text, .video-container").fadeTo(0, 0);
 
     $(window).scroll(function(a,b) {
       tiles.each(function() {
@@ -182,6 +182,41 @@ enquire.register(smScreen, smView);
       .setTween(startAni)
       .addTo(onLeaveCtrl);
 
+    //about me page
+    var mTriangle = $('.m-triangle')
+    var moveUp = new TimelineMax();
+        moveUp.staggerFrom(['.about-me-title','.about-me-p'], 4, {y:-70, autoAlpha:0, ease: Power1.easeOut}, 2)
+              .staggerFrom(mTriangle, 5, {delay: 3.5, y:-50, autoAlpha:0, ease: Power1.easeOut}, 1)
+              .staggerFrom('.m-text', 3, { x:-30, autoAlpha: 0, ease: Power1.easeOut}, .5);
+
+
+    new ScrollMagic.Scene({
+        triggerElement: "#about-us",
+        duration: '50%'
+    })
+    .setTween(moveUp)
+    .addTo(onCenterCtrl);
+
+    var moveUp2 = new TimelineMax();
+        moveUp2.staggerFrom(['.portfolio-title','#design'], 4, {y:-50, autoAlpha:0, ease: Power1.easeOut}, 1);
+
+        
+    new ScrollMagic.Scene({
+        triggerElement: "#portfolio",
+        duration: '50%'
+    })
+    .setTween(moveUp2)
+    .addTo(onCenterCtrl);
+
+    //mountain group svg anim
+    var mountainGroupAnim = new Vivus('mountain-group',{
+                type: 'delayed',
+                duration: 100,
+                delay: 2,
+                animTimingFunction: Vivus.EASE_OUT_BOUCE
+    });
+
+ 
 
   }//if (!Modernizr.touch)
   

@@ -451,7 +451,7 @@ ul.mobile-dropdown-content {
   margin: 74px auto 120px auto; }
   .about-us .mountain-group svg {
     width: 100%; }
-    .about-us .mountain-group svg .m-triangle polygon {
+    .about-us .mountain-group svg .m-triangle polygon, .about-us .mountain-group svg .m-triangle path {
       mix-blend-mode: multiply; }
 
 .no-mix-blend-mode {

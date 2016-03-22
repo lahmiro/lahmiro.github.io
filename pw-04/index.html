@@ -157,11 +157,18 @@
   <section class="about-us" id="about-us">
 
   <div class="content">
-  
-    <h1>ABOUT ME</h1>
-    <hr/>
-    <p class="title"> Hi, I am Philina (/fə’lina/), a photographer, a web/graphic designer, a theatre lover, and a cat person. Snow mountains, starry nights and aurora are my most cherished landscapes on the earth. I love clean design, and desire a simple life. </p>
-  
+    
+    <div class="about-me-text move-up">
+      <div class="about-me-title">
+         <h1>ABOUT ME</h1>
+         <hr/>
+      </div>
+      <div class="about-me-p">
+          <p class="title"> Hi, I am Philina (/fə’lina/), a photographer, a web/graphic designer, a theatre lover, and a cat person. Snow mountains, starry nights and aurora are my most cherished landscapes on the earth. I love clean design, and desire a simple life. </p>
+      </div>
+     
+    </div>
+   
     <div class="mountain-group">
       
 <svg id="mountain-group" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="900px"
@@ -263,11 +270,14 @@
 
     <div class="portfolio-margin">
     
-      <h1>PORTFOLIO</h1>
-      <hr/> 
-
-      <h2 id="design">& Graphic/Web/UX/UI Design &</h2>
-    
+      <div class="portfolio-text">
+        <div class="portfolio-title">
+          <h1>PORTFOLIO</h1>
+         <hr/> 
+        </div>
+         <h2 id="design">& Graphic/Web/UX/UI Design &</h2>
+      </div>
+     
     <!-- 1 item portoflio-->
     
         <ul class="grid design">
@@ -470,7 +480,7 @@
           
         </ul>  
 
-        <h2 id="photography">& Photography - Landscape &</h2>
+        <h2 id="photography" class="portfolio-subtitle">& Photography - Landscape &</h2>
         <ul class="grid pure-img"> 
           <!-- shortcut li*28>a[href="img/photography/landscape/full/photo-$$.jpg"][data-imagelightbox="f"]>img[src="img/photography/landscape/thumb/photo-$$.jpg"][alt=""] -->
           <li><a href="img/photography/landscape/full/photo-01.jpg" data-imagelightbox="f"><img src="img/photography/landscape/thumb/photo-01.jpg" alt=""></a></li>
@@ -504,7 +514,7 @@
     
         </ul><!-- photography-landscape grid -->
 
-        <h2>& Photography - Human &</h2>
+        <h2 class="portfolio-subtitle">& Photography - Human &</h2>
         <ul class="grid pure-img">
            <li><a href="img/photography/human/full/photo-01.jpg" data-imagelightbox="f"><img src="img/photography/human/thumb/photo-01.jpg" alt=""></a></li>
            <li><a href="img/photography/human/full/photo-02.jpg" data-imagelightbox="f"><img src="img/photography/human/thumb/photo-02.jpg" alt=""></a></li>
@@ -522,7 +532,7 @@
         </ul>
         <a href="https://www.flickr.com/photos/lahmiro16/" target="_blank"><div class="read-more">View more</div></a>
 
-        <h2 id="painting">& Painting &</h2>
+        <h2 id="painting" class="portfolio-subtitle">& Painting &</h2>
         <ul class="grid pure-img">
           <li><a href="img/painting/full/painting-01.jpg" data-imagelightbox="f"><img src="img/painting/thumb/painting-01.jpg" alt=""></a></li>
           <li><a href="img/painting/full/painting-02.jpg" data-imagelightbox="f"><img src="img/painting/thumb/painting-02.jpg" alt=""></a></li>
@@ -537,7 +547,7 @@
         </ul>
         
 
-        <h2 id="animation">& Animation/Videos &</h2>
+        <h2 id="animation" class="portfolio-subtitle">& Animation/Videos &</h2>
         <div class="video-container">
            <div id="video-carousel" class="owl-carousel">
                   <div>
@@ -842,11 +852,12 @@
   
   <script src="js/vendor/TweenMax.min.js"></script>
   <script src="js/vendor/CSSPlugin.min.js"></script>
-  <!-- <script src="js/vendor/ScrollMagic.min.js"></script>  -->
-  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+  <script src="js/vendor/ScrollMagic.min.js"></script> 
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script> -->
   <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
   <script src="js/vendor/animation.gsap.min.js"></script>
-
+  
+  <script src="js/vendor/vivus.min.js"></script>
   <script src="js/vendor/jquery.hoverdir.js"></script>
   <script src="js/vendor/imagelightbox.min.js"></script>
   <script src="js/vendor/imagelightboxstyle.js"></script>
