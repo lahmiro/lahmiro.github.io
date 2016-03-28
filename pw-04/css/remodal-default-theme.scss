@@ -13,13 +13,7 @@
    ========================================================================== */
 
 /* Default theme styles for the background */
-@mixin transition($in) {
-  transition:$in;
-  -webkit-transition:$in;
-  -moz-transition:$in;
-  -o-transition:$in;
-  -ms-transition:$in;
-}
+@import 'mixin.scss';
 
 .remodal-bg.remodal-is-opening,
 .remodal-bg.remodal-is-opened {
@@ -81,6 +75,17 @@
   margin: 1.618em auto;
   font-size: 1.2em;
   text-align: justify;
+  a{
+    padding: 1em;
+    text-align: center;
+    background: #6dcff6;
+    color: #fff;
+    @include transition(all .3s ease);
+    &:hover{
+      background: darken(#6dcff6, 10);
+       @include transition(all .3s ease);
+    }
+  }
 }
 
 .remodal h1{
@@ -154,7 +159,6 @@
 }
 
 .remodal-close:before {
-  font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif !important;
   font-size: 25px;
   line-height: 35px;
 

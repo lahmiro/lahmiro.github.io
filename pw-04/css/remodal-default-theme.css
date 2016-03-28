@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
  *  Remodal - v1.0.6
  *  Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
@@ -10,6 +11,20 @@
    Remodal's default mobile first theme
    ========================================================================== */
 /* Default theme styles for the background */
+/* general */
+/*#545863 */
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box; }
+
 .remodal-bg.remodal-is-opening,
 .remodal-bg.remodal-is-opened {
   -webkit-filter: blur(3px);
@@ -57,6 +72,23 @@
   margin: 1.618em auto;
   font-size: 1.2em;
   text-align: justify; }
+  .remodal p a {
+    padding: 1em;
+    text-align: center;
+    background: #6dcff6;
+    color: #fff;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease; }
+    .remodal p a:hover {
+      background: #3dbff3;
+      transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease; }
 
 .remodal h1 {
   letter-spacing: 0;
@@ -115,7 +147,6 @@
   color: #2b2e38; }
 
 .remodal-close:before {
-  font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif !important;
   font-size: 25px;
   line-height: 35px;
   position: absolute;
