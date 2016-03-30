@@ -926,45 +926,10 @@ ul.mobile-dropdown-content{
   border:0;
 }
 
-.contact .content .form{
-  width:455px;
-  overflow:hidden;
-  height:auto;
-  float:left;
-}
-
-
-.contact .content .form .column{
-  width:180px;
-  overflow:hidden;
-  height:auto;
-  float:left;
-  letter-spacing:1px;
-  margin-bottom:30px;
-}
-
-.contact .content .form .column-2{
-  width:210px;
-  padding-left:60px;
-  overflow:hidden;
-  height:auto;
-  float:left;
-  letter-spacing:1px;
-  margin-bottom:30px;  
-}
-
-.contact .content .form .column-3{
-  width:450px;
-  overflow:hidden;
-  height:auto;
-  float:left;
-  letter-spacing:1px;
-}
-
-
 
 .contact .content .contact-text{
-  width:405px;
+  width: 100%;
+  text-align: center;
   overflow:hidden;
   height:auto;
   font-weight:300;
@@ -1012,62 +977,7 @@ strong{
       }
 }
 
-input{
 
-  width:180px;
-  height:40px;
-  background:#f8f7f7;
-  border-top:1px solid #333;
-  border-bottom:0;
-  border-left:0;
-  border-right:0;
-  color:#333;
-  font-weight:300;
-  line-height:40px;
-  padding-left:15px;
-  font-family: 'Lato', sans-serif;
-  font-size:14px;
-  margin-bottom:10px;
-}
-
-input:focus{background:#f4f4f4;}
-
-textarea{
-
-  width:420px;
-  height:150px;
-  border-top:1px solid #333;
-  border-bottom:0;
-  line-height:20px;
-  border-left:0;
-  border-right:0;
-  background:#f8f7f7;
-  color:#333;
-  font-weight:300;
-  padding:15px 0 0 15px;
-  font-family: 'Lato', sans-serif;
-  font-size:14px;
-  margin-bottom:10px;
-}
-
-textarea:focus{background:#f4f4f4;}
-
-
-input.submit{
-  width:100px;
-  height:34px;
-  float:right;
-  margin:20px 10px 0 0;
-  border:0;
-  font-weight:700;
-  text-align:right;
-  background:none;
-  -webkit-transition: all 0.6s ease-in;
-  -moz-transition: all 0.6s ease-in;
-  -ms-transition: all 0.6s ease-in;
-  -o-transition: all 0.6s ease-in;
-  transition: all 0.6s ease-in;
-}
 
 /* Footer */
 
