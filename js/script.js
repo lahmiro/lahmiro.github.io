@@ -119,17 +119,6 @@ $(".mobile-dropdown").click(function() {
     $( ".move-contact" ).css("margin-top", "90px");
 });
 
-$(window).load(function(){
-
-
-  // Parallax
-  if ($('.parallax-background').length) {
-    $(".parallax-background").parallax();
-  }
-  
-
-});
-
 //stikcy menu for mobile
 var smScreen = "screen and (max-width: 768px)";
 var smView = {
@@ -154,6 +143,11 @@ if (Modernizr.touch){
     setTimeout(function(){
       $('body').addClass('loaded');
     }, 1000);
+
+    // Parallax
+    if ($('.parallax-background').length) {
+      $(".parallax-background").parallax();
+    }
 
     //$('#loader-wrapper').css("display", "none");
     //controllers
