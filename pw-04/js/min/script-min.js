@@ -141,13 +141,16 @@ var smView = {
 
 enquire.register(smScreen, smView);
 
-
+//turn off loader for touch devices
+if (Modernizr.touch){
+    $('#loader-wrapper').css("display", "none");
+  }
 
   //scrollmagic animation
   //only enable animation on desktop: if (!Modernizr.touch)
   if (!Modernizr.touch){
 
-    //turn off loader
+    //loader
     setTimeout(function(){
       $('body').addClass('loaded');
     }, 1000);
