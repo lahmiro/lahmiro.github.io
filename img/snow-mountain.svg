@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="400px"
+	 height="361px" viewBox="0 0 400 361" enable-background="new 0 0 400 361" xml:space="preserve">
+<g id="snow-mounain">
+	<g id="transparent-snow-mountain.psd">
+		<defs>
+			<rect id="SVGID_1_" x="14.787" y="153.667" width="362.425" height="173.666"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_1_"  overflow="visible"/>
+		</clipPath>
+		<g transform="matrix(1 0 0 1 -9.536743e-07 0)" clip-path="url(#SVGID_2_)">
+			
+				<image overflow="visible" width="1609" height="771" id="transparent-snow-mountain_1_" xlink:href="6C3BEB9CB1BB3D98.png"  transform="matrix(0.2252 0 0 0.2252 14.7871 153.667)">
+			</image>
+		</g>
+	</g>
+</g>
+<g id="blue-circle">
+	<circle opacity="0.8" fill="#6DCFF6" cx="196" cy="154" r="150"/>
+</g>
+<g id="m-rect-left">
+	<rect x="14.5" y="284.5" fill="none" stroke="#FFF568" stroke-width="3" stroke-miterlimit="10" width="43" height="43"/>
+	<rect x="3.5" y="267.5" fill="none" stroke="#FFF568" stroke-width="3" stroke-miterlimit="10" width="22" height="30"/>
+</g>
+<g id="m-rect-right">
+	<rect x="328.5" y="4.5" fill="none" stroke="#FFF568" stroke-width="3" stroke-miterlimit="10" width="33" height="33"/>
+	<rect x="348.5" y="29.5" fill="none" stroke="#FFF568" stroke-width="3" stroke-miterlimit="10" width="33" height="15"/>
+</g>
+<g id="Layer_2" display="none">
+	<g id="blue-circle-snow-mountain.psd" display="inline" opacity="0.6">
+		<defs>
+			<rect id="SVGID_3_" x="1.04" opacity="0.6" width="397.92" height="359.039"/>
+		</defs>
+		<clipPath id="SVGID_4_">
+			<use xlink:href="#SVGID_3_"  overflow="visible"/>
+		</clipPath>
+		<g transform="matrix(1 0 0 1 0 0)" clip-path="url(#SVGID_4_)">
+			
+				<image overflow="visible" width="1658" height="1496" id="blue-circle-snow-mountain_1_" xlink:href="6C3BEB9CB1BB3D99.png"  transform="matrix(0.24 0 0 0.24 1.04 0)">
+			</image>
+		</g>
+	</g>
+</g>
+</svg>

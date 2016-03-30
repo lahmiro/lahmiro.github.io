@@ -1,0 +1,114 @@
+/* general */
+$blue: #6dcff6;
+$yellow: #fff568;
+$pale-sky: #6b717f;
+$dark-grey: darken($pale-sky, 10); 
+/*#545863 */
+$phi: 1.618;
+@mixin serif-font{font-family: 'Playfair Display', serif;}
+@mixin roboto{font-family: 'Roboto', sans-serif;}
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+//convert px to em
+$browser-context: 16; // Default
+
+@function em($pixels, $context: $browser-context) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1em;
+}
+
+//scss mixins
+@mixin box-sizing( $type: border-box ) {
+    -webkit-box-sizing: $type;
+       -moz-box-sizing: $type;
+         -o-box-sizing: $type;
+        -ms-box-sizing: $type;
+            box-sizing: $type;
+}
+* { @include box-sizing(); } 
+@mixin transition($in) {
+	transition:$in;
+	-webkit-transition:$in;
+	-moz-transition:$in;
+	-o-transition:$in;
+	-ms-transition:$in;
+}
+@mixin transform($in) {
+	transform:$in;
+	-webkit-transform:$in;
+	-moz-transform:$in;
+	-o-transform:$in;
+	-ms-transform:$in;
+}
+
+@mixin transform-origin($in) {
+	-webkit-transform-origin: $in;
+	   -moz-transform-origin: $in;
+	    -ms-transform-origin: $in;
+	     -o-transform-origin: $in;
+	        transform-origin: $in;
+}
+
+@mixin animation($in) {
+	animation:$in;
+	-webkit-animation:$in;
+	-moz-animation:$in;
+	-o-animation:$in;
+	-ms-animation:$in;
+}
+@mixin opacity($value) {
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="$value * 100")";
+  filter: alpha(opacity= $value * 100 );
+  zoom: 1;
+}
+@mixin border-radius ($value) {
+  -webkit-border-radius: $value;
+  -moz-border-radius: $value;
+  border-radius: $value;
+  // keeps background from busting out of border 
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+@mixin box-shadow($in){
+  -webkit-box-shadow: $in;
+  -moz-box-shadow: $in;
+  box-shadow: $in;
+}
+@mixin centerEl(){
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	@include transform(translate(-50%, -50%));
+}
+@mixin waveBorder(){
+	content:"";
+	display: block;
+	width: 100%;
+	background-clip: padding-box;
+	border-style: solid;
+	border-image-slice: 100% 0 0 0;
+	border-image-width: 32px 0 0 0;
+	border-image-outset: 0;
+	border-image-repeat: repeat stretch;
+	border-width: 32px 0 0;	
+}
+@mixin clearUl(){
+	ul{
+		padding-left: 0;
+		li{
+			list-style: none;
+		}
+	}
+}
+@mixin subTitle(){
+	margin-top: 1em;
+}
