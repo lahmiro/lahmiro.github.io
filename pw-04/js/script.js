@@ -121,7 +121,9 @@ $(".mobile-dropdown").click(function() {
 
 $(window).load(function(){
 
-$(".preloader").delay(1000).fadeOut("slow");
+setTimeout(function(){
+      $('body').addClass('loaded');
+}, 1000);
 
   // Parallax
   if ($('.parallax-background').length) {
@@ -147,6 +149,10 @@ enquire.register(smScreen, smView);
   //scrollmagic animation
   //only enable animation on desktop: if (!Modernizr.touch)
   if (!Modernizr.touch){
+
+    //turn off loader
+    //$('#loader-wrapper').css("display", "none");
+
     //controllers
     //on Leave controller
     var onLeaveCtrl = new ScrollMagic.Controller({
@@ -192,7 +198,8 @@ enquire.register(smScreen, smView);
 
     new ScrollMagic.Scene({
         triggerElement: "#about-us",
-        duration: '50%'
+        duration: '50%',
+        reverse: false
     })
     .setTween(moveUp)
     .addTo(onCenterCtrl);
@@ -203,7 +210,7 @@ enquire.register(smScreen, smView);
         
     new ScrollMagic.Scene({
         triggerElement: "#portfolio",
-        duration: '50%'
+        duration: '50%',
     })
     .setTween(moveUp2)
     .addTo(onCenterCtrl);
@@ -212,7 +219,7 @@ enquire.register(smScreen, smView);
     var mountainGroupAnim = new Vivus('mountain-group',{
                 type: 'delayed',
                 duration: 100,
-                delay: 2,
+                delay: 1,
                 animTimingFunction: Vivus.EASE_OUT_BOUCE
     });
 
