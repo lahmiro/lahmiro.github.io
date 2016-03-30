@@ -121,9 +121,6 @@ $(".mobile-dropdown").click(function() {
 
 $(window).load(function(){
 
-setTimeout(function(){
-      $('body').addClass('loaded');
-}, 1000);
 
   // Parallax
   if ($('.parallax-background').length) {
@@ -151,7 +148,9 @@ enquire.register(smScreen, smView);
   if (!Modernizr.touch){
 
     //turn off loader
-    //$('#loader-wrapper').css("display", "none");
+    setTimeout(function(){
+      $('body').addClass('loaded');
+    }, 1000);
 
     //controllers
     //on Leave controller
